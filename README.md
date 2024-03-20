@@ -1,8 +1,8 @@
-# Stevenblock
+# StevenBlock
 This module enables you to block advertisements in your device's in-applications by adding a file hosted by Stevenblack to your device. This does not cover in-browser ads or YouTube advertisements; it only imposes access restrictions for specific domains.
 
 # Download
-- [Module](https://github.com/mikropsoft/Stevenblock/releases)
+- [Module](https://github.com/mikropsoft/StevenBlock/releases)
 
 # Updates
 The hosts file is continuously updated.
