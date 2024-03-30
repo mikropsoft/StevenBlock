@@ -1,5 +1,5 @@
 # StevenBlock
-This module enables you to block advertisements in your device's in-applications by adding a file hosted by Stevenblack to your device. This does not cover in-browser ads or YouTube advertisements; it only imposes access restrictions for specific domains.
+By adding a file hosted by Stevenblack to your device, this module empowers you to block advertisements, malware, and spyware domains within your device's in-applications. Please note that it does not extend to in-browser ads or YouTube advertisements; its scope is limited to imposing access restrictions for specific domains.
 
 ## Features
 
@@ -26,6 +26,7 @@ This module enables you to block advertisements in your device's in-applications
 - Modifications: The hosts file was sourced from Hosts file provider. Combining four separate files into one comprehensive file, it now blocks over 180,000 harmful and bothersome websites including spyware, malware, and ads.
 
 ## Let's Begin
+
 Secure your rooted digital environment effortlessly with the StevenBlock Magisk Module! Just follow these straightforward instructions:
 
 1. **Download & Install**: Launch Magisk Manager, navigate to the Modules section, tap the '+' icon, and choose the StevenBlock Module zip file for installation.
@@ -34,16 +35,20 @@ Secure your rooted digital environment effortlessly with the StevenBlock Magisk 
 For any questions or support, feel free to contact me at https://t.me/microzort.
 
 ## Note
+
 When using with magisk or kernelsu, there is no need to install your systemless hosts module.
 
 ## Updates
+
 The module is updated regularly 1-2 times a week. What distinguishes this module from other modules is that it is constantly up to date.
 
 ## Releases
+
 - [Download](https://github.com/mikropsoft/StevenBlock/releases)
 
 ## Credits
+
 - [Malwack](https://github.com/Magisk-Modules-Alt-Repo/Malwack) - Main source files
-- [StevenBlack](https://github.com/StevenBlack/hosts) - /system/etc/hosts file
+- [StevenBlack](https://github.com/StevenBlack/hosts) - Hosts file
 
 <img src="https://raw.githubusercontent.com/matfantinel/matfantinel/master/waves.svg" width="100%" height="150">
