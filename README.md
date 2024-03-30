@@ -1,15 +1,20 @@
-# StevenBlock
+# StevenBlock Magisk Module - Your Ultimate Defense Against Advertisements
+
 By adding a file hosted by Stevenblack to your device, this module empowers you to block advertisements, malware, and spyware domains within your device's in-applications. Please note that it does not extend to in-browser ads or YouTube advertisements; its scope is limited to imposing access restrictions for specific domains.
 
 ## Features
 
 - 🛡️ **Fortress-like Protection**: With StevenBlock, your device transforms into an impenetrable fortress within the Magisk framework, repelling all cyber threats attempting to breach your defenses.
+  
 - 🚫 **Goodbye, Annoying Ads**: Say goodbye to intrusive ads that disrupt your online experience. StevenBlock swiftly eliminates these nuisances, allowing you to enjoy uninterrupted browsing free from distractions.
+  
 - 🕵️ **Spyware No More**: Protect your privacy from prying eyes with StevenBlock. It fortifies your device against spyware, ensuring that your sensitive information remains confidential, even in rooted environments.
+  
 - ⚙️ **Effortless Performance**: Experience seamless device performance effortlessly with StevenBlock's sleek and efficient design tailored specifically for Magisk. Enjoy optimized functionality without compromising speed or efficiency.
+  
 - 🌐 **Universal Compatibility**: Whether you're using a rooted phone or tablet, StevenBlock stands guard within the Magisk ecosystem, offering universal protection across all your devices.
 
-## Total Blocked
+## Total Blocked Domains
 
 180,000+ Malware, Ads, Spyware
 
