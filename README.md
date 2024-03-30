@@ -43,9 +43,7 @@ The module is updated regularly 1-2 times a week. What distinguishes this module
 - [Download](https://github.com/mikropsoft/StevenBlock/releases)
 
 ## Credits
-- [Topjohnwu](https://github.com/topjohnwu) - Magisk Creator
-- [Zackptg5](https://github.com/Zackptg5/MMT-Extended) - Magisk Template Creator
 - [Malwack](https://github.com/Magisk-Modules-Alt-Repo/Malwack) - Main source files
-- [StevenBlack](https://github.com/StevenBlack/hosts) /system/etc/hosts file
+- [StevenBlack](https://github.com/StevenBlack/hosts) - /system/etc/hosts file
 
 <img src="https://raw.githubusercontent.com/matfantinel/matfantinel/master/waves.svg" width="100%" height="150">
