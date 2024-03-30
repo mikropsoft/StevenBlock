@@ -6,6 +6,9 @@ This module enables you to block advertisements in your device's in-applications
 # Note
 When using with magisk or kernelsu, there is no need to install your systemless hosts module.
 
+# Updates
+The module is updated regularly 1-2 times a week.
+
 # Releases
 - [Download](https://github.com/mikropsoft/StevenBlock/releases)
 
