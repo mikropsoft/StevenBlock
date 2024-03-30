@@ -37,7 +37,7 @@ For any questions or support, feel free to contact me at https://t.me/microzort.
 When using with magisk or kernelsu, there is no need to install your systemless hosts module.
 
 ## Updates
-The module is updated regularly 1-2 times a week.
+The module is updated regularly 1-2 times a week. What distinguishes this module from other modules is that it is constantly up to date.
 
 ## Releases
 - [Download](https://github.com/mikropsoft/StevenBlock/releases)
