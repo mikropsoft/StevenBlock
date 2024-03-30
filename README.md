@@ -30,6 +30,10 @@ By adding a file hosted by Stevenblack to your device, this module empowers you 
 
 - Modifications: The hosts file was sourced from Hosts file provider. Combining four separate files into one comprehensive file, it now blocks over 180,000 harmful and bothersome websites including spyware, malware, and ads.
 
+**How can I see these domains in an easy way?**
+
+- You can get results by typing "hosts manager" or "hosts editor" on google play or fdroid.
+
 ## Let's Begin
 
 Secure your rooted digital environment effortlessly with the StevenBlock Magisk Module! Just follow these straightforward instructions:
