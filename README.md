@@ -1,6 +1,6 @@
-# StevenBlock Magisk Module - Your Ultimate Defense Against Advertisements
+# StevenBlock Magisk Module
 
-By adding a file hosted by Stevenblack to your device, this module empowers you to block advertisements, malware, and spyware domains within your device's in-applications. Please note that it does not extend to in-browser ads or YouTube advertisements; its scope is limited to imposing access restrictions for specific domains.
+StevenBlock: Your Virtual Cyber Hygiene Solution - Say goodbye to digital intruders and eliminate malware and intrusive ads effortlessly. Think of it as a vigilant bouncer for your digital space, keeping out malicious software, bugs, and disruptive ads from your device.
 
 ## Features
 
@@ -47,11 +47,11 @@ For any questions or support, feel free to contact me at https://t.me/microzort.
 
 **Note**
 
-When using with magisk or kernelsu, there is no need to install your systemless hosts module.
+- When using with magisk or kernelsu, there is no need to install your systemless hosts module.
 
 **Updates**
 
-The module is updated regularly 1-2 times a week. What distinguishes this module from other modules is that it is constantly up to date.
+- The module is updated regularly 1-2 times a week. What distinguishes this module from other modules is that it is constantly up to date.
 
 ## Releases
 
