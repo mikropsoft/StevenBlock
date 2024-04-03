@@ -43,21 +43,23 @@ Secure your rooted digital environment effortlessly with the StevenBlock Magisk 
 3. **Enjoy**: Delight in a refined, more secure digital journey on your rooted device with StevenBlock.
 For any questions or support, feel free to contact me at https://t.me/microzort.
 
-## Note
+## Note & Updates
+
+**Note**
 
 When using with magisk or kernelsu, there is no need to install your systemless hosts module.
 
-## Updates
+**Updates**
 
 The module is updated regularly 1-2 times a week. What distinguishes this module from other modules is that it is constantly up to date.
 
 ## Releases
 
-- [Download](https://github.com/mikropsoft/StevenBlock/releases)
+- [Access the latest versions here](https://github.com/mikropsoft/StevenBlock/releases)
 
 ## Credits
 
 - [Malwack](https://github.com/Magisk-Modules-Alt-Repo/Malwack) - Main source files
 - [StevenBlack](https://github.com/StevenBlack/hosts) - Hosts file
 
-<img src="https://raw.githubusercontent.com/matfantinel/matfantinel/master/waves.svg" width="100%" height="150">
+<img src="https://raw.githubusercontent.com/matfantinel/matfantinel/master/waves.svg" width="100%" height="100">
