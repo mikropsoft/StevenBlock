@@ -51,7 +51,7 @@ For any questions or support, feel free to contact me at https://t.me/microzort.
 
 **Updates**
 
-- The module is updated regularly 1-2 times a week. What distinguishes this module from other modules is that it is constantly up to date.
+- The module is updated regularly 1-2 times a week. What distinguishes this module from other modules is that it is constantly up to date. Don't forget to star my project to get the latest updates :)
 
 ## Releases
 
