@@ -4,19 +4,19 @@ StevenBlock: Your Virtual Cyber Hygiene Solution - Say goodbye to digital intrud
 
 ## Features
 
-- 🛡️ **Fortress-like Protection**: With StevenBlock, your device transforms into an impenetrable fortress within the Magisk framework, repelling all cyber threats attempting to breach your defenses.
-  
-- 🚫 **Goodbye, Annoying Ads**: Say goodbye to intrusive ads that disrupt your online experience. StevenBlock swiftly eliminates these nuisances, allowing you to enjoy uninterrupted browsing free from distractions.
-  
-- 🕵️ **Spyware No More**: Protect your privacy from prying eyes with StevenBlock. It fortifies your device against spyware, ensuring that your sensitive information remains confidential, even in rooted environments.
-  
-- ⚙️ **Effortless Performance**: Experience seamless device performance effortlessly with StevenBlock's sleek and efficient design tailored specifically for Magisk. Enjoy optimized functionality without compromising speed or efficiency.
-  
-- 🌐 **Universal Compatibility**: Whether you're using a rooted phone or tablet, StevenBlock stands guard within the Magisk ecosystem, offering universal protection across all your devices.
+- 🛡️ **Impenetrable Fortress**: Experience StevenBlock's Shielding Power within the Magisk Framework, Safeguarding Your Device Against Cyber Threats.
+
+- 🚫 **Ad-Free Serenity**: Bid Farewell to Disruptive Ads with StevenBlock, Enjoy Distraction-Free Browsing at its Finest.
+
+- 🕵️ **Privacy Protection**: Keep Spyware at Bay with StevenBlock, Shielding Your Sensitive Data in Rooted Environments.
+
+- ⚙️ **Seamless Performance**: Effortlessly Enhance Device Efficiency with StevenBlock's Optimized Design for Magisk, Ensuring Swift Functionality.
+
+- 🌐 **Universal Security**: From Phones to Tablets, StevenBlock Offers Universal Defense within the Magisk Ecosystem, Protecting All Your Devices.
 
 ## Total Blocked Domains
 
-180,000+ Malware, Ads, Spyware
+(100.000 - 200.000) Malware, Ads, Spyware
 
 ## How does it work?
 
@@ -32,32 +32,35 @@ StevenBlock: Your Virtual Cyber Hygiene Solution - Say goodbye to digital intrud
 
 **How can I see these domains in an easy way?**
 
-- You can get results by typing "hosts manager" or "hosts editor" on google play or fdroid.
+- Finding these domains is a breeze! Just head to Google Play or F-Droid and search for "hosts manager" or "hosts editor" to access a range of tools that will swiftly provide you with the results you seek.
 
 ## Let's Begin
 
 Secure your rooted digital environment effortlessly with the StevenBlock Magisk Module! Just follow these straightforward instructions:
 
 1. **Download & Install**: Launch Magisk Manager, navigate to the Modules section, tap the '+' icon, and choose the StevenBlock Module zip file for installation.
-2. **Reboot**: Reboot your device to enable the protective functionalities of the StevenBlock Module.
-3. **Enjoy**: Delight in a refined, more secure digital journey on your rooted device with StevenBlock.
+   
+3. **Reboot**: Reboot your device to enable the protective functionalities of the StevenBlock Module.
+   
+5. **Enjoy**: Delight in a refined, more secure digital journey on your rooted device with StevenBlock.
+   
 For any questions or support, feel free to contact me at https://t.me/microzort.
 
-## Note & Updates
+## Important Information & Latest Updates
 
-**Note**
+**A Quick Note**
 
-- When using with magisk or kernelsu, there is no need to install your systemless hosts module.
+If you're utilizing Magisk or Kernelsu, you won't need to install your systemless hosts module separately.
 
-**Updates**
+**Stay Updated**
 
-- The module is updated regularly 1-2 times a week. What distinguishes this module from other modules is that it is constantly up to date. Don't forget to star my project to get the latest updates :)
+Our module receives regular updates, typically 1-2 times per week. What sets this module apart is its commitment to staying current. Remember to star our project to stay in the loop with the latest updates! 🌟
 
 ## Releases
 
-- [Access the latest versions here](https://github.com/mikropsoft/StevenBlock/releases)
+- [Download here](https://github.com/mikropsoft/StevenBlock/releases)
 
-## Credits
+## Thanks
 
 - [Malwack](https://github.com/Magisk-Modules-Alt-Repo/Malwack) - Main source files
 - [StevenBlack](https://github.com/StevenBlack/hosts) - Hosts file
