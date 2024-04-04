@@ -1,6 +1,7 @@
 ## v2.0.1
 - Updated Hosts File
 - Unused script removed
+- Added support for updating the module from magisk
 ---
 ## v2.0.1
 - Updated hosts file
