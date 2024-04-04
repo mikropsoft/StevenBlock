@@ -16,23 +16,23 @@ StevenBlock: Your Virtual Cyber Hygiene Solution - Say goodbye to digital intrud
 
 ## Total Blocked Domains
 
-(100.000 - 200.000) Malware, Ads, Spyware
+In this category, the total number of blocked domains ranges from 100,000 to 200,000. These domains may include malware, advertisements, and spyware. Blocked domains are identified by a continuously updated database to ensure online security. These measures are essential to safeguard users' safety and privacy.
 
 ## How does it work?
 
-**The file's location?**
+**How does the functionality of the hosts file operate, and where can you locate it within your system?**
 
-- Your ``hosts`` file can be found in ``/system/etc``. It functions similarly to a school blocking service, preventing access to certain websites. However, this file operates locally within your phone's root system.
+- The ``hosts`` file, residing in ``/system/etc``, functions akin to a vigilant gatekeeper, meticulously regulating access to specific websites. Rather than employing a distant server, it operates locally within the root system of your phone, ensuring direct control over website access.
 
-**How does the hosts file block websites, and what changes were implemented?**
+**But how does this file enact its web-blocking prowess, and what enhancements have been made?**
 
-- Blocking Mechanism: The hosts file inhibits access to websites and malware by prohibiting your phone from connecting to them altogether, resulting in a blank page. Example: 0.0.0.0 www.the-website-that-is-blocked.com.
+- The hosts file employs a straightforward yet effective blocking mechanism, thwarting access to designated websites and potential threats by intercepting connection attempts and redirecting them to a null address. For instance, a blocked website like www.the-website-that-is-blocked.com would be rendered inaccessible through an entry like 0.0.0.0 in the hosts file.
 
-- Modifications: The hosts file was sourced from Hosts file provider. Combining four separate files into one comprehensive file, it now blocks over 180,000 harmful and bothersome websites including spyware, malware, and ads.
+- In recent modifications, the hosts file underwent significant augmentation through sourcing from Hosts file provider. This consolidation of four distinct files into one comprehensive entity has bolstered its capabilities, now boasting the capability to block over 100.000 - 200.000 detrimental entities ranging from spyware and malware to intrusive ads.
 
-**How can I see these domains in an easy way?**
+**Now, how can one effortlessly peruse these myriad blocked domains?**
 
-- Finding these domains is a breeze! Just head to Google Play or F-Droid and search for "hosts manager" or "hosts editor" to access a range of tools that will swiftly provide you with the results you seek.
+- Discovering the array of blocked domains is a seamless endeavor! Simply venture to Google Play or F-Droid and initiate a search for "hosts manager" or "hosts editor." These tools furnish a user-friendly interface, swiftly furnishing you with a comprehensive list of the domains barred by your hosts file, facilitating effortless management and customization.
 
 ## Let's Begin
 
@@ -58,7 +58,7 @@ Our module receives regular updates, typically 1-2 times per week. What sets thi
 
 ## Releases
 
-- [Download here](https://github.com/mikropsoft/StevenBlock/releases)
+- [Download Here](https://github.com/mikropsoft/StevenBlock/releases)
 
 ## Thanks
 
