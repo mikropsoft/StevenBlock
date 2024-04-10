@@ -32,10 +32,6 @@ StevenBlock blocks a substantial number of domains, ranging from 100,000 to 200,
 
 - Exploring blocked domains is straightforward. Simply search for "hosts manager" or "hosts editor" on Google Play or F-Droid. These tools offer user-friendly interfaces, providing comprehensive lists of blocked domains for easy management and customization.
 
-**Where can the source codes be found?**
-
-- The source codes were included in the install.zip file and removed from the repository.
-
 ## Let's Begin: Effortlessly Secure Your Digital Environment
 
 Securing your rooted digital environment with StevenBlock is a breeze. Just follow these simple instructions:
