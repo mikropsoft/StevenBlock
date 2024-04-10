@@ -54,20 +54,19 @@ For any questions or support, feel free to contact me at https://t.me/microzort.
 
 **A Quick Note**
 
-If you're utilizing Magisk or Kernelsu, you won't need to install your systemless hosts module separately.
+- If you're utilizing Magisk or Kernelsu, you won't need to install your systemless hosts module separately.
 
 **Stay Updated**
 
-Our module receives regular updates, typically 1-2 times per week. What sets this module apart is its commitment to staying current. Remember to star our project to stay in the loop with the latest updates! 🌟
+- Our module receives regular updates, typically 1-2 times per week. What sets this module apart is its commitment to staying current. Remember to star our project to stay in the loop with the latest updates! 🌟
 
 ## Releases
 
-[Download Here](https://github.com/mikropsoft/StevenBlock/releases)
+- [Download Here](https://github.com/mikropsoft/StevenBlock/releases)
 
 ## Thanks
 
-[Malwack](https://github.com/Magisk-Modules-Alt-Repo/Malwack) - Main source files
-
-[StevenBlack](https://github.com/StevenBlack/hosts) - Hosts file
+- [Malwack](https://github.com/Magisk-Modules-Alt-Repo/Malwack) - Main source files
+- [StevenBlack](https://github.com/StevenBlack/hosts) - Hosts file
 
 <img src="https://raw.githubusercontent.com/matfantinel/matfantinel/master/waves.svg" width="100%" height="100">
