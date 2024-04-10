@@ -18,7 +18,7 @@ StevenBlock: Your Virtual Cyber Hygiene Solution - Say goodbye to digital intrud
 
 In this category, the total number of blocked domains ranges from 100,000 to 200,000. These domains may include malware, advertisements, and spyware. Blocked domains are identified by a continuously updated database to ensure online security. These measures are essential to safeguard users' safety and privacy.
 
-## How does it work?
+## Frequently Asked Questions (F.A.Q.)
 
 **How does the functionality of the hosts file operate, and where can you locate it within your system?**
 
@@ -33,6 +33,10 @@ In this category, the total number of blocked domains ranges from 100,000 to 200
 **Now, how can one effortlessly peruse these myriad blocked domains?**
 
 - Discovering the array of blocked domains is a seamless endeavor! Simply venture to Google Play or F-Droid and initiate a search for "hosts manager" or "hosts editor." These tools furnish a user-friendly interface, swiftly furnishing you with a comprehensive list of the domains barred by your hosts file, facilitating effortless management and customization.
+
+**Where can the source codes be found?**
+
+- The source codes were removed from the repository as they were included in the install.zip file.
 
 ## Let's Begin
 
@@ -58,11 +62,12 @@ Our module receives regular updates, typically 1-2 times per week. What sets thi
 
 ## Releases
 
-- [Download Here](https://github.com/mikropsoft/StevenBlock/releases)
+[Download Here](https://github.com/mikropsoft/StevenBlock/releases)
 
 ## Thanks
 
-- [Malwack](https://github.com/Magisk-Modules-Alt-Repo/Malwack) - Main source files
-- [StevenBlack](https://github.com/StevenBlack/hosts) - Hosts file
+[Malwack](https://github.com/Magisk-Modules-Alt-Repo/Malwack) - Main source files
+
+[StevenBlack](https://github.com/StevenBlack/hosts) - Hosts file
 
 <img src="https://raw.githubusercontent.com/matfantinel/matfantinel/master/waves.svg" width="100%" height="100">
