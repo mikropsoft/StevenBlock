@@ -1,6 +1,5 @@
 ## v2.0.3
 - Updated hosts file
-- Source codes removed from github because the source code is in a zip file
 ---
 ## v2.0.2
 - Updated hosts file
