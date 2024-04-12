@@ -1,3 +1,6 @@
+## v2.0.4
+- Updated hosts file
+---
 ## v2.0.3
 - Updated hosts file
 ---
