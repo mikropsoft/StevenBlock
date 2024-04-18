@@ -1,7 +1,7 @@
 id=StevenBlock
 name=StevenBlock | Anti-Malware & Ad Blocker
-version=v2.0.4
-versionCode=7
+version=v1.0.5
+versionCode=6
 author=WINZORT
 description=Say goodbye to pesky ads with StevenBlock, your ultimate shield against online clutter. No more intrusive pop-ups or disruptive promos. Enjoy a cleaner browsing experience with StevenBlock, your personal host file defender.
 updateJson=https://raw.githubusercontent.com/mikropsoft/StevenBlock/main/update.json
