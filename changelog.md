@@ -1,3 +1,6 @@
+## v1.0.6
+- Hosts file updated
+---
 ## v1.0.5
 - Hosts file updated
 - Version codes have been updated. Please install the latest version
