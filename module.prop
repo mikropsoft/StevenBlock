@@ -1,7 +1,7 @@
 id=StevenBlock
 name=StevenBlock | Anti-Malware & Ad Blocker
-version=v1.0.6
-versionCode=7
+version=v1.0.7
+versionCode=8
 author=WINZORT
-description=Bid farewell to pesky ads and banish malware with StevenBlock, your cyber world's virtual fly swatter. Think of it as your device's vigilant bouncer, keeping out malware, ads, and any uninvited party crashers!
+description=Say goodbye to annoying ads and banish malware with StevenBlock, the virtual fly swatter of your cyber world. Think of it as your device's vigilant bouncer, keeping out malware, ads and uninvited party crashers!
 updateJson=https://raw.githubusercontent.com/mikropsoft/StevenBlock/main/update.json
