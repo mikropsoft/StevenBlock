@@ -1,3 +1,6 @@
+## v1.0.7
+- Hosts file updated
+---
 ## v1.0.6
 - Hosts file updated
 ---
