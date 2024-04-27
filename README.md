@@ -64,9 +64,7 @@ For any inquiries or support, feel free to contact me at [Telegram](https://t.me
 
 ## Acknowledgements: Gratitude to Contributors
 
-- [Malwack](https://github.com/Magisk-Modules-Alt-Repo/Malwack) - For source files
+- [Malwack](https://github.com/Magisk-Modules-Alt-Repo/Malwack) - For source codes
 - [StevenBlack](https://github.com/StevenBlack/hosts) - For hosts file
-- [Topjohnwu](https://github.com/topjohnwu) - Magisk creator
-- [Zackptg5](https://github.com/Zackptg5) - Magisk template creator
 
 <img src="https://raw.githubusercontent.com/matfantinel/matfantinel/master/waves.svg" width="100%" height="100">
