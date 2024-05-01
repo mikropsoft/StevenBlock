@@ -4,7 +4,7 @@ Introducing StevenBlock, the most frequently updated and stable ad-blocking modu
 
 ## Features that Empower Your Digital Defense
 
-- 🛡️ **Impenetrable fortress**: Experience the formidable shielding power of StevenBlock within the Magisk framework, ensuring your device remains fortified against evolving cyber threats.
+- 🛡️ **Impenetrable Fortress**: Experience the formidable shielding power of StevenBlock within the Magisk framework, ensuring your device remains fortified against evolving cyber threats.
 
 - 🚫 **Ad-Free Serenity**: Say goodbye to annoying ads with StevenBlock. Enjoy distraction-free browsing so you can immerse yourself in content without interruption.
 
