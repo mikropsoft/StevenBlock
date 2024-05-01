@@ -4,33 +4,33 @@ Introducing StevenBlock, the most frequently updated and stable ad-blocking modu
 
 ## Features that Empower Your Digital Defense
 
-- 🛡️ **Impenetrable Fortress**: Experience the formidable Shielding Power of StevenBlock within the Magisk Framework, ensuring your device stays fortified against evolving cyber threats.
+- 🛡️ **Impenetrable fortress**: Experience the formidable shielding power of StevenBlock within the Magisk framework, ensuring your device remains fortified against evolving cyber threats.
 
-- 🚫 **Ad-Free Serenity**: Bid farewell to disruptive ads with StevenBlock. Enjoy distraction-free browsing, allowing you to immerse yourself in content without interruptions.
+- 🚫 **Ad-Free Serenity**: Say goodbye to annoying ads with StevenBlock. Enjoy distraction-free browsing so you can immerse yourself in content without interruption.
 
-- 🕵️ **Privacy Protection**: Keep spyware at bay with StevenBlock, safeguarding your sensitive data within rooted environments, ensuring your privacy remains intact.
+- 🕵️ **Privacy Protection**: Keep spyware at bay with StevenBlock and protect your sensitive data in rooted environments to ensure your privacy remains intact.
 
-- ⚙️ **Seamless Performance**: Enhance device efficiency effortlessly with StevenBlock's optimized design for Magisk. Enjoy swift functionality without compromising performance.
+- ⚙️ **Seamless Performance**: Increase device efficiency effortlessly with StevenBlock's optimised design for Magisk. Enjoy fast functionality without compromising performance.
 
-- 🌐 **Universal Security**: Whether you're using phones or tablets, StevenBlock offers universal defense within the Magisk ecosystem, ensuring all your devices stay protected.
+- 🌐 **Universal Security**: Whether you're using phones or tablets, StevenBlock provides universal defence within the Magisk ecosystem, ensuring all your devices are protected.
 
-## Total Blocked Domains: Safeguarding Your Digital Space
+## Total Blocked Domains: Protecting Your Digital Space
 
-StevenBlock blocks a substantial number of domains, ranging from 100,000 to 200,000, which include malware, advertisements, and spyware. These domains are continually monitored and updated to maintain online security, ensuring your safety and privacy are prioritized.
+StevenBlock blocks a significant number of domains - between 100,000 and 200,000 - that contain malware, advertising and spyware. These domains are constantly monitored and updated to maintain online safety, ensuring that your security and privacy are prioritised.
 
 ## Frequently Asked Questions (F.A.Q.): Enlightening Insights
 
-**How does the hosts file functionality operate, and where can it be found within your system?**
+**How does the Hosts file work and where is it on your system?**
 
-- The `hosts` file, located in `/system/etc`, functions as a vigilant gatekeeper, regulating access to specific websites locally within the root system of your device. It intercepts connection attempts, ensuring direct control over website access.
+- The `hosts' file, located in `/system/etc', acts as a vigilant gatekeeper, regulating access to specific websites locally within your device's root system. It intercepts connection attempts and ensures direct control over website access.
 
-**But how does it block websites, and what enhancements have been made?**
+**But how does it block websites and what improvements have been made?**
 
-- The hosts file employs a simple yet effective blocking mechanism by redirecting connection attempts to a null address, rendering designated websites inaccessible. Recent enhancements involve consolidating multiple files into one comprehensive entity, expanding its capabilities to block over 100,000 - 200,000 detrimental entities.
+- The Hosts file uses a simple but effective blocking mechanism by redirecting connection attempts to a null address, rendering the specified websites inaccessible. Recent enhancements include the consolidation of multiple files into one comprehensive unit, extending its capabilities to block over 100,000 - 200,000 malicious entities.
 
 **How can one explore the blocked domains effortlessly?**
 
-- Exploring blocked domains is straightforward. Simply search for "hosts manager" or "hosts editor" on Google Play or F-Droid. These tools offer user-friendly interfaces, providing comprehensive lists of blocked domains for easy management and customization.
+- Finding blocked domains is easy. Just search for "hosts manager" or "hosts editor" on Google Play or F-Droid. These tools offer user-friendly interfaces and provide comprehensive lists of blocked domains for easy management and customisation.
 
 ## Let's Begin: Effortlessly Secure Your Digital Environment
 
@@ -62,9 +62,9 @@ For any inquiries or support, feel free to contact me at [Telegram](https://t.me
 
 - [Download Here](https://github.com/mikropsoft/StevenBlock/releases)
 
-## Acknowledgements: Gratitude to Contributors
+## Acknowledgements: Thanks to Contributors
 
-- [Malwack](https://github.com/Magisk-Modules-Alt-Repo/Malwack) - For source codes
-- [StevenBlack](https://github.com/StevenBlack/hosts) - For hosts file
+- [Malwack](https://github.com/Magisk-Modules-Alt-Repo/Malwack) (Source codes)
+- [StevenBlack](https://github.com/StevenBlack/hosts) (Hosts file)
 
 <img src="https://raw.githubusercontent.com/matfantinel/matfantinel/master/waves.svg" width="100%" height="100">
