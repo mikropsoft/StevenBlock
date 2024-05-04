@@ -48,7 +48,7 @@ For any inquiries or support, feel free to contact me at [Telegram](https://t.me
 
 **A Quick Note**
 
-- If you're using any root solution, there's no need to install your systemless hosts module separately. Please check that it works after installing the module.
+- If you're using any root solution, there's no need to install your systemless hosts module separately. Please check that it works after installing the module. Also, do not use this module with Adaway.
   
 - Also, please note that the module will not have any impact on the browser; it will block domains but will not benefit ads.
 
