@@ -58,9 +58,6 @@ print_modname() {
   ui_print " $MODNAME "
   ui_print " by $MODAUTH "
   ui_print "$pounds"
-  ui_print "*******************"
-  ui_print " Powered by Magisk "
-  ui_print "*******************"
 }
 
 # Override abort as old scripts have some issues

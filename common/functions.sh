@@ -108,13 +108,20 @@ prop_process() {
 # Credits in acsii for "Stevenblock"
 ui_print " 
 
-          __                           ___.   .__                 __    
-  _______/  |_  _______  __ ____   ____\_ |__ |  |   ____   ____ |  | __
- /  ___/\   __\/ __ \  \/ // __ \ /    \| __ \|  |  /  _ \_/ ___\|  |/ /
- \___ \  |  | \  ___/\   /\  ___/|   |  \ \_\ \  |_(  <_> )  \___|    < 
-/____  > |__|  \___  >\_/  \___  >___|  /___  /____/\____/ \___  >__|_ 
-     \/            \/          \/     \/    \/                 \/     \/
-                                                 
+███████╗████████╗███████╗██╗   ██╗███████╗███╗   ██╗
+██╔════╝╚══██╔══╝██╔════╝██║   ██║██╔════╝████╗  ██║
+███████╗   ██║   █████╗  ██║   ██║█████╗  ██╔██╗ ██║
+╚════██║   ██║   ██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║╚██╗██║
+███████║   ██║   ███████╗ ╚████╔╝ ███████╗██║ ╚████║
+╚══════╝   ╚═╝   ╚══════╝  ╚═══╝  ╚══════╝╚═╝  ╚═══╝
+                                                    
+██████╗ ██╗      ██████╗  ██████╗██╗  ██╗           
+██╔══██╗██║     ██╔═══██╗██╔════╝██║ ██╔╝           
+██████╔╝██║     ██║   ██║██║     █████╔╝            
+██╔══██╗██║     ██║   ██║██║     ██╔═██╗            
+██████╔╝███████╗╚██████╔╝╚██████╗██║  ██╗           
+╚═════╝ ╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝                                                                    
+                                                                                       
 "
 
 # Check for min/max api version
@@ -136,7 +143,7 @@ else
 fi
 if ! $BOOTMODE; then
   ui_print "- Only uninstall is supported in recovery"
-  ui_print "  Uninstalling!"
+  ui_print "🚀 Uninstalling!"
   touch $MODPATH/remove
   [ -s $INFO ] && install_script $MODPATH/uninstall.sh || rm -f $INFO $MODPATH/uninstall.sh
   recovery_cleanup
@@ -148,8 +155,8 @@ fi
 # Debug
 if $DEBUG; then
   ui_print "- Debug mode"
-  ui_print "  Module install log will include debug info"
-  ui_print "  Be sure to save it after module install"
+  ui_print "🚀 Module install log will include debug info"
+  ui_print "🚀 Be sure to save it after module install"
   set -x
 fi
 
@@ -192,7 +199,7 @@ ui_print "- Installing......"
 
 [ -f "$MODPATH/common/install.sh" ] && . $MODPATH/common/install.sh
 
-ui_print "   Installing for $ARCH SDK $API device..."
+ui_print "🚀 Installing for $ARCH SDK $API device..."
 # Remove comments from files and place them, add blank line to end if not already present
 for i in $(find $MODPATH -type f -name "*.sh" -o -name "*.prop" -o -name "*.rule"); do
   [ -f $i ] && { sed -i -e "/^#/d" -e "/^ *$/d" $i; [ "$(tail -1 $i)" ] && echo "" >> $i; } || continue
