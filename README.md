@@ -76,9 +76,9 @@ For any inquiries or support, feel free to contact me at [Telegram](https://t.me
 
 ---
 
-## Acknowledgements: Thanks to Contributors
+## Sources: Thanks 
 
-- [Malwack](https://github.com/Magisk-Modules-Alt-Repo/Malwack) (Source codes)
-- [StevenBlack](https://github.com/StevenBlack/hosts) (Hosts file)
+- [Pantsufan](https://github.com/pantsufan) (Source codes)
+- [StevenBlack](https://github.com/StevenBlack) (Hosts file)
 
 <img src="https://raw.githubusercontent.com/matfantinel/matfantinel/master/waves.svg" width="100%" height="100">
