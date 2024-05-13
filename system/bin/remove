@@ -1,0 +1,29 @@
+#!/system/bin/sh
+
+# Check if the argument is provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 <hostname>"
+    exit 1
+fi
+
+word="$1"
+hosts_file="/etc/hosts"
+
+# Check if the hostname entry exists in /etc/hosts
+if grep -q "$word" "$hosts_file"; then
+
+    # Create a temporary file with the entry removed
+    grep -v "$word" "$hosts_file" > "$hosts_file.tmp"
+
+    # Check for successful creation of the temporary file
+    if [ $? -eq 0 ]; then
+        # Overwrite /etc/hosts with the temporary file
+        mv "$hosts_file.tmp" "$hosts_file"
+        echo "Entry for $word removed from $hosts_file"
+    else
+        echo "Error: Failed to create temporary file"
+        exit 1
+    fi
+else
+    echo "No Entry Found for $word"
+fi

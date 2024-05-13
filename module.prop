@@ -1,7 +1,7 @@
 id=StevenBlock
 name=StevenBlock | Anti-Malware & Ad Blocker
-version=v1.0.9
-versionCode=10
+version=v1.1.0
+versionCode=11
 author=W͏ I͏ N͏ Z͏ O͏ R͏ T͏
 description=StevenBlock protects your device from malware and unwanted ads. This Magisk module keeps your browsers and apps safe from malicious content, so you can enjoy a clean and smooth internet experience.
 updateJson=https://raw.githubusercontent.com/mikropsoft/StevenBlock/main/update.json

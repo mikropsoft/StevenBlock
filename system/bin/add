@@ -1,0 +1,20 @@
+#!/system/bin/sh
+
+# Check if the argument is provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 <hostname>"
+    exit 1
+fi
+
+host="$1"
+hosts_file="/etc/hosts"
+
+# Check if the hostname is already present in /etc/hosts
+if grep -q "^0.0.0.0 $host$" "$hosts_file"; then
+    echo "Entry for $host already exists in $hosts_file"
+    exit 0
+fi
+
+# Add the entry to /etc/hosts
+echo "0.0.0.0 $host" >> "$hosts_file"
+echo "Entry for $host added to $hosts_file"
