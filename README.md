@@ -1,6 +1,8 @@
 # Introduction to the StevenBlock module
 
-Introducing StevenBlock, the most frequently updated and stable ad-blocking module. Its consistent updates ensure that users stay ahead in the battle against intrusive ads, providing a reliable solution for a clutter-free online experience.
+Introducing StevenBlock, the most frequently updated and stable ad-blocking module. Its consistent updates ensure that users stay ahead in the battle against intrusive ads, providing a reliable solution for a clutter-free online experience. 
+
+Thanks to the [Malwack](https://github.com/Magisk-Modules-Alt-Repo/Malwack) module developer for the source code prior to version 1.1.0, and thanks to [BlockAds](https://github.com/pantsufan/BlockAds) module developer for the current versions, and thanks to [StevenBlack](https://github.com/StevenBlack/hosts) for providing the hosts source. You can think of this module as a serially updated fork.
 
 ---
 
@@ -66,19 +68,8 @@ For any inquiries or support, feel free to contact me at [Telegram](https://t.me
 
 - Our module receives regular updates, typically 1-2 times per week. Stay informed about the latest developments by starring our project on GitHub!
 
-- You probably should see update in your root solution every time an update comes. This works for Magisk, but I haven't tried it for others. If it doesn't work, occasionally check the GitHub repository or star the repo to stay informed about updates!
+- You probably should see update in your root solution every time an update comes. If it doesn't work, occasionally check the GitHub repository or star the repo to stay informed about updates!
 
 ---
-
-## Releases: Get the Latest Version
-
-- [Download Here](https://github.com/mikropsoft/StevenBlock/releases)
-
----
-
-## Sources: Thanks 
-
-- [Pantsufan](https://github.com/pantsufan) (Source codes)
-- [StevenBlack](https://github.com/StevenBlack) (Hosts file)
 
 <img src="https://raw.githubusercontent.com/matfantinel/matfantinel/master/waves.svg" width="100%" height="100">
