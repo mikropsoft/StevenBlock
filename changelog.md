@@ -1,1 +1,3 @@
-- Hosts file updated
+## Changelog
+
+Please check latest commits.
