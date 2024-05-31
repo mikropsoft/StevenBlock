@@ -1,6 +1,6 @@
 # Introduction to the StevenBlock Module
 
-Welcome to StevenBlock, the ultimate ad-blocking solution that ensures you enjoy a clutter-free online experience. With frequent updates and robust performance, StevenBlock keeps you ahead in the fight against intrusive ads and malicious content.
+Welcome to StevenBlock, the ultimate ad-blocking solution that ensures you enjoy a clutter-free online experience with frequent updates and robust performance, keeping you ahead in the fight against intrusive ads and malicious content. StevenBlock blocks ads, Android app ads, and systemwide capacity drainers such as YouTube, Reddit, Facebook, TikTok, etc., while allowing essential apps like Whatsapp, Telegram, and LinkedIn. Updating via Magisk is easy.
 
 ![Downloads](https://img.shields.io/github/downloads/mikropsoft/StevenBlock/total?color=green&style=for-the-badge)
 ![Release](https://img.shields.io/github/v/release/mikropsoft/StevenBlock?style=for-the-badge)
