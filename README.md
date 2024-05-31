@@ -2,8 +2,6 @@
 
 Welcome to StevenBlock, the ultimate ad-blocking solution that ensures you enjoy a clutter-free online experience. With frequent updates and robust performance, StevenBlock keeps you ahead in the fight against intrusive ads and malicious content.
 
-We owe our thanks to the [Malwack](https://github.com/Magisk-Modules-Alt-Repo/Malwack) module developer for the initial code up to version 1.1.0, the [BlockAds](https://github.com/pantsufan/BlockAds) module developer for current versions, and [StevenBlack](https://github.com/StevenBlack/hosts) for providing the hosts source. Think of this module as a continuously updated fork, refined for your security and convenience.
-
 ---
 
 ## Features that Empower Your Digital Defense
@@ -69,5 +67,15 @@ For any inquiries or support, feel free to contact me on [Telegram](https://t.me
 - The module receives regular updates, typically 1-2 times per week. Stay informed by starring our project on GitHub!
   
 - You should see updates in your root solution whenever an update is released. If not, occasionally check the GitHub repository or star the repo to stay informed about updates.
+
+---
+
+## Thanks
+
+- [MMT-Extended](https://github.com/Zackptg5/MMT-Extended)
+- [BlockAds](https://github.com/pantsufan/BlockAds)
+- [StevenBlack](https://github.com/StevenBlack/hosts)
+
+---
 
 <img src="https://raw.githubusercontent.com/matfantinel/matfantinel/master/waves.svg" width="100%" height="100">
