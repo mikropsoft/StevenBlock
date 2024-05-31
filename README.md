@@ -2,6 +2,13 @@
 
 Welcome to StevenBlock, the ultimate ad-blocking solution that ensures you enjoy a clutter-free online experience. With frequent updates and robust performance, StevenBlock keeps you ahead in the fight against intrusive ads and malicious content.
 
+![Downloads](https://img.shields.io/github/downloads/mikropsoft/StevenBlock/total?color=green&style=for-the-badge)
+![Release](https://img.shields.io/github/v/release/mikropsoft/StevenBlock?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/mikropsoft/StevenBlock?style=for-the-badge)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Magisk](https://img.shields.io/badge/Magisk-8A2BE2?style=for-the-badge&logo=magisk&logoColor=white)
+![Root](https://img.shields.io/badge/Root-ff0000?style=for-the-badge&logo=superuser&logoColor=white)
+
 ---
 
 ## Features that Empower Your Digital Defense
@@ -70,7 +77,7 @@ For any inquiries or support, feel free to contact me on [Telegram](https://t.me
 
 ---
 
-## Thanks
+## Credits
 
 - [MMT-Extended](https://github.com/Zackptg5/MMT-Extended)
 - [BlockAds](https://github.com/pantsufan/BlockAds)
