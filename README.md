@@ -13,15 +13,15 @@ Welcome to StevenBlock, the ultimate ad-blocking solution that ensures you enjoy
 
 ## 🛡️ Features that Empower Your Digital Defense
 
-- 🛡️ **Impenetrable Fortress**: StevenBlock, integrated with the Magisk framework, provides unbeatable protection against evolving cyber threats, keeping your device secure.
+- 🛑 **Blocks Ads**: StevenBlock effectively blocks all types of ads, providing you with an uninterrupted and clean browsing experience. Say goodbye to annoying pop-ups and intrusive banner ads.
 
-- 🚫 **Ad-Free Serenity**: Enjoy an ad-free browsing experience with StevenBlock. Focus on your content without the distraction of intrusive advertisements.
+- 📱 **Blocks Android Apps Ads**: Fed up with ads within your favorite apps? StevenBlock ensures that in-app advertisements are a thing of the past, allowing you to enjoy your apps without distractions.
 
-- 🕵️ **Privacy Protection**: Safeguard your sensitive data and maintain your privacy in rooted environments with StevenBlock's powerful anti-spyware features.
+- 🖥️ **Blocks Systemwide Capacity Drainers**: StevenBlock not only blocks ads but also optimizes your device by preventing systemwide capacity drainers like YouTube, Reddit, Facebook, and TikTok from consuming excessive resources.
 
-- ⚙️ **Seamless Performance**: StevenBlock is optimized for Magisk, ensuring fast, efficient performance without compromising your device's functionality.
+- 💬 **Allows WhatsApp, Telegram, and LinkedIn**: Need essential apps for communication and professional networking? StevenBlock smartly allows WhatsApp, Telegram, and LinkedIn to function without any restrictions, so you stay connected.
 
-- 🌐 **Universal Security**: Whether you use a phone or a tablet, StevenBlock offers comprehensive protection within the Magisk ecosystem, securing all your devices.
+- 🔄 **Easy Update via Magisk**: Keeping StevenBlock up-to-date is a breeze with Magisk. Enjoy the convenience of easy updates directly through Magisk Manager, ensuring you always have the latest protection.
 
 ---
 
