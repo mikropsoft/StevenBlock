@@ -1,4 +1,4 @@
-# Introduction to the StevenBlock Module
+# 🚀 Introduction to the StevenBlock Module
 
 ![Downloads](https://img.shields.io/github/downloads/mikropsoft/StevenBlock/total?color=green&style=for-the-badge)
 ![Release](https://img.shields.io/github/v/release/mikropsoft/StevenBlock?style=for-the-badge)
@@ -11,7 +11,7 @@ Welcome to StevenBlock, the ultimate ad-blocking solution that ensures you enjoy
 
 ---
 
-## Features that Empower Your Digital Defense
+## 🛡️ Features that Empower Your Digital Defense
 
 - 🛡️ **Impenetrable Fortress**: StevenBlock, integrated with the Magisk framework, provides unbeatable protection against evolving cyber threats, keeping your device secure.
 
@@ -25,30 +25,30 @@ Welcome to StevenBlock, the ultimate ad-blocking solution that ensures you enjoy
 
 ---
 
- ## Total Blocked Domains
- 
+## 📊 Total Blocked Domains
+
 > [!WARNING]
 > StevenBlock effectively blocks between 100,000 and 200,000 domains known for malware, advertising, and spyware. These domains are regularly monitored and updated to ensure continuous protection of your security and privacy.
 
 ---
 
-## Frequently Asked Questions (F.A.Q.)
+## ❓ Frequently Asked Questions (F.A.Q.)
 
 > [!NOTE]
-> #### How does the Hosts file work and where is it on your system?
+> #### ❔ How does the Hosts file work and where is it on your system?
 > The hosts file, located in `/system/etc`, serves as a local gatekeeper, regulating access to specific websites by intercepting connection attempts and allowing you direct control over website accessibility.
 
 > [!NOTE]
-> #### How does it block websites and what improvements have been made?
+> #### ❔ How does it block websites and what improvements have been made?
 > The hosts file blocks websites by redirecting connection attempts to a null address, making the specified websites inaccessible. Recent improvements include merging multiple files into one comprehensive unit, expanding its capability to block over 100,000 to 200,000 malicious entities.
 
 > [!NOTE]
-> #### How can one explore the blocked domains effortlessly?
+> #### ❔ How can one explore the blocked domains effortlessly?
 > To explore blocked domains, search for "hosts manager" or "hosts editor" on Google Play or F-Droid. These tools provide user-friendly interfaces with comprehensive lists of blocked domains for easy management and customization.
 
 ---
 
-## Installation Guide
+## 🛠️ Installation Guide
 
 Securing your rooted digital environment with StevenBlock is straightforward. Follow these simple steps:
 
@@ -62,7 +62,7 @@ For any inquiries or support, feel free to contact me on [Telegram](https://t.me
 
 ---
 
-## Important Information & Latest Updates
+## 🔔 Important Information & Latest Updates
 
 > [!CAUTION] 
 > If you’re using any root solution, there's no need to install your systemless hosts module separately. After installing the module, ensure it’s working correctly. Avoid using this module with AdAway.
@@ -75,7 +75,7 @@ For any inquiries or support, feel free to contact me on [Telegram](https://t.me
 
 ---
 
-## Credits
+## 🙌 Credits
 
 - **[MMT-Extended](https://github.com/Zackptg5/MMT-Extended)** - Magisk Template
 - **[BlockAds](https://github.com/pantsufan/BlockAds)** - Providing The Some Necessary Files 
@@ -83,7 +83,7 @@ For any inquiries or support, feel free to contact me on [Telegram](https://t.me
 
 ---
 
-## Star History
+## ⭐ Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=mikropsoft/StevenBlock&type=Date)](https://star-history.com/#mikropsoft/StevenBlock&Date)
 
