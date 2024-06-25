@@ -50,9 +50,7 @@ set_permissions() {
   
   # For directories (includes files in them):
   # set_perm_recursive  <dirname>                <owner> <group> <dirpermission> <filepermission> <contexts> (default: u:object_r:system_file:s0)
-  set_perm  $MODPATH/system/bin/add  0  0  0755
-  set_perm  $MODPATH/system/bin/remove  0  0  0755
-  set_perm  $MODPATH/system/bin/updater  0  0  0755
+  set_perm  $MODPATH/system/bin/script  0  0  0755
   # set_perm_recursive $MODPATH/system/lib 0 0 0755 0644
   # set_perm_recursive $MODPATH/system/vendor/lib/soundfx 0 0 0755 0644
 

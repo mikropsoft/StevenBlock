@@ -1,0 +1,114 @@
+#!/system/bin/sh
+
+# Function to add a host entry
+add_host() {
+    if [ -z "$1" ]; then
+        echo "Usage: $0 add <hostname>"
+        exit 1
+    fi
+
+    host="$1"
+    hosts_file="/etc/hosts"
+
+    if grep -qxF "0.0.0.0 $host" "$hosts_file"; then
+        echo "Entry for $host already exists in $hosts_file"
+    else
+        if echo "0.0.0.0 $host" >> "$hosts_file"; then
+            echo "Entry for $host added to $hosts_file"
+        else
+            echo "Error: Failed to add entry to $hosts_file"
+            exit 1
+        fi
+    fi
+}
+
+# Function to remove a host entry
+remove_host() {
+    if [ -z "$1" ]; then
+        echo "Usage: $0 remove <hostname>"
+        exit 1
+    fi
+
+    word="$1"
+    hosts_file="/etc/hosts"
+    temp_file="$(mktemp)"
+
+    if grep -qF "$word" "$hosts_file"; then
+        if grep -vF "$word" "$hosts_file" > "$temp_file"; then
+            if mv "$temp_file" "$hosts_file"; then
+                echo "Entry for $word removed from $hosts_file"
+            else
+                echo "Error: Failed to update $hosts_file"
+                rm "$temp_file"
+                exit 1
+            fi
+        else
+            echo "Error: Failed to create temporary file"
+            rm "$temp_file"
+            exit 1
+        fi
+    else
+        echo "No entry found for $word"
+    fi
+}
+
+# Function to update the hosts file
+update_hosts() {
+    PS3='Choose your preferred option: '
+    options=("Ultimate Hosts" "Daily Hosts" "Quit")
+
+    update_hosts_file() {
+        local url="$1"
+        if curl -sf "$url" -o /etc/hosts; then
+            echo "Successfully updated"
+        else
+            echo "Failed to update. Please check your internet connection or try again later."
+        fi
+    }
+
+    select opt in "${options[@]}"; do
+        case $opt in
+            "Ultimate Hosts")
+                echo "Unified hosts + fakenews + gambling + porn + social"
+                update_hosts_file "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts"
+                break
+                ;;
+            "Daily Hosts")
+                echo "Unified hosts = (adware + malware)"
+                update_hosts_file "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
+                break
+                ;;
+            "Quit")
+                echo "User requested exit"
+                break
+                ;;
+            *)
+                echo "Invalid option $REPLY"
+                ;;
+        esac
+    done
+}
+
+# Main script
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 {add|remove|update} [hostname]"
+    exit 1
+fi
+
+case $1 in
+    add)
+        shift
+        add_host "$@"
+        ;;
+    remove)
+        shift
+        remove_host "$@"
+        ;;
+    update)
+        update_hosts
+        ;;
+    *)
+        echo "Usage: $0 {add|remove|update} [hostname]"
+        exit 1
+        ;;
+esac
