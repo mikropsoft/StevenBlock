@@ -1,114 +1,62 @@
 #!/system/bin/sh
 
-# Function to add a host entry
-add_host() {
-    if [ -z "$1" ]; then
-        echo "Usage: $0 add <hostname>"
-        exit 1
-    fi
+HOSTS_FILE="/etc/hosts"
 
-    host="$1"
-    hosts_file="/etc/hosts"
-
-    if grep -qxF "0.0.0.0 $host" "$hosts_file"; then
-        echo "Entry for $host already exists in $hosts_file"
-    else
-        if echo "0.0.0.0 $host" >> "$hosts_file"; then
-            echo "Entry for $host added to $hosts_file"
-        else
-            echo "Error: Failed to add entry to $hosts_file"
-            exit 1
-        fi
-    fi
+# Error handling function
+error() {
+    echo "Error: $1" >&2
+    exit 1
 }
 
-# Function to remove a host entry
-remove_host() {
-    if [ -z "$1" ]; then
-        echo "Usage: $0 remove <hostname>"
-        exit 1
-    fi
+# Function to add or remove a host entry
+modify_host() {
+    [ $# -ne 2 ] && error "Usage: $0 $1 <hostname>"
+    local action=$1 hostname=$2
 
-    word="$1"
-    hosts_file="/etc/hosts"
-    temp_file="$(mktemp)"
-
-    if grep -qF "$word" "$hosts_file"; then
-        if grep -vF "$word" "$hosts_file" > "$temp_file"; then
-            if mv "$temp_file" "$hosts_file"; then
-                echo "Entry for $word removed from $hosts_file"
-            else
-                echo "Error: Failed to update $hosts_file"
-                rm "$temp_file"
-                exit 1
-            fi
-        else
-            echo "Error: Failed to create temporary file"
-            rm "$temp_file"
-            exit 1
-        fi
-    else
-        echo "No entry found for $word"
-    fi
+    case $action in
+        add)
+            grep -qxF "0.0.0.0 $hostname" "$HOSTS_FILE" && 
+                echo "Entry for $hostname already exists" ||
+                { echo "0.0.0.0 $hostname" >> "$HOSTS_FILE" && echo "Entry for $hostname added"; }
+            ;;
+        remove)
+            sed -i "/0\.0\.0\.0 $hostname/d" "$HOSTS_FILE" && 
+                echo "Entry for $hostname removed" || 
+                echo "No entry found for $hostname"
+            ;;
+    esac
 }
 
 # Function to update the hosts file
 update_hosts() {
-    PS3='Choose your preferred option: '
-    options=("Ultimate Hosts" "Daily Hosts" "Quit")
+    local urls=(
+        "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts"
+        "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
+    )
+    local descriptions=(
+        "Ultimate Hosts (Unified + fakenews + gambling + porn + social)"
+        "Daily Hosts (Unified = adware + malware)"
+    )
 
-    update_hosts_file() {
-        local url="$1"
-        if curl -sf "$url" -o /etc/hosts; then
-            echo "Successfully updated"
-        else
-            echo "Failed to update. Please check your internet connection or try again later."
-        fi
-    }
-
-    select opt in "${options[@]}"; do
-        case $opt in
-            "Ultimate Hosts")
-                echo "Unified hosts + fakenews + gambling + porn + social"
-                update_hosts_file "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts"
-                break
-                ;;
-            "Daily Hosts")
-                echo "Unified hosts = (adware + malware)"
-                update_hosts_file "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
-                break
-                ;;
-            "Quit")
-                echo "User requested exit"
-                break
-                ;;
-            *)
-                echo "Invalid option $REPLY"
-                ;;
-        esac
+    echo "Select hosts file to download:"
+    for i in "${!descriptions[@]}"; do
+        echo "$((i+1))) ${descriptions[$i]}"
     done
+
+    read -p "Enter your choice (1-${#urls[@]}): " choice
+    [ "$choice" -ge 1 ] && [ "$choice" -le ${#urls[@]} ] || error "Invalid option"
+
+    if curl -sfL "${urls[$((choice-1))]}" -o "$HOSTS_FILE.tmp"; then
+        mv "$HOSTS_FILE.tmp" "$HOSTS_FILE" && echo "Hosts file updated successfully" || error "Failed to update hosts file"
+    else
+        rm -f "$HOSTS_FILE.tmp"
+        error "Failed to download hosts file. Check your internet connection."
+    fi
 }
 
 # Main script
-if [ $# -lt 1 ]; then
-    echo "Usage: $0 {add|remove|update} [hostname]"
-    exit 1
-fi
-
-case $1 in
-    add)
-        shift
-        add_host "$@"
-        ;;
-    remove)
-        shift
-        remove_host "$@"
-        ;;
-    update)
-        update_hosts
-        ;;
-    *)
-        echo "Usage: $0 {add|remove|update} [hostname]"
-        exit 1
-        ;;
+case ${1:-help} in
+    add|remove) modify_host "$@" ;;
+    update) update_hosts ;;
+    *) echo "Usage: $0 {add|remove|update} [hostname]" ;;
 esac
