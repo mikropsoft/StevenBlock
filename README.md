@@ -31,17 +31,17 @@ Hey there, digital explorer! 👋 Ready to take control of your online experienc
 > [!TIP]
 > **❔: What's this "hosts file" I keep hearing about, and where's it hiding?**
 > 
-> A: Think of the hosts file as your device's very own bouncer list. It's tucked away in `/system/etc`, deciding who gets in and who gets the boot when your device tries to connect to websites.
+> Think of the hosts file as your device's very own bouncer list. It's tucked away in `/system/etc`, deciding who gets in and who gets the boot when your device tries to connect to websites.
 
 > [!TIP]
 > **❔: How does StevenBlock work its magic?**
 > 
-> A: It's like a master of misdirection. When your device tries to chat up a blocked website, StevenBlock sends it to a digital dead end instead. We've recently beefed up our skills, merging multiple files into one lean, mean, blocking machine that can handle over 100,000 to 200,000 bad actors.
+> It's like a master of misdirection. When your device tries to chat up a blocked website, StevenBlock sends it to a digital dead end instead. We've recently beefed up our skills, merging multiple files into one lean, mean, blocking machine that can handle over 100,000 to 200,000 bad actors.
 
 > [!TIP]
 > **❔: I'm curious about what's getting blocked. How can I take a peek?**
 > 
-> A: Curiosity is healthy! Hit up Google Play or F-Droid and search for "hosts manager" or "hosts editor". These nifty tools let you browse and tweak your blocked domain list like a pro.
+> Curiosity is healthy! Hit up Google Play or F-Droid and search for "hosts manager" or "hosts editor". These nifty tools let you browse and tweak your blocked domain list like a pro.
 
 ## 🛠️ Let's Get This Party Started: Installation Guide
 
