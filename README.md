@@ -82,9 +82,15 @@ For any inquiries or support, feel free to contact me on [Telegram](https://t.me
 
 ---
 
+## 🏆 Repository Activities
+
+![Activities](https://repobeats.axiom.co/api/embed/359376e8fd59201ac45b1f13f73201c3be069b62.svg)
+
+---
+
 ## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=mikropsoft/StevenBlock&type=Date)](https://star-history.com/#mikropsoft/StevenBlock&Date)
+![Star History Chart](https://api.star-history.com/svg?repos=mikropsoft/StevenBlock&type=Date)
 
 ---
 
