@@ -153,8 +153,11 @@ ui_print "
  _\ \  / / / _/ | |/ / _//    / _  / /__/ /_/ / /__/ ,<   
 /___/ /_/ /___/ |___/___/_/|_/____/____/\____/\___/_/|_| 
 
-Thanks for joining the StevenBlock family! Together, we're making the digital world a cleaner, safer place. Rock on! 🤘
-                                                                                                                                                                                                                 
+Welcome to the StevenBlock family! We're delighted to have you on board.
+
+Together, we're making the digital world cleaner and safer. Keep up the great work!
+
+Important Note: Please refrain from using this module in conjunction with the AdAway application and the systemless hosts module.                                                                                                                                                                                                          
 "
 
 # Check for min/max api version
