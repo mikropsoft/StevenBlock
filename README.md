@@ -70,7 +70,7 @@ Got questions? I'm just a [Telegram](https://t.me/mikropsoft) message away!
 
 Huge shoutout to:
 - **[MMT-Extended](https://github.com/Zackptg5/MMT-Extended)** for their awesome Magisk Template
-- **[StevenBlack](https://github.com/StevenBlack/hosts)** for being our hosts file guru
+- **[StevenBlack](https://github.com/StevenBlack/hosts)** for being our hosts file guru - [1Hosts](https://github.com/badmojr/1Hosts) for an alternative hosts list.
 
 ## 🏆 Watch Us Grow!
 
