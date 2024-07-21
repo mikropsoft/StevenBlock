@@ -1,9 +1,9 @@
 ## 📝Important Notes
 
-- Head over to the "releases" section to check out the latest updates.
+- Check out the latest updates in the "releases" section.
 
-- We usually update the hosts file to block current malicious software and ads. This is super important.
+- To use the 1hosts list, install 1hosts.zip. For the stevenblack list, install stevenblack.zip.
 
-- Please avoid using this module together with the AdAway application and the systemless hosts module.
+- Please don't use this module with the AdAway app or the systemless hosts module.
 
-- Also, please double-check that the hosts file is up-to-date using any hosts manager or file manager. If it's not, give me a shout!
+- Make sure your hosts file is up-to-date using any hosts manager or file manager. If it's not, let me know!
