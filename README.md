@@ -78,7 +78,7 @@ Huge shoutout to:
 
 ## ⭐ Our Rising Star
 
-[![Star History Chart](https://api.star-history.com/svg?repos=mikropsoft/StevenBlock&type=Date)](https://star-history.com/#mikropsoft/StevenBlock&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=mikropsoft/StevenBlock,Magisk-Modules-Alt-Repo/StevenBlock&type=Date)](https://star-history.com/#mikropsoft/StevenBlock&Magisk-Modules-Alt-Repo/StevenBlock&Date)
 
 ---
 
