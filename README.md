@@ -53,7 +53,7 @@ Ready to level up your digital defense? Follow these simple steps:
    
 3. **Enjoy the Peace**: Welcome to your new, cleaner digital world!
 
-Got questions? I'm just a [Telegram](https://t.me/mikropsoft) message away!
+Got questions? I'm just a [Telegram](https://t.me/microzort) message away!
 
 ## 🔔 Hot Off the Press: Updates & Pro Tips
 
