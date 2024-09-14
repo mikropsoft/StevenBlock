@@ -1,7 +1,7 @@
 id=StevenBlock
 name=StevenBlock | Anti-Malware & Ad Blocker
-version=v1.3.7
-versionCode=38
+version=v1.3.8
+versionCode=39
 author=𝗦𝗵𝗟𝗲𝗿𝗣
 description=Your digital bodyguard. This Magisk module zaps ads and malware, keeping your apps squeaky clean and your browsing buttery smooth. Surf smart, surf safe! 🛡️🚀
 updateJson=https://raw.githubusercontent.com/mikropsoft/StevenBlock/main/update_stevenblack.json
