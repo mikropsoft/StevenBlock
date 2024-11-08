@@ -2,7 +2,7 @@
 
 - Check out the latest updates in the "releases" section.
 
-- To use the 1hosts list, install 1hosts.zip. For the stevenblack list, install stevenblack.zip.
+- To use the AdGuard list, install adguard.zip. For the StevenBlack list, install stevenblack.zip.
 
 - Please don't use this module with the AdAway app or the systemless hosts module.
 
