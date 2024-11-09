@@ -158,8 +158,6 @@ ui_print "
 * Together, we're making the digital world cleaner and safer. Keep up the great work!
 
 * Note: Please refrain from using this module in conjunction with the AdAway application and the systemless hosts module.
-
-* Note: If you're experiencing issues with the StevenBlack hosts list, try the AdGuard version.
 "
 
 # Check for min/max api version
