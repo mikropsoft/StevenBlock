@@ -158,6 +158,10 @@ ui_print "
 * Together, we're making the digital world cleaner and safer. Keep up the great work!
 
 * Note: Please refrain from using this module in conjunction with the AdAway application and the systemless hosts module.
+
+* Note: If you're experiencing issues with the StevenBlack hosts list, try the 1Hosts version.
+
+* Note: The 1hosts list hasn't been updated recently, so if the version is still the same, do not attempt to update by installing the same zip file.
 "
 
 # Check for min/max api version
