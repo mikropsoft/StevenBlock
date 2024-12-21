@@ -1,7 +1,6 @@
 {
-  "version": "v1.5.4",
-  "versionCode": 55,
+  "version": "v1.5.7",
+  "versionCode": 58,
   "zipUrl": "https://github.com/mikropsoft/StevenBlock/raw/main/1hostslist.zip",
   "changelog": "https://raw.githubusercontent.com/mikropsoft/StevenBlock/main/changelog.md"
 }
-    
