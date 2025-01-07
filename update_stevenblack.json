@@ -1,6 +1,6 @@
 {
-  "version": "v1.5.9",
-  "versionCode": 60,
+  "version": "v1.6.0",
+  "versionCode": 61,
   "zipUrl": "https://github.com/mikropsoft/StevenBlock/raw/main/stevenblacklist.zip",
   "changelog": "https://raw.githubusercontent.com/mikropsoft/StevenBlock/main/changelog.md"
 }
