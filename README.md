@@ -24,7 +24,7 @@ Hey there, digital explorer! 👋 Ready to take control of your online experienc
 ## 📊 The Numbers Game: Domains We've Got Your Back On
 
 > [!WARNING]
-> Brace yourself: StevenBlock is like a bouncer for your device, keeping a watchful eye on 100,000 to 200,000 troublemakers (read: malware, ad, and spyware domains). And just like your favorite club's security, we're always updating our list to keep the riffraff out.
+> Brace yourself: StevenBlock is like a bouncer for your device, keeping a watchful eye on 100,000 to 500,000 troublemakers (read: malware, ad, and spyware domains). And just like your favorite club's security, we're always updating our list to keep the riffraff out.
 
 ## 🧠 Knowledge is Power: F.A.Q. Time!
 
@@ -70,7 +70,7 @@ Got questions? I'm just a [Telegram](https://t.me/microzort) message away!
 
 Huge shoutout to:
 - **[MMT-Extended](https://github.com/Zackptg5/MMT-Extended)** for their awesome Magisk Template
-- **[StevenBlack](https://github.com/StevenBlack/hosts)** for being our hosts file guru - [1Hosts](https://github.com/badmojr/1Hosts) for an alternative hosts list.
+- **[hBlock]([https://github.com/StevenBlack/hosts](https://github.com/hectorm/hblock))** for being our hosts file guru
 
 ## 🏆 Watch Us Grow!
 
