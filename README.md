@@ -36,7 +36,7 @@ Hey there, digital explorer! 👋 Ready to take control of your online experienc
 > [!TIP]
 > **❔: How does StevenBlock work its magic?**
 > 
-> It's like a master of misdirection. When your device tries to chat up a blocked website, StevenBlock sends it to a digital dead end instead. We've recently beefed up our skills, merging multiple files into one lean, mean, blocking machine that can handle over 100,000 to 200,000 bad actors.
+> It's like a master of misdirection. When your device tries to chat up a blocked website, StevenBlock sends it to a digital dead end instead. We've recently beefed up our skills, merging multiple files into one lean, mean, blocking machine that can handle over 100,000 to 500,000 bad actors.
 
 > [!TIP]
 > **❔: I'm curious about what's getting blocked. How can I take a peek?**
@@ -70,7 +70,7 @@ Got questions? I'm just a [Telegram](https://t.me/microzort) message away!
 
 Huge shoutout to:
 - **[MMT-Extended](https://github.com/Zackptg5/MMT-Extended)** for their awesome Magisk Template
-- **[hBlock]([https://github.com/StevenBlack/hosts](https://github.com/hectorm/hblock))** for being our hosts file guru
+- **[hBlock](https://github.com/hectorm/hblock)** for being our hosts file guru
 
 ## 🏆 Watch Us Grow!
 
