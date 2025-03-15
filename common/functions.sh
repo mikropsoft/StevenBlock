@@ -155,7 +155,7 @@ ui_print "
 
 - Welcome to the StevenBlock family! We're thrilled to have you.
 - Let’s make the digital world cleaner and safer together!
-- Avoid using this module with AdAway or systemless hosts. Need help? Message me on Telegram.
+- Avoid using this module with AdAway app or systemless hosts module. Need help? Message me on Telegram.
 "
 
 # Check for min/max api version
