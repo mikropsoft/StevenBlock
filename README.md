@@ -70,7 +70,7 @@ Got questions? I'm just a [Telegram](https://t.me/microzort) message away!
 
 Huge shoutout to:
 - **[MMT-Extended](https://github.com/Zackptg5/MMT-Extended)** for their awesome Magisk Template
-- **[hBlock](https://github.com/hectorm/hblock)** for being our hosts file guru
+- **[Hagezi-Blocklists](https://github.com/hagezi/dns-blocklists)** for being our hosts file guru
 
 ## 🏆 Watch Us Grow!
 
