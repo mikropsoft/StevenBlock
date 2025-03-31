@@ -81,7 +81,7 @@ Enjoying an ad-free and malware-free experience with StevenBlock? A small donati
 <div align="left">
   <h3>🌟 Donate with Tron (TRX) 🌟</h3>
   <p><strong>Tron (TRX) Wallet:</strong><br>
-    <code>TSNziZXhbq5qMhMinizEx9aThAPYpZhzA7</code>
+    <code>TT74zek1KPyPCFxcsmvNecjPLNtFdBvTYW</code>
   </p>
 </div>
 
