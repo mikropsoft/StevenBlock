@@ -72,9 +72,29 @@ Huge shoutout to:
 - **[MMT-Extended](https://github.com/Zackptg5/MMT-Extended)** for their awesome Magisk Template
 - **[Hagezi-Blocklists](https://github.com/hagezi/dns-blocklists)** for being our hosts file guru
 
+---
+
+## 💰 Support StevenBlock’s Mission!
+
+Enjoying an ad-free and malware-free experience with StevenBlock? A small donation helps us keep the fight going! 🚀
+
+<div align="left">
+  <h3>🌟 Donate with Tron (TRX) 🌟</h3>
+  <p><strong>Tron (TRX) Wallet:</strong><br>
+    <code>TSNziZXhbq5qMhMinizEx9aThAPYpZhzA7</code>
+  </p>
+</div>
+
+> [!TIP]  
+> Copy the wallet address above and send your TRX donation to support StevenBlock. Every contribution helps us keep your digital world safe! 💪
+
+---
+
 ## 🏆 Watch Us Grow!
 
 ![Activities](https://repobeats.axiom.co/api/embed/359376e8fd59201ac45b1f13f73201c3be069b62.svg)
+
+---
 
 ## ⭐ Our Rising Star
 
