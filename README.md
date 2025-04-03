@@ -70,7 +70,7 @@ Got questions? I'm just a [Telegram](https://t.me/microzort) message away!
 
 Huge shoutout to:
 - **[MMT-Extended](https://github.com/Zackptg5/MMT-Extended)** for their awesome Magisk Template
-- **[Hagezi-Blocklists](https://github.com/hagezi/dns-blocklists)** for being our hosts file guru
+- **[StevenBlack](https://github.com/StevenBlack)** for being our hosts file guru
 
 ---
 
@@ -81,7 +81,7 @@ Enjoying an ad-free and malware-free experience with StevenBlock? A small donati
 <div align="left">
   <h3>🌟 Donate with Tron (TRX) 🌟</h3>
   <p><strong>Tron (TRX) Wallet:</strong><br>
-    <code>TL72pS1Z44eNeYbGuyHyqF3kZWjAV5D5oj</code>
+    <code>TTmbAkVQCfaEQyqwZzmr2w3To6Bt5A3Xs9</code>
   </p>
 </div>
 
