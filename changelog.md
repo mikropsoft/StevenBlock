@@ -1,6 +1,8 @@
 # StevenBlock - AdBlock Module
 
 **Need help?**  
-Contact me on Telegram: [@microzort](https://t.me/microzort) 💬
+You can contact me through:  
+- **Telegram**: [@microzort](https://t.me/microzort) 💬  
+- **GitHub**: Open an issue on the repository.  
 
-*Telegram is the only support channel for this module.*
+*Telegram and GitHub are the only official support channels for this module.*
