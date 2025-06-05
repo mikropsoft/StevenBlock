@@ -154,8 +154,8 @@ ui_print "
 /___/ /_/ /___/ |___/___/_/|_/____/____/\____/\___/_/|_|
 
 - Welcome to the StevenBlock family! We're thrilled to have you.
-- Let’s make the digital world cleaner and safer together!
-- Avoid using this module with AdAway app or systemless hosts module. Need help? Message me on Telegram.
+- Join our Telegram group to get support and connect with the community: t.me/stevenblockmodule
+- Please don’t use this module with AdAway or other systemless hosts modules.
 "
 
 # Check for min/max api version
