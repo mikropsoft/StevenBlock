@@ -1,7 +1,7 @@
 id=StevenBlock
 name=StevenBlock | Anti-Malware & Ad Blocker
-version=v1.8.7
-versionCode=88
+version=v1.8.8
+versionCode=89
 author=𝗛𝗼𝗹𝗶
 description=Your digital protector: This Magisk module blocks ads and malware, keeping your apps safe and your browsing smooth. For support or discussion, join our community on Telegram.
 updateJson=https://raw.githubusercontent.com/mikropsoft/StevenBlock/main/update.json
