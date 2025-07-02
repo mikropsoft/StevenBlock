@@ -1,92 +1,82 @@
-# 🛡️ StevenBlock: Your Digital Guardian Against Ads and Malware
+# 🛡️ StevenBlock: Your Digital Guardian for a Cleaner, Faster Android
 
 ![Downloads](https://img.shields.io/github/downloads/mikropsoft/StevenBlock/total?color=green&style=for-the-badge)
 ![Release](https://img.shields.io/github/v/release/mikropsoft/StevenBlock?style=for-the-badge)
 ![Stars](https://img.shields.io/github/stars/mikropsoft/StevenBlock?style=for-the-badge)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 ![Magisk](https://img.shields.io/badge/Magisk-8A2BE2?style=for-the-badge&logo=magisk&logoColor=white)
-![Root](https://img.shields.io/badge/Root-ff0000?style=for-the-badge&logo=superuser&logoColor=white)
+![KernelSU](https://img.shields.io/badge/KernelSU-199116?style=for-the-badge&logo=kernelsu&logoColor=white)
+![APatch](https://img.shields.io/badge/APatch-3086F8?style=for-the-badge&logo=apatch&logoColor=white)
 
-Hey there, digital explorer! 👋 Ready to take control of your online experience? Say hello to StevenBlock, your new best friend in the fight against pesky ads and sneaky malware. Let's dive into how this little powerhouse can transform your digital life!
+Hey there, digital explorer! 👋 Ready to reclaim your online experience? Say hello to StevenBlock, your new best friend in the fight against pesky ads and sneaky malware. Let's dive into how this little powerhouse can transform your digital life!
 
 ## 🚀 What Makes StevenBlock Your Digital Superhero?
 
-- 🛑 **Ad Annihilator**: Wave goodbye to those annoying pop-ups and clingy banner ads. StevenBlock swats them away like flies!
+- 🛑 **Ad Annihilator**: Wave goodbye to annoying pop-ups, intrusive video ads, and clingy banners. StevenBlock makes them vanish.
 
-- 📱 **App Ad Assassin**: Tired of ads crashing your app party? StevenBlock kicks them to the curb, letting you enjoy your apps in peace.
+- 📱 **App Ad Assassin**: Tired of ads crashing your app party? StevenBlock kicks them to the curb, letting you enjoy your apps in uninterrupted peace.
 
-- 🖥️ **System Savior**: Not just a pretty face, StevenBlock also keeps resource hogs like YouTube, Reddit, Facebook, and TikTok from eating up your system's mojo.
+- 🔋 **Battery Friendly**: StevenBlock is a lean, mean, blocking machine. It's **not an app** that runs in the background. It's a system-level module, meaning it does its job silently without draining your battery.
+
+- 🛡️ **Broad Root Support**: Whether you're using **Magisk, KernelSU, or APatch**, StevenBlock integrates seamlessly. We've got your back, no matter your root solution.
 
 - 💬 **Conversation Keeper**: Don't worry, we know you need to stay connected. StevenBlock plays nice with WhatsApp, Telegram, and LinkedIn, keeping your social and professional lifelines intact.
 
-- 🔄 **Magisk's Magic Touch**: Keeping StevenBlock fighting fit is a breeze with Magisk. A few taps, and you're always rocking the latest and greatest protection.
+- 🔄 **Effortless Updates**: Keeping StevenBlock fighting fit is a breeze. Your root manager handles updates, so you're always rocking the latest and greatest protection with just a few taps.
 
-## 📊 The Numbers Game: Domains We've Got Your Back On
+## 📊 The Numbers Game: How We Protect You
 
 > [!WARNING]
-> Brace yourself: StevenBlock is like a bouncer for your device, keeping a watchful eye on 100,000 to 500,000 troublemakers (read: malware, ad, and spyware domains). And just like your favorite club's security, we're always updating our list to keep the riffraff out.
+> Brace yourself: StevenBlock is like a bouncer for your device, blocking between **100,000 to 500,000** troublemakers (read: malware, ad, and spyware domains). And just like a top-tier security team, our blocklist is constantly updated to keep the riffraff out.
 
 ## 🧠 Knowledge is Power: F.A.Q. Time!
 
 > [!TIP]
-> **❔: What's this "hosts file" I keep hearing about, and where's it hiding?**
-> 
-> Think of the hosts file as your device's very own bouncer list. It's tucked away in `/system/etc`, deciding who gets in and who gets the boot when your device tries to connect to websites.
+> **❔: What's this "hosts file" and where is it?**
+>
+> Think of the hosts file as your device's bouncer list. It lives in `/system/etc` and tells your device which connections to block before they even start.
 
 > [!TIP]
-> **❔: How does StevenBlock work its magic?**
-> 
-> It's like a master of misdirection. When your device tries to chat up a blocked website, StevenBlock sends it to a digital dead end instead. We've recently beefed up our skills, merging multiple files into one lean, mean, blocking machine that can handle over 100,000 to 500,000 bad actors.
+> **❔: How does StevenBlock actually work?**
+>
+> It's a master of misdirection. When an app or website tries to connect to a blocked domain, StevenBlock redirects that request to a digital dead end (0.0.0.0). By merging multiple trusted sources into one powerful hosts file, we ensure comprehensive protection without slowing you down.
 
 > [!TIP]
-> **❔: I'm curious about what's getting blocked. How can I take a peek?**
-> 
-> Curiosity is healthy! Hit up Google Play or F-Droid and search for "hosts manager" or "hosts editor". These nifty tools let you browse and tweak your blocked domain list like a pro.
+> **❔: How can I see what's being blocked?**
+>
+> Curiosity is a great thing! Head over to Google Play or F-Droid and search for a "hosts manager" or "hosts editor" app. These tools let you view and even customize the list of blocked domains.
 
 ## 🛠️ Let's Get This Party Started: Installation Guide
 
-Ready to level up your digital defense? Follow these simple steps:
+Ready to level up your digital defense? It's as easy as 1-2-3:
 
-1. **Grab & Install**: Fire up Magisk Manager, head to Modules, tap that '+', and select the StevenBlock Module zip. Easy peasy!
-   
-2. **Quick Reboot**: Give your device a quick restart to wake up StevenBlock.
-   
-3. **Enjoy the Peace**: Welcome to your new, cleaner digital world!
+1.  **Grab & Install**: Open your root manager (**Magisk, KernelSU, or APatch**), head to the Modules section, tap the 'Install from storage' button, and select the StevenBlock module zip.
+2.  **Quick Reboot**: Give your device a quick restart to activate StevenBlock's shields.
+3.  **Enjoy the Peace**: Welcome to your new, cleaner, and faster digital world!
 
-Join our [Telegram group](https://t.me/stevenblockmodule) and get help from the community!
+Got questions or want to hang out? Join our [Telegram group](https://t.me/stevenblockmodule) and get help from the community!
 
 ## 🔔 Hot Off the Press: Updates & Pro Tips
 
-> [!IMPORTANT] 
-> Already rocking a root solution? No need for extra systemless hosts modules. Just install StevenBlock and you're golden. Oh, and it's best not to mix this with AdAway - they don't play well together.
+> [!IMPORTANT]
+> If you're already using a root solution like Magisk, KernelSU, or APatch, you **do not** need any other "systemless hosts" modules. StevenBlock handles everything. For best results, avoid using it alongside AdAway to prevent conflicts.
+
+> [!INFO]
+> **What's NOT Blocked By Default?**
+> StevenBlock focuses on ads, trackers, and malware. It does **not** include blocklists for pornography or gambling websites. If you need those, join our Telegram group! The community often shares custom lists you can use.
 
 > [!NOTE]
-> Just a heads up: While we're pros at blocking domains, browser-based ads might still sneak through. We're good, but we're not magicians!
+> While we're pros at blocking domains, some ads served directly by browsers (like on YouTube's website) might still sneak through. We're powerful, but not quite magicians!
 
 > [!TIP]
-> We're always evolving! Expect fresh updates 1-2 times a week. Star us on GitHub to stay in the loop. Most root solutions will auto-update, but it never hurts to check our GitHub for the latest and greatest.
+> We're always evolving! Expect fresh updates 1-2 times a week. Star us on GitHub to stay in the loop. Most root solutions will notify you of updates, but checking our GitHub is always a good idea.
 
 ## 🙌 Standing on the Shoulders of Giants
 
-Huge shoutout to:
-- **[MMT-Extended](https://github.com/Zackptg5/MMT-Extended)** for their awesome Magisk Template
-- **[StevenBlack](https://github.com/StevenBlack)** for being our hosts file guru
+A huge shoutout to these amazing projects for making StevenBlock possible:
 
----
-
-## 💰 Support StevenBlock’s Mission!
-
-Enjoying an ad-free and malware-free experience with StevenBlock? A small donation helps us keep the fight going! 🚀
-
-<div align="left">
-  <h3>🌟 Donate with Tron (TRX) 🌟</h3>
-  <p><strong>Tron (TRX) Wallet:</strong><br>
-    <code>TTmbAkVQCfaEQyqwZzmr2w3To6Bt5A3Xs9</code>
-  </p>
-</div>
-
-> [!TIP]  
-> Copy the wallet address above and send your TRX donation to support StevenBlock. Every contribution helps us keep your digital world safe! 💪
+-   **[MMT-Extended](https://github.com/Zackptg5/MMT-Extended)** for their incredible Magisk Module Template.
+-   **[StevenBlack](https://github.com/StevenBlack)** for being the original hosts file guru and inspiration.
 
 ---
 
