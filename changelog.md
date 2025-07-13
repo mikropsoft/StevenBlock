@@ -1,14 +1,10 @@
-# StevenBlock - AdBlock Module
+# 🚫 StevenBlock — AdBlock Module
 
 ---
 
-🎉 **Exciting News! Our Official Telegram Group is Now Open!** 🎉
+## Official Support & Community
 
-Need support, want the latest updates, or just want to chat with the community?  
-Join us now and become part of the StevenBlock family!
+Looking for support, updates, or want to connect with others?  
+Join our official group to stay in the loop and engage with the StevenBlock community!
 
-👉 **[Join the StevenBlock Main Discussion on Telegram!](https://t.me/stevenblockmodule)** 👈
-
-> *Telegram group is the only official support channel for this module.*
-
----
+> **[Telegram](https://t.me/stevenblockmodule)** is the only official support channel for this module.

@@ -1,0 +1,50 @@
+#!/sbin/sh
+
+OUTFD=$2
+ZIPFILE=$3
+
+readlink /proc/$$/fd/$OUTFD 2>/dev/null | grep /tmp >/dev/null
+if [ "$?" -eq "0" ]; then
+  OUTFD=0
+  for FD in `ls /proc/$$/fd`; do
+    readlink /proc/$$/fd/$FD 2>/dev/null | grep pipe >/dev/null
+    if [ "$?" -eq "0" ]; then
+      ps | grep " 3 $FD " | grep -v grep >/dev/null
+      if [ "$?" -eq "0" ]; then
+        OUTFD=$FD
+        break
+      fi
+    fi
+  done
+fi
+
+ui_print() {
+  echo "ui_print $1" > /proc/self/fd/$OUTFD
+  echo "ui_print" > /proc/self/fd/$OUTFD
+}
+
+TMPDIR=/dev/tmp
+INSTALLER=$TMPDIR/install
+MODPATH=/data/adb/modules/StevenBlock
+
+rm -rf $TMPDIR 2>/dev/null
+mkdir -p $INSTALLER
+cd $INSTALLER
+unzip -o "$ZIPFILE"
+
+export OUTFD
+export MODPATH
+export INSTALLER
+export TMPDIR
+
+ui_print "***********************************"
+ui_print "    StevenBlock AdBlock Module    "
+ui_print "***********************************"
+
+if [ -f "$INSTALLER/customize.sh" ]; then
+  ui_print "Running installation script..."
+  . $INSTALLER/customize.sh
+else
+  ui_print "customize.sh not found!"
+  exit 1
+fi
