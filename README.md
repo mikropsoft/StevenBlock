@@ -66,6 +66,16 @@ Ready to level up your digital defense? It's as easy as 1-2-3-4:
 3.  **Quick Reboot**: Give your device a quick restart to activate **StevenBlock**'s shields.
 4.  **Enjoy the Peace**: Welcome to your new, cleaner, and faster digital world!
 
+## **💖 Support the Project 💖**
+
+Enjoying a cleaner, ad-free digital life thanks to **StevenBlock**? Consider supporting its development! Every coffee you buy helps keep the project alive, updated, and continuously improving.
+
+<p align="left">
+  <a href="https://buymeacoffee.com/mikropsoft">
+    <img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" />
+  </a>
+</p>
+
 Got questions or want to hang out? Join our **[Telegram group](https://t.me/stevenblockmodule)** and get help from the community!
 
 ## **🔔 Hot Off the Press: Updates & Pro Tips**
