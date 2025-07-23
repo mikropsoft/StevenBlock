@@ -43,10 +43,10 @@ interactive_menu() {
   ui_print ""
   ui_print "🗂️ Select your preferred hosts file:"
   ui_print ""
-  ui_print "1️ StevenBlack Hosts (Main)"
-  ui_print "2️ 1Hosts Lite (Light)"
-  ui_print "3️ 1Hosts Pro (Balanced)"
-  ui_print "4️ 1Hosts Xtra (Aggressive)"
+  ui_print "1️ StevenBlack Hosts (Recommended, for daily use)"
+  ui_print "2️ 1Hosts Lite Hosts (For users experiencing issues)"
+  ui_print "3️ 1Hosts Pro Hosts (For stronger protection)"
+  ui_print "4️ 1Hosts Xtra Hosts (Very aggressive & problematic, maximum protection)"
   ui_print "5️ ❌ Exit Installation"
   ui_print ""
   ui_print "🔼 Volume Up: Navigate | 🔽 Volume Down: Confirm"
@@ -55,10 +55,10 @@ interactive_menu() {
 
   print_current_selection() {
     case "$SELECTION" in
-      1) ui_print "👉 Current Selection: StevenBlack Hosts (Main)" ;;
-      2) ui_print "👉 Current Selection: 1Hosts Lite (Light)" ;;
-      3) ui_print "👉 Current Selection: 1Hosts Pro (Balanced)" ;;
-      4) ui_print "👉 Current Selection: 1Hosts Xtra (Aggressive)" ;;
+      1) ui_print "👉 StevenBlack Hosts (Recommended, for daily use)" ;;
+      2) ui_print "👉 1Hosts Lite Hosts (For users experiencing issues)" ;;
+      3) ui_print "👉 1Hosts Pro Hosts (For stronger protection)" ;;
+      4) ui_print "👉 1Hosts Xtra Hosts (Very aggressive & problematic, maximum protection)" ;;
       5) ui_print "👉 Current Selection: ❌ Exit Installation" ;;
     esac
   }
@@ -77,22 +77,22 @@ interactive_menu() {
       case "$SELECTION" in
         1)
           SELECTED_HOSTS="stevenblack_hosts"
-          SELECTED_NAME="StevenBlack Hosts (Main)"
+          SELECTED_NAME="StevenBlack Hosts (Recommended, for daily use)"
           break
           ;;
         2)
           SELECTED_HOSTS="1hosts_lite"
-          SELECTED_NAME="1Hosts Lite (Light)"
+          SELECTED_NAME="1Hosts Lite Hosts (For users experiencing issues)"
           break
           ;;
         3)
           SELECTED_HOSTS="1hosts_pro"
-          SELECTED_NAME="1Hosts Pro (Balanced)"
+          SELECTED_NAME="1Hosts Pro Hosts (For stronger protection)"
           break
           ;;
         4)
           SELECTED_HOSTS="1hosts_xtra"
-          SELECTED_NAME="1Hosts Xtra (Aggressive)"
+          SELECTED_NAME="1Hosts Xtra Hosts (Very aggressive & problematic, maximum protection)"
           break
           ;;
         5)
