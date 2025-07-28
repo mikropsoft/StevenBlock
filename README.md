@@ -83,8 +83,10 @@ Got questions or want to hang out? Join our **[Telegram group](https://t.me/stev
 > [!IMPORTANT]
 > If you're already using a root solution like **Magisk**, **KernelSU**, or **APatch**, you **do not** need any other "systemless hosts" modules. **StevenBlock** handles everything. For best results, avoid using it alongside **AdAway** to prevent conflicts.
 
-> [!INFO]
+> **INFO**
+> 
 > **What's NOT Blocked By Default?**
+> 
 > **StevenBlock** focuses on ads, trackers, and malware. It does **not** include blocklists for pornography or gambling websites. If you need those, join our Telegram group! The community often shares custom lists you can use.
 
 > [!NOTE]
