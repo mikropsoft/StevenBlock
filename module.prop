@@ -1,7 +1,7 @@
 id=StevenBlock
 name=StevenBlock | Anti-Malware & Ad Blocker
-version=v1.9.8
-versionCode=99
+version=v1.9.9
+versionCode=100
 author=𝗛𝗼𝗹𝗶
 description=Advanced ad blocker with 4 protection levels. Interactive installation, DNS-level filtering.
 updateJson=https://raw.githubusercontent.com/mikropsoft/StevenBlock/main/update.json

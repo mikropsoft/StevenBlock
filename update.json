@@ -1,6 +1,6 @@
 {
-  "version": "v1.9.8",
-  "versionCode": 99,
+  "version": "v1.9.9",
+  "versionCode": 100,
   "zipUrl": "https://github.com/mikropsoft/StevenBlock/raw/main/StevenBlock.zip",
   "changelog": "https://raw.githubusercontent.com/mikropsoft/StevenBlock/main/changelog.md"
 }
