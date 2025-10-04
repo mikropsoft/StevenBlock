@@ -31,9 +31,9 @@ Hey there, digital explorer! 👋 Ready to reclaim your online experience? Say h
 **StevenBlock** now puts the power in your hands. During installation, you'll be prompted to select the hosts file that best suits your browsing style.
 
 -   **StevenBlack (Main)**: The classic, balanced blocklist. A great starting point for most users, based on the original **StevenBlack** hosts.
--   **1Hosts Lite (Light)**: A lighter touch for minimal blocking, focusing on the most intrusive ads while maintaining high compatibility.
--   **1Hosts Pro (Balanced)**: A comprehensive and well-rounded list for everyday use, blocking a wide range of ads, trackers, and malware.
--   **1Hosts Xtra (Aggressive)**: For the power user who wants maximum blocking. This list is more aggressive and may require some manual whitelisting for certain sites or services.
+-   **Spark Protection (Light)**: A lighter touch for minimal blocking, focusing on the most intrusive ads while maintaining high compatibility.
+-   **Blu Protection (Balanced)**: A comprehensive and well-rounded list for everyday use, blocking a wide range of ads, trackers, and malware.
+-   **Ultimate Protection (Aggressive)**: For the power user who wants maximum blocking. This list is more aggressive and may require some manual whitelisting for certain sites or services.
 
 ## **📊 The Numbers Game: How We Protect You**
 
