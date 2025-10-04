@@ -39,16 +39,16 @@ interactive_menu() {
   ui_print "💬 Join our Telegram group for support and to connect with the community:"
   ui_print "➡️ t.me/stevenblockmodule"
   ui_print ""
-  ui_print "⚠️ Please do NOT use this module together with AdAway or other systemless hosts modules."
+  ui_print "⚠️ Make sure the systemless hosts module is not installed when enabling this module. Also, remove modules such as Adaway and BindHosts, as they will conflict with this module."
   ui_print ""
-  ui_print "❗ If you experience issues with 1Hosts (Pro) or 1Hosts (Xtra), consider switching to the recommended Steven Black's List or 1Hosts (Lite)."
+  ui_print "❗ The most trouble-free and lightweight blocklist to use on your device is StevenBlack. If you experience issues with Energized Ultimate, use this one instead."
   ui_print ""
   ui_print "🗂️ Select your preferred hosts file:"
   ui_print ""
-  ui_print "1️ Steven Black's List (Recommended)"
-  ui_print "2️ 1Hosts (Lite) — For Issues"
-  ui_print "3️ 1Hosts (Pro) — Strong Protection"
-  ui_print "4️ 1Hosts (Xtra) — Max Protection"
+  ui_print "1️ Steven Black's List — Recommended, daily protection"
+  ui_print "2️ Spark Protection — Lightweight, essential protection"
+  ui_print "3️ Blu Protection — Balanced, extended protection"
+  ui_print "4️ Ultimate Protection — Comprehensive, full protection"
   ui_print "5️ ❌ Exit Installation"
   ui_print ""
   ui_print "🔼 Volume Up: Navigate | 🔽 Volume Down: Confirm"
@@ -57,10 +57,10 @@ interactive_menu() {
 
   print_current_selection() {
     case "$SELECTION" in
-      1) ui_print "👉 Steven Black's List (Recommended)" ;;
-      2) ui_print "👉 1Hosts (Lite) — For Issues" ;;
-      3) ui_print "👉 1Hosts (Pro) — Strong Protection" ;;
-      4) ui_print "👉 1Hosts (Xtra) — Max Protection" ;;
+      1) ui_print "👉 Steven Black's List — Recommended, daily protection" ;;
+      2) ui_print "👉 Spark Protection — Lightweight, essential protection" ;;
+      3) ui_print "👉 Blu Protection — Balanced, extended protection" ;;
+      4) ui_print "👉 Ultimate Protection — Comprehensive, full protection" ;;
       5) ui_print "👉 Selection: ❌ Exit Installation" ;;
     esac
   }
@@ -79,22 +79,22 @@ interactive_menu() {
       case "$SELECTION" in
         1)
           SELECTED_HOSTS="stevenblack_hosts"
-          SELECTED_NAME="Steven Black's List (Recommended)"
+          SELECTED_NAME="Steven Black's List — Recommended, daily protection"
           break
           ;;
         2)
-          SELECTED_HOSTS="1hosts_lite"
-          SELECTED_NAME="1Hosts (Lite) — For Issues"
+          SELECTED_HOSTS="energized_spark"
+          SELECTED_NAME="Spark Protection — Lightweight, essential protection"
           break
           ;;
         3)
-          SELECTED_HOSTS="1hosts_pro"
-          SELECTED_NAME="1Hosts (Pro) — Strong Protection"
+          SELECTED_HOSTS="energized_blu"
+          SELECTED_NAME="Blu Protection — Balanced, extended protection"
           break
           ;;
         4)
-          SELECTED_HOSTS="1hosts_xtra"
-          SELECTED_NAME="1Hosts (Xtra) — Max Protection"
+          SELECTED_HOSTS="energized_ultimate"
+          SELECTED_NAME="Ultimate Protection — Comprehensive, full protection"
           break
           ;;
         5)
