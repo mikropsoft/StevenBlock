@@ -30,10 +30,12 @@ Hey there, digital explorer! 👋 Ready to reclaim your online experience? Say h
 
 **StevenBlock** now puts the power in your hands. During installation, you'll be prompted to select the hosts file that best suits your browsing style.
 
--   **StevenBlack (Main)**: The classic, balanced blocklist. A great starting point for most users, based on the original **StevenBlack** hosts.
--   **Spark Protection (Light)**: A lighter touch for minimal blocking, focusing on the most intrusive ads while maintaining high compatibility.
--   **Blu Protection (Balanced)**: A comprehensive and well-rounded list for everyday use, blocking a wide range of ads, trackers, and malware.
--   **Ultimate Protection (Aggressive)**: For the power user who wants maximum blocking. This list is more aggressive and may require some manual whitelisting for certain sites or services.
+-   **Steven Black's List (Recommended)**: The classic, balanced blocklist. A great starting point for most users, offering robust daily protection with excellent compatibility.
+-   **Hagezi's Multi LIGHT (Basic)**: For those who prefer a lighter touch. This list provides essential protection against the most common ads and trackers while ensuring maximum website and app compatibility.
+-   **Hagezi's Multi NORMAL (All-Round)**: The perfect balance between protection and compatibility. This comprehensive list is designed for the average user, blocking a wide range of annoyances without breaking sites.
+-   **Hagezi's Multi PRO (Extended)**: A step up for users who want more thorough blocking. It targets a broader spectrum of ads, trackers, and malicious domains, offering extended protection.
+-   **Hagezi's Multi PRO++ (Maximum)**: For users seeking maximum protection. This list is more extensive and includes additional blocklists that might occasionally affect certain services, offering a near-complete ad-free experience.
+-   **Hagezi's Multi ULTIMATE (Aggressive)**: The ultimate choice for power users who want to block everything possible. This is a very aggressive list and is more likely to break websites or apps, potentially requiring manual whitelisting for desired services. Use with caution.
 
 ## **📊 The Numbers Game: How We Protect You**
 
