@@ -41,15 +41,17 @@ interactive_menu() {
   ui_print ""
   ui_print "⚠️ Make sure the systemless hosts module is not installed when enabling this module. Also, remove modules such as Adaway and BindHosts, as they will conflict with this module."
   ui_print ""
-  ui_print "❗ The most trouble-free and lightweight blocklist to use on your device is StevenBlack. If you experience issues with Energized Ultimate, use this one instead."
+  ui_print "❗ The most trouble-free and lightweight blocklist to use on your device is StevenBlack. If you experience issues with other lists, use this one instead."
   ui_print ""
   ui_print "🗂️ Select your preferred hosts file:"
   ui_print ""
-  ui_print "1️ Steven Black's List — Recommended, daily protection"
-  ui_print "2️ Spark Protection — Lightweight, essential protection"
-  ui_print "3️ Blu Protection — Balanced, extended protection"
-  ui_print "4️ Ultimate Protection — Comprehensive, full protection"
-  ui_print "5️ ❌ Exit Installation"
+  ui_print "1️ ⭐ Steven Black's List — Main daily list"
+  ui_print "2️ 🍃 Hagezi's Multi LIGHT — Basic protection"
+  ui_print "3️ ⚖️ Hagezi's Multi NORMAL — All-round protection"
+  ui_print "4️ 🛡️ Hagezi's Multi PRO — Extended protection"
+  ui_print "5 💎 Hagezi's Multi PRO++ — Maximum protection"
+  ui_print "6 🚀 Hagezi's Multi ULTIMATE — Aggressive protection"
+  ui_print "7 ❌ Exit Installation"
   ui_print ""
   ui_print "🔼 Volume Up: Navigate | 🔽 Volume Down: Confirm"
   ui_print "==========================================="
@@ -57,11 +59,13 @@ interactive_menu() {
 
   print_current_selection() {
     case "$SELECTION" in
-      1) ui_print "👉 Steven Black's List — Recommended, daily protection" ;;
-      2) ui_print "👉 Spark Protection — Lightweight, essential protection" ;;
-      3) ui_print "👉 Blu Protection — Balanced, extended protection" ;;
-      4) ui_print "👉 Ultimate Protection — Comprehensive, full protection" ;;
-      5) ui_print "👉 Selection: ❌ Exit Installation" ;;
+      1) ui_print "👉 [Steven Black — Main Daily List]" ;;
+      2) ui_print "👉 [Hagezi's LIGHT — Basic Protection]" ;;
+      3) ui_print "👉 [Hagezi's NORMAL — All-round Protection]" ;;
+      4) ui_print "👉 [Hagezi's PRO — Extended Protection]" ;;
+      5) ui_print "👉 [Hagezi's PRO++ — Maximum Protection]" ;;
+      6) ui_print "👉 [Hagezi's ULTIMATE — Aggressive Protection]" ;;
+      7) ui_print "👉 [Exit Installation]" ;;
     esac
   }
 
@@ -73,31 +77,41 @@ interactive_menu() {
 
     if [ "$key_result" -eq 1 ]; then
       SELECTION=$((SELECTION + 1))
-      [ "$SELECTION" -gt 5 ] && SELECTION=1
+      [ "$SELECTION" -gt 7 ] && SELECTION=1
       print_current_selection
     elif [ "$key_result" -eq 0 ]; then
       case "$SELECTION" in
         1)
           SELECTED_HOSTS="stevenblack_hosts"
-          SELECTED_NAME="Steven Black's List — Recommended, daily protection"
+          SELECTED_NAME="Steven Black's List"
           break
           ;;
         2)
-          SELECTED_HOSTS="energized_spark"
-          SELECTED_NAME="Spark Protection — Lightweight, essential protection"
+          SELECTED_HOSTS="hagezi_light"
+          SELECTED_NAME="Hagezi's Multi LIGHT"
           break
           ;;
         3)
-          SELECTED_HOSTS="energized_blu"
-          SELECTED_NAME="Blu Protection — Balanced, extended protection"
+          SELECTED_HOSTS="hagezi_normal"
+          SELECTED_NAME="Hagezi's Multi NORMAL"
           break
           ;;
         4)
-          SELECTED_HOSTS="energized_ultimate"
-          SELECTED_NAME="Ultimate Protection — Comprehensive, full protection"
+          SELECTED_HOSTS="hagezi_pro"
+          SELECTED_NAME="Hagezi's Multi PRO"
           break
           ;;
         5)
+          SELECTED_HOSTS="hagezi_pro_plus"
+          SELECTED_NAME="Hagezi's Multi PRO++"
+          break
+          ;;
+        6)
+          SELECTED_HOSTS="hagezi_ultimate"
+          SELECTED_NAME="Hagezi's Multi ULTIMATE"
+          break
+          ;;
+        7)
           abort "🚫 Installation cancelled by user"
           ;;
       esac
@@ -117,7 +131,7 @@ install_module() {
   echo "$SELECTED_HOSTS" > "$MODPATH/selected_hosts"
   echo "$SELECTED_NAME" > "$MODPATH/selected_name"
   ui_print "✅ Successfully installed: $SELECTED_NAME"
-  rm -rf $MODPATH/hosts 
+  rm -rf "$MODPATH/hosts"
 }
 
 main() {
