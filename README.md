@@ -96,7 +96,7 @@ Got questions or want to hang out? Join our **[Telegram group](https://t.me/stev
 A huge shoutout to these amazing projects for making **StevenBlock** possible:
 
 -   **[StevenBlack](https://github.com/StevenBlack)** for being the original hosts file guru and inspiration.
--   **[Hagezi](https://github.com/hagezi)** for providing the excellent alternative blocklists that power our selection menu.
+-   **[Badmojr](https://github.com/badmojr)** - **[Hectorm](https://github.com/hectorm)** for providing the excellent alternative blocklists that power our selection menu.
 -   A special thanks to **[ZG089](https://github.com/ZG089)** for their incredible support and contributions to the project.
 
 ---
