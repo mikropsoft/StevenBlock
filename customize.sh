@@ -41,17 +41,16 @@ interactive_menu() {
   ui_print ""
   ui_print "⚠️ Make sure the systemless hosts module is not installed when enabling this module. Also, remove modules such as Adaway and BindHosts, as they will conflict with this module."
   ui_print ""
-  ui_print "❗ The most trouble-free and lightweight blocklist to use on your device is StevenBlack. If you experience issues with other lists, use this one instead."
+  ui_print "💡 Note: Larger lists offer more protection but may consume more RAM"
+  ui_print "   and potentially impact device performance. Choose based on your needs."
   ui_print ""
   ui_print "🗂️ Select your preferred hosts file:"
   ui_print ""
-  ui_print "1️ ⭐ Steven Black's List — Main daily list"
-  ui_print "2️ 🍃 Hagezi's Multi LIGHT — Basic protection"
-  ui_print "3️ ⚖️ Hagezi's Multi NORMAL — All-round protection"
-  ui_print "4️ 🛡️ Hagezi's Multi PRO — Extended protection"
-  ui_print "5 💎 Hagezi's Multi PRO++ — Maximum protection"
-  ui_print "6 🚀 Hagezi's Multi ULTIMATE — Aggressive protection"
-  ui_print "7 ❌ Exit Installation"
+  ui_print "1️ ⭐ StevenBlack — Main Recommended List (~100k+ entries)"
+  ui_print "2️ 🍃 1Hosts (Lite) — Average Protection (~200k+ entries)"
+  ui_print "3️ 🚀 1Hosts (Xtra) — Aggressive Protection (~1M+ entries)"
+  ui_print "4️ 🛡️ hBlock — Comprehensive but Non-Aggressive (~400k+ entries)"
+  ui_print "5️ ❌ Exit Installation"
   ui_print ""
   ui_print "🔼 Volume Up: Navigate | 🔽 Volume Down: Confirm"
   ui_print "==========================================="
@@ -59,13 +58,11 @@ interactive_menu() {
 
   print_current_selection() {
     case "$SELECTION" in
-      1) ui_print "👉 [Steven Black — Main Daily List]" ;;
-      2) ui_print "👉 [Hagezi's LIGHT — Basic Protection]" ;;
-      3) ui_print "👉 [Hagezi's NORMAL — All-round Protection]" ;;
-      4) ui_print "👉 [Hagezi's PRO — Extended Protection]" ;;
-      5) ui_print "👉 [Hagezi's PRO++ — Maximum Protection]" ;;
-      6) ui_print "👉 [Hagezi's ULTIMATE — Aggressive Protection]" ;;
-      7) ui_print "👉 [Exit Installation]" ;;
+      1) ui_print "👉 [StevenBlack — Main Recommended List]" ;;
+      2) ui_print "👉 [1Hosts (Lite) — Average Protection]" ;;
+      3) ui_print "👉 [1Hosts (Xtra) — Aggressive Protection]" ;;
+      4) ui_print "👉 [hBlock — Comprehensive but Non-Aggressive]" ;;
+      5) ui_print "👉 [Exit Installation]" ;;
     esac
   }
 
@@ -77,41 +74,31 @@ interactive_menu() {
 
     if [ "$key_result" -eq 1 ]; then
       SELECTION=$((SELECTION + 1))
-      [ "$SELECTION" -gt 7 ] && SELECTION=1
+      [ "$SELECTION" -gt 5 ] && SELECTION=1
       print_current_selection
     elif [ "$key_result" -eq 0 ]; then
       case "$SELECTION" in
         1)
           SELECTED_HOSTS="stevenblack_hosts"
-          SELECTED_NAME="Steven Black's List"
+          SELECTED_NAME="StevenBlack's List"
           break
           ;;
         2)
-          SELECTED_HOSTS="hagezi_light"
-          SELECTED_NAME="Hagezi's Multi LIGHT"
+          SELECTED_HOSTS="1hosts_lite"
+          SELECTED_NAME="1Hosts (Lite)"
           break
           ;;
         3)
-          SELECTED_HOSTS="hagezi_normal"
-          SELECTED_NAME="Hagezi's Multi NORMAL"
+          SELECTED_HOSTS="1hosts_xtra"
+          SELECTED_NAME="1Hosts (Xtra)"
           break
           ;;
         4)
-          SELECTED_HOSTS="hagezi_pro"
-          SELECTED_NAME="Hagezi's Multi PRO"
+          SELECTED_HOSTS="hblock_hosts"
+          SELECTED_NAME="hBlock List"
           break
           ;;
         5)
-          SELECTED_HOSTS="hagezi_pro_plus"
-          SELECTED_NAME="Hagezi's Multi PRO++"
-          break
-          ;;
-        6)
-          SELECTED_HOSTS="hagezi_ultimate"
-          SELECTED_NAME="Hagezi's Multi ULTIMATE"
-          break
-          ;;
-        7)
           abort "🚫 Installation cancelled by user"
           ;;
       esac
