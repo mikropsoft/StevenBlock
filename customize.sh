@@ -48,9 +48,8 @@ interactive_menu() {
   ui_print ""
   ui_print "1️ ⭐ StevenBlack — Main Recommended List (~100k+ entries)"
   ui_print "2️ 🍃 1Hosts (Lite) — Average Protection (~200k+ entries)"
-  ui_print "3️ 🚀 1Hosts (Xtra) — Aggressive Protection (~1M+ entries)"
-  ui_print "4️ 🛡️ hBlock — Comprehensive but Non-Aggressive (~400k+ entries)"
-  ui_print "5️ ❌ Exit Installation"
+  ui_print "3️ 🛡️ hBlock — Comprehensive but Non-Aggressive (~400k+ entries)"
+  ui_print "4️ ❌ Exit Installation"
   ui_print ""
   ui_print "🔼 Volume Up: Navigate | 🔽 Volume Down: Confirm"
   ui_print "==========================================="
@@ -60,9 +59,8 @@ interactive_menu() {
     case "$SELECTION" in
       1) ui_print "👉 [StevenBlack — Main Recommended List]" ;;
       2) ui_print "👉 [1Hosts (Lite) — Average Protection]" ;;
-      3) ui_print "👉 [1Hosts (Xtra) — Aggressive Protection]" ;;
-      4) ui_print "👉 [hBlock — Comprehensive but Non-Aggressive]" ;;
-      5) ui_print "👉 [Exit Installation]" ;;
+      3) ui_print "👉 [hBlock — Comprehensive but Non-Aggressive]" ;;
+      4) ui_print "👉 [Exit Installation]" ;;
     esac
   }
 
@@ -74,7 +72,7 @@ interactive_menu() {
 
     if [ "$key_result" -eq 1 ]; then
       SELECTION=$((SELECTION + 1))
-      [ "$SELECTION" -gt 5 ] && SELECTION=1
+      [ "$SELECTION" -gt 4 ] && SELECTION=1
       print_current_selection
     elif [ "$key_result" -eq 0 ]; then
       case "$SELECTION" in
@@ -89,16 +87,11 @@ interactive_menu() {
           break
           ;;
         3)
-          SELECTED_HOSTS="1hosts_xtra"
-          SELECTED_NAME="1Hosts (Xtra)"
-          break
-          ;;
-        4)
           SELECTED_HOSTS="hblock_hosts"
           SELECTED_NAME="hBlock List"
           break
           ;;
-        5)
+        4)
           abort "🚫 Installation cancelled by user"
           ;;
       esac
