@@ -32,7 +32,6 @@ Hey there, digital explorer! 👋 Ready to reclaim your online experience? Say h
 
 -   **⭐ StevenBlack — Main Recommended List (~100k+ entries)**: The classic, balanced blocklist. A great starting point for most users, offering robust daily protection with excellent compatibility.
 -   **🍃 1Hosts (Lite) — Average Protection (~200k+ entries)**: This list offers solid, everyday protection against common ads and trackers without being overly aggressive, ensuring high compatibility with most apps and websites.
--   **🚀 1Hosts (Xtra) — Aggressive Protection (~1M+ entries)**: For those who want to block nearly everything. This is a highly aggressive list that targets a vast range of domains. Be aware that its strength might cause some websites or apps to misbehave.
 -   **🛡️ hBlock — Comprehensive Protection (~400k+ entries)**: This list strikes a great balance. It's extensive, blocking a wide array of annoyances, but it is curated to be less aggressive. An excellent choice for users who want thorough protection with a lower risk of breaking sites.
 
 ## **📊 The Numbers Game: How We Protect You**
