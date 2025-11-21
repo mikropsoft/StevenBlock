@@ -1,42 +1,37 @@
 #!/system/bin/sh
 
 MODDIR=${0%/*}
-SELECTED_FILE="$MODDIR/selected_hosts"
+MODULE_HOSTS="$MODDIR/target_hosts"
+SYSTEM_HOSTS="/system/etc/hosts"
+LOG_FILE="/data/local/tmp/stevenblock.log"
 
 log_message() {
-  echo "$(date '+%Y-%m-%d %H:%M:%S') StevenBlock: $1" >> /data/local/tmp/stevenblock.log
+  echo "[$(date '+%Y-%m-%d %H:%M:%S')] ℹ️ $1" >> "$LOG_FILE"
 }
 
-apply_hosts_file() {
-  if [ -f "$SELECTED_FILE" ]; then
-    SELECTED_HOSTS=$(cat "$SELECTED_FILE")
-    
-    if [ -f "$MODDIR/hosts/$SELECTED_HOSTS" ]; then
-      if [ -f "/system/etc/hosts" ]; then
-        if ! cmp -s "$MODDIR/hosts/$SELECTED_HOSTS" "/system/etc/hosts"; then
-          cp -f "$MODDIR/hosts/$SELECTED_HOSTS" "/system/etc/hosts"
-          chmod 644 "/system/etc/hosts"
-          chcon u:object_r:system_file:s0 "/system/etc/hosts" 2>/dev/null
-          log_message "Applied hosts file: $SELECTED_HOSTS"
-        fi
-      else
-        cp -f "$MODDIR/hosts/$SELECTED_HOSTS" "/system/etc/hosts"
-        chmod 644 "/system/etc/hosts"
-        chcon u:object_r:system_file:s0 "/system/etc/hosts" 2>/dev/null
-        log_message "Created hosts file: $SELECTED_HOSTS"
-      fi
-    else
-      log_message "Selected hosts file not found: $SELECTED_HOSTS"
-    fi
+mount_hosts() {
+  log_message "--- Service Started (Clean Mount Method) ---"
+
+  if [ ! -f "$MODULE_HOSTS" ]; then
+    log_message "❌ Error: Host file missing at $MODULE_HOSTS"
+    return
+  fi
+
+  chcon u:object_r:system_file:s0 "$MODULE_HOSTS"
+
+  if grep -q "$SYSTEM_HOSTS" /proc/mounts; then
+    umount "$SYSTEM_HOSTS"
+    log_message "Previous mount unmounted."
+  fi
+
+  mount --bind "$MODULE_HOSTS" "$SYSTEM_HOSTS"
+
+  if grep -q "$SYSTEM_HOSTS" /proc/mounts; then
+    log_message "✅ Success: Protection Active. ($MODULE_HOSTS mounted)"
   else
-    log_message "No hosts selection found, using default"
-    if [ -f "$MODDIR/hosts/stevenblack_hosts" ]; then
-      cp -f "$MODDIR/hosts/stevenblack_hosts" "/system/etc/hosts"
-      chmod 644 "/system/etc/hosts"
-      chcon u:object_r:system_file:s0 "/system/etc/hosts" 2>/dev/null
-      log_message "Applied default hosts file"
-    fi
+    log_message "❌ Critical: Mount failed!"
   fi
 }
 
-apply_hosts_file
+sleep 3
+mount_hosts

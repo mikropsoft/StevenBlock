@@ -37,14 +37,16 @@ export MODPATH
 export INSTALLER
 export TMPDIR
 
-ui_print "***********************************"
-ui_print "    StevenBlock AdBlock Module    "
-ui_print "***********************************"
+ui_print " "
+ui_print " ───────────────────────────────────────────"
+ui_print "      🛡️  STEVENBLOCK  |  INSTALLER        "
+ui_print " ───────────────────────────────────────────"
+ui_print " "
 
 if [ -f "$INSTALLER/customize.sh" ]; then
-  ui_print "Running installation script..."
+  ui_print "  ✨ Launching Setup Wizard..."
   . $INSTALLER/customize.sh
 else
-  ui_print "customize.sh not found!"
+  ui_print "  ❌ Critical Error: customize.sh not found!"
   exit 1
 fi
