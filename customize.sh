@@ -120,9 +120,11 @@ install_module() {
   ui_print "  ⚙️  Configuring system..."
   
   if [ -f "$MODPATH/hosts/$SELECTED_HOSTS" ]; then
-      mv "$MODPATH/hosts/$SELECTED_HOSTS" "$MODPATH/target_hosts"
+      mkdir -p "$MODPATH/system/etc"
       
-      chmod 644 "$MODPATH/target_hosts"
+      mv "$MODPATH/hosts/$SELECTED_HOSTS" "$MODPATH/system/etc/hosts"
+      
+      chmod 644 "$MODPATH/system/etc/hosts"
       
       echo "$SELECTED_HOSTS" > "$MODPATH/selected_hosts"
       echo "$SELECTED_NAME" > "$MODPATH/selected_name"
