@@ -16,7 +16,7 @@ Hey there, digital explorer! 👋 Ready to reclaim your online experience? Say h
 
 -   **📱 App Ad Assassin**: Tired of ads crashing your app party? **StevenBlock** kicks them to the curb, letting you enjoy your apps in uninterrupted peace.
 
--   **🎯 Customizable Protection**: You are in control! During installation, choose from four different blocklists, from light to aggressive, to perfectly match your needs.
+-   **🎯 Customizable Protection**: You are in control! During installation, choose from multiple blocklists, from light to aggressive, to perfectly match your needs.
 
 -   **🔋 Battery Friendly**: **StevenBlock** is a lean, mean, blocking machine. It's **not an app** that runs in the background. It's a system-level module, meaning it does its job silently without draining your battery.
 
@@ -30,14 +30,15 @@ Hey there, digital explorer! 👋 Ready to reclaim your online experience? Say h
 
 **StevenBlock** now puts the power in your hands. During installation, you'll be prompted to select the hosts file that best suits your browsing style.
 
--   **⭐ StevenBlack — Main Recommended List (~100k+ entries)**: The classic, balanced blocklist. A great starting point for most users, offering robust daily protection with excellent compatibility.
--   **🍃 1Hosts (Lite) — Average Protection (~200k+ entries)**: This list offers solid, everyday protection against common ads and trackers without being overly aggressive, ensuring high compatibility with most apps and websites.
--   **🛡️ hBlock — Comprehensive Protection (~400k+ entries)**: This list strikes a great balance. It's extensive, blocking a wide array of annoyances, but it is curated to be less aggressive. An excellent choice for users who want thorough protection with a lower risk of breaking sites.
+-   **⭐ StevenBlack — Unified List**: The classic, balanced blocklist. A great starting point for most users, offering robust daily protection with excellent compatibility.
+-   **⚡ Energized Spark — Lightweight Protection**: Ideal for users who want essential protection with the lowest possible impact on system resources. Fast, light, and effective.
+-   **💧 Energized Blu — Balanced Protection**: A great all-rounder that offers extended protection against a wider range of threats. The perfect middle ground for most users.
+-   **🛡️ Energized Ultimate — Comprehensive Protection**: For the user who wants maximum security. This list is extensive, providing a powerful shield against ads, trackers, and malware domains.
 
 ## **📊 The Numbers Game: How We Protect You**
 
 > [!WARNING]
-> Brace yourself: Depending on the list you choose, **StevenBlock** acts as a bouncer for your device, blocking between **100,000 to over 1,000,000** troublemakers (read: malware, ad, and spyware domains). And just like a top-tier security team, our blocklists are constantly updated to keep the riffraff out.
+> Brace yourself: Depending on the list you choose, **StevenBlock** acts as a bouncer for your device, blocking **hundreds of thousands** of troublemakers (read: malware, ad, and spyware domains). And just like a top-tier security team, our blocklists are constantly updated to keep the riffraff out.
 
 ## **🧠 Knowledge is Power: F.A.Q. Time!**
 
@@ -93,7 +94,7 @@ Got questions or want to hang out? Join our **[Telegram group](https://t.me/stev
 A huge shoutout to these amazing projects for making **StevenBlock** possible:
 
 -   **[StevenBlack](https://github.com/StevenBlack)** for being the original hosts file guru and inspiration.
--   **[Badmojr](https://github.com/badmojr)** & **[Hectorm](https://github.com/hectorm)** for providing the excellent alternative blocklists that power our selection menu.
+-   **[EnergizedProtection](https://github.com/EnergizedProtection)** for providing the excellent Spark, Blu, and Ultimate packs that power our selection menu.
 -   A special thanks to **[ZG089](https://github.com/ZG089)** for their incredible support and contributions to the project.
 
 ---
