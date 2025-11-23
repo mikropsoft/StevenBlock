@@ -83,6 +83,11 @@ Got questions or want to hang out? Join our **[Telegram group](https://t.me/stev
 > [!IMPORTANT]
 > If you're already using a root solution like **Magisk**, **KernelSU**, or **APatch**, you **do not** need any other "systemless hosts" modules. **StevenBlock** handles everything. For best results, avoid using it alongside **AdAway** to prevent conflicts.
 
+> [!TIP]
+> **Using KernelSU and still seeing ads in Chrome?** This is a common issue. To fix it, disable module unmounting for your browser (Chrome, Brave, etc.).
+> 
+> **How to fix:** Go to the **KernelSU app → Superuser tab → Select Chrome → Custom → and uncheck 'umount modules'**. This ensures the hosts file applies correctly to your browser.
+
 > [!NOTE]
 > While we're pros at blocking domains, some ads served directly by browsers (like on YouTube's website) might still sneak through. We're powerful, but not quite magicians!
 
