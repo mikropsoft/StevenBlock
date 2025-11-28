@@ -33,13 +33,13 @@ print_line() {
 
 interactive_menu() {
   SELECTION=1
-
+  
   ui_print ""
   print_line
   ui_print "      🛡️  STEVENBLOCK  |  ADBLOCK MODULE     "
   print_line
   ui_print ""
-  ui_print "  👋 Welcome aboard! Let's secure your device."
+  ui_print "  👋 Welcome! Let's secure your device."
   ui_print "  💬 Support & Community: t.me/stevenblockmodule"
   ui_print ""
   print_line
@@ -47,20 +47,27 @@ interactive_menu() {
   ui_print "  • Ensure 'Systemless Hosts' is DISABLED."
   ui_print "  • Remove conflicting modules (AdAway, BindHosts)."
   print_line
+  ui_print "  💡 KERNELSU USER TIP:"
+  ui_print "  • If ads aren't blocked in Chrome, disable"
+  ui_print "    'umount modules' for it in the KernelSU app."
+  print_line
   ui_print ""
   ui_print "  🗂️  SELECT YOUR PROTECTION LEVEL:"
   ui_print "  (Larger lists = Better protection, but more RAM usage)"
   ui_print ""
   ui_print "  [ 1 ] ⭐ StevenBlack Unified"
-  ui_print "        └─ Balanced & Recommended (~100k entries)"
+  ui_print "        └─ Balanced & Recommended"
   ui_print ""
-  ui_print "  [ 2 ] 🍃 1Hosts (Lite)"
-  ui_print "        └─ Performance Focused (~200k entries)"
+  ui_print "  [ 2 ] ⚡ Energized Spark"
+  ui_print "        └─ Lightweight & Essential"
   ui_print ""
-  ui_print "  [ 3 ] 🛡️ hBlock"
-  ui_print "        └─ Comprehensive Shield (~400k entries)"
+  ui_print "  [ 3 ] 💧 Energized Blu"
+  ui_print "        └─ Balanced & Extended"
   ui_print ""
-  ui_print "  [ 4 ] ❌ Cancel Installation"
+  ui_print "  [ 4 ] 🛡️ Energized Ultimate"
+  ui_print "        └─ Comprehensive & Full"
+  ui_print ""
+  ui_print "  [ 5 ] ❌ Cancel Installation"
   ui_print ""
   print_line
   ui_print "  🔼 Vol+ : Next Option   |   🔽 Vol- : Select"
@@ -70,9 +77,10 @@ interactive_menu() {
   print_current_selection() {
     case "$SELECTION" in
       1) ui_print "  👉 SELECTED: [ StevenBlack Unified ]" ;;
-      2) ui_print "  👉 SELECTED: [ 1Hosts (Lite) ]" ;;
-      3) ui_print "  👉 SELECTED: [ hBlock ]" ;;
-      4) ui_print "  👉 SELECTED: [ Exit Installation ]" ;;
+      2) ui_print "  👉 SELECTED: [ Energized Spark ]" ;;
+      3) ui_print "  👉 SELECTED: [ Energized Blu ]" ;;
+      4) ui_print "  👉 SELECTED: [ Energized Ultimate ]" ;;
+      5) ui_print "  👉 SELECTED: [ Exit Installation ]" ;;
     esac
   }
 
@@ -84,7 +92,7 @@ interactive_menu() {
 
     if [ "$key_result" -eq 1 ]; then
       SELECTION=$((SELECTION + 1))
-      [ "$SELECTION" -gt 4 ] && SELECTION=1
+      [ "$SELECTION" -gt 5 ] && SELECTION=1
       print_current_selection
     elif [ "$key_result" -eq 0 ]; then
       ui_print ""
@@ -96,16 +104,21 @@ interactive_menu() {
           break
           ;;
         2)
-          SELECTED_HOSTS="1hosts_lite"
-          SELECTED_NAME="1Hosts Lite"
+          SELECTED_HOSTS="energized_spark_hosts"
+          SELECTED_NAME="Energized Spark"
           break
           ;;
         3)
-          SELECTED_HOSTS="hblock_hosts"
-          SELECTED_NAME="hBlock List"
+          SELECTED_HOSTS="energized_blu_hosts"
+          SELECTED_NAME="Energized Blu"
           break
           ;;
         4)
+          SELECTED_HOSTS="energized_ultimate_hosts"
+          SELECTED_NAME="Energized Ultimate"
+          break
+          ;;
+        5)
           abort "  🚫 Action cancelled by user."
           ;;
       esac
