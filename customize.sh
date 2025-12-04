@@ -137,6 +137,7 @@ install_module() {
       
       mv "$MODPATH/hosts/$SELECTED_HOSTS" "$MODPATH/system/etc/hosts"
       
+      chown 0:0 "$MODPATH/system/etc/hosts"
       chmod 644 "$MODPATH/system/etc/hosts"
       
       echo "$SELECTED_HOSTS" > "$MODPATH/selected_hosts"
