@@ -9,7 +9,7 @@ ui_print() {
 }
 
 keytest() {
-  timeout 0.1 getevent -lc 1 2>&1 | grep VOLUME | grep " DOWN" | head -1
+  timeout 0.1 getevent -lc 1 2>/dev/null | grep VOLUME | grep " DOWN" | head -1
 }
 
 wait_for_keypress() {
@@ -36,51 +36,51 @@ interactive_menu() {
   
   ui_print ""
   print_line
-  ui_print "      🛡️  STEVENBLOCK  |  ADBLOCK MODULE     "
+  ui_print "🛡️  STEVENBLOCK  |  ADBLOCK MODULE"
   print_line
   ui_print ""
-  ui_print "  👋 Welcome! Let's secure your device."
-  ui_print "  💬 Support & Community: t.me/stevenblockmodule"
+  ui_print "👋 Welcome! Let's secure your device."
+  ui_print "💬 Support & Community: t.me/stevenblockmodule"
   ui_print ""
   print_line
-  ui_print "  ⚠️  PRE-INSTALLATION CHECK:"
-  ui_print "  • Ensure 'Systemless Hosts' is DISABLED."
-  ui_print "  • Remove conflicting modules (AdAway, BindHosts)."
+  ui_print "⚠️  PRE-INSTALLATION CHECK:"
+  ui_print "• Ensure 'Systemless Hosts' is DISABLED."
+  ui_print "• Remove conflicting modules (AdAway, BindHosts)."
   print_line
-  ui_print "  💡 KERNELSU USER TIP:"
-  ui_print "  • If ads aren't blocked in Chrome, disable"
-  ui_print "    'umount modules' for it in the KernelSU app."
+  ui_print "💡 KERNELSU USER TIP:"
+  ui_print "• If ads aren't blocked in Chrome, disable"
+  ui_print "'umount modules' for it in the KernelSU app."
   print_line
   ui_print ""
-  ui_print "  🗂️  SELECT YOUR PROTECTION LEVEL:"
-  ui_print "  (Larger lists = Better protection, but more RAM usage)"
+  ui_print "🗂️  SELECT YOUR PROTECTION LEVEL:"
+  ui_print "(Larger lists = Better protection, but more RAM usage)"
   ui_print ""
-  ui_print "  [ 1 ] ⭐ StevenBlack Unified"
+  ui_print "[ 1 ] ⭐ StevenBlack Unified"
   ui_print "        └─ Balanced & Recommended"
   ui_print ""
-  ui_print "  [ 2 ] ⚡ Energized Spark"
+  ui_print "[ 2 ] ⚡ Energized Spark"
   ui_print "        └─ Lightweight & Essential"
   ui_print ""
-  ui_print "  [ 3 ] 💧 Energized Blu"
+  ui_print "[ 3 ] 💧 Energized Blu"
   ui_print "        └─ Balanced & Extended"
   ui_print ""
-  ui_print "  [ 4 ] 🛡️ Energized Ultimate"
+  ui_print "[ 4 ] 🛡️ Energized Ultimate"
   ui_print "        └─ Comprehensive & Full"
   ui_print ""
-  ui_print "  [ 5 ] ❌ Cancel Installation"
+  ui_print "[ 5 ] ❌ Cancel Installation"
   ui_print ""
   print_line
-  ui_print "  🔼 Vol+ : Next Option   |   🔽 Vol- : Select"
+  ui_print "🔼 Vol+ : Next Option   |   🔽 Vol- : Select"
   print_line
   ui_print ""
 
   print_current_selection() {
     case "$SELECTION" in
-      1) ui_print "  👉 SELECTED: [ StevenBlack Unified ]" ;;
-      2) ui_print "  👉 SELECTED: [ Energized Spark ]" ;;
-      3) ui_print "  👉 SELECTED: [ Energized Blu ]" ;;
-      4) ui_print "  👉 SELECTED: [ Energized Ultimate ]" ;;
-      5) ui_print "  👉 SELECTED: [ Exit Installation ]" ;;
+      1) ui_print "👉 SELECTED: [ StevenBlack Unified ]" ;;
+      2) ui_print "👉 SELECTED: [ Energized Spark ]" ;;
+      3) ui_print "👉 SELECTED: [ Energized Blu ]" ;;
+      4) ui_print "👉 SELECTED: [ Energized Ultimate ]" ;;
+      5) ui_print "👉 SELECTED: [ Exit Installation ]" ;;
     esac
   }
 
@@ -99,61 +99,69 @@ interactive_menu() {
       print_line
       case "$SELECTION" in
         1)
-          SELECTED_HOSTS="stevenblack_hosts"
+          DOWNLOAD_URL="https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
           SELECTED_NAME="StevenBlack Unified"
           break
           ;;
         2)
-          SELECTED_HOSTS="energized_spark_hosts"
+          DOWNLOAD_URL="https://raw.githubusercontent.com/mikropsoft/StevenBlock/refs/heads/main/hosts/energized_spark_hosts"
           SELECTED_NAME="Energized Spark"
           break
           ;;
         3)
-          SELECTED_HOSTS="energized_blu_hosts"
+          DOWNLOAD_URL="https://raw.githubusercontent.com/mikropsoft/StevenBlock/refs/heads/main/hosts/energized_blu_hosts"
           SELECTED_NAME="Energized Blu"
           break
           ;;
         4)
-          SELECTED_HOSTS="energized_ultimate_hosts"
+          DOWNLOAD_URL="https://raw.githubusercontent.com/mikropsoft/StevenBlock/refs/heads/main/hosts/energized_ultimate_hosts"
           SELECTED_NAME="Energized Ultimate"
           break
           ;;
         5)
-          abort "  🚫 Action cancelled by user."
+          abort "🚫 Action cancelled by user."
           ;;
       esac
     else
-      abort "  ⌛ Timeout: No input received."
+      abort "⌛ Timeout: No input received."
     fi
     sleep 0.2
   done
 }
 
-install_module() {
-  ui_print "  ⚙️  Configuring system..."
+download_payload() {
+  local url=$1
+  local output=$2
   
-  if [ -f "$MODPATH/hosts/$SELECTED_HOSTS" ]; then
-      mkdir -p "$MODPATH/system/etc"
-      
-      mv "$MODPATH/hosts/$SELECTED_HOSTS" "$MODPATH/system/etc/hosts"
-      
+  if command -v curl >/dev/null 2>&1; then
+    curl -sL "$url" -o "$output" >/dev/null 2>&1
+  elif command -v wget >/dev/null 2>&1; then
+    wget -qO "$output" "$url" >/dev/null 2>&1
+  else
+    return 1
+  fi
+}
+
+install_module() {
+  ui_print "🌐 Fetching latest definitions from the server..."
+  
+  mkdir -p "$MODPATH/system/etc"
+  
+  if download_payload "$DOWNLOAD_URL" "$MODPATH/system/etc/hosts"; then
       chown 0:0 "$MODPATH/system/etc/hosts"
       chmod 644 "$MODPATH/system/etc/hosts"
       
-      echo "$SELECTED_HOSTS" > "$MODPATH/selected_hosts"
       echo "$SELECTED_NAME" > "$MODPATH/selected_name"
       
-      ui_print "  ✅  Applied: $SELECTED_NAME"
-      ui_print "  🧹  Cleaning up temporary files..."
-      rm -rf "$MODPATH/hosts"
+      ui_print "✅  Successfully applied: $SELECTED_NAME"
   else
-      abort "  ❌ Error: Selected hosts file not found!"
+      abort "❌ Error: Failed to download hosts file. Check your internet connection!"
   fi
 }
 
 main() {
   ui_print ""
-  ui_print "  🚀 Initializing Installer..."
+  ui_print "🚀 Initializing Installer..."
   sleep 0.5
   
   interactive_menu
@@ -161,8 +169,8 @@ main() {
   
   ui_print ""
   print_line
-  ui_print "      🎉 INSTALLATION SUCCESSFUL! 🎉"
-  ui_print "  🔄 Reboot your device to activate protection."
+  ui_print "🎉 INSTALLATION SUCCESSFUL! 🎉"
+  ui_print "🔄 Reboot your device to activate protection. 🔄"
   print_line
   ui_print ""
 }

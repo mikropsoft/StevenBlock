@@ -11,7 +11,7 @@ log_print() {
 }
 
 while [ "$(getprop sys.boot_completed)" != "1" ]; do
-  sleep 1
+  sleep 2
 done
 
 sleep 5
@@ -20,12 +20,10 @@ if [ -f "$SOURCE_HOSTS" ]; then
   cp -f "$SOURCE_HOSTS" "$TEMP_HOSTS"
   chmod 644 "$TEMP_HOSTS"
   chown 0:0 "$TEMP_HOSTS"
-  chcon u:object_r:system_file:s0 "$TEMP_HOSTS"
+  chcon u:object_r:system_file:s0 "$TEMP_HOSTS" 2>/dev/null
 
   umount "$SYS_HOSTS" 2>/dev/null
-  mount --bind "$TEMP_HOSTS" "$SYS_HOSTS"
-  
-  if [ $? -eq 0 ]; then
+  if mount --bind "$TEMP_HOSTS" "$SYS_HOSTS"; then
     log_print "✅ Hosts mounted successfully with SELinux context."
     ndc resolver clearnetdns 2>/dev/null
   else
