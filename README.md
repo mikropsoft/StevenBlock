@@ -8,63 +8,57 @@
 ![KernelSU](https://img.shields.io/badge/KernelSU-199116?style=for-the-badge&logo=kernelsu&logoColor=white)
 ![APatch](https://img.shields.io/badge/APatch-3086F8?style=for-the-badge&logo=apatch&logoColor=white)
 
-Hey there, digital explorer! 👋 Ready to reclaim your online experience? Say hello to **StevenBlock**, your new best friend in the fight against pesky ads and sneaky malware. Let's dive into how this little powerhouse can transform your digital life!
+Hey there, digital explorer! 👋 Ready to reclaim your online experience? Say hello to **StevenBlock v3.0**, your ultimate weapon in the fight against pesky ads, trackers, and sneaky malware. Now supercharged with a brand-new **Web-based UI**! Let's dive into how this little powerhouse can transform your digital life!
 
 ## **🚀 What Makes StevenBlock Your Digital Superhero?**
 
--   **🛑 Ad Annihilator**: Wave goodbye to annoying pop-ups, intrusive video ads, and clingy banners. **StevenBlock** makes them vanish.
+-   **🌐 Sleek WebUI Dashboard**: No extra APKs cluttering your app drawer! StevenBlock now features a gorgeous, Glassmorphism-inspired WebUI accessible directly from your root manager's "Action" button.
+-   **🛑 Ad Annihilator**: Wave goodbye to annoying pop-ups, intrusive video ads, and clingy banners. **StevenBlock** makes them vanish system-wide.
+-   **🎯 On-Demand Customization**: You are in total control! Open the WebUI anytime to seamlessly switch between multiple blocklists—from light to aggressive—to perfectly match your needs.
+-   **🔍 Built-in Hosts Checker**: Want to know if you're protected? Use the WebUI's integrated status checker to see exactly how many thousands of malicious lines are currently blocked, complete with slick, fluid animations!
+-   **🛡️ Maximum Stability (Delayed Apply)**: To prevent any system hiccups or active connection crashes, your chosen lists are downloaded securely and applied **only upon the next system reboot**.
+-   **🔋 Battery Friendly**: **StevenBlock** is a lean, mean, blocking machine. It's a system-level module, meaning it does its job silently at the DNS level without draining your battery.
+-   **🤝 Broad Root Support**: Whether you're using **Magisk**, **KernelSU**, or **APatch**, **StevenBlock** integrates flawlessly. We've got your back.
 
--   **📱 App Ad Assassin**: Tired of ads crashing your app party? **StevenBlock** kicks them to the curb, letting you enjoy your apps in uninterrupted peace.
+## **🎯 Choose Your Shield: Premium Blocklists**
 
--   **🎯 Customizable Protection**: You are in control! During installation, choose from multiple blocklists, from light to aggressive, to perfectly match your needs.
+Through our modern WebUI, you can select the perfect hosts file that suits your browsing style:
 
--   **🔋 Battery Friendly**: **StevenBlock** is a lean, mean, blocking machine. It's **not an app** that runs in the background. It's a system-level module, meaning it does its job silently without draining your battery.
-
--   **🛡️ Broad Root Support**: Whether you're using **Magisk**, **KernelSU**, or **APatch**, **StevenBlock** integrates seamlessly. We've got your back, no matter your root solution.
-
--   **💬 Conversation Keeper**: Don't worry, we know you need to stay connected. **StevenBlock** plays nice with WhatsApp, Telegram, and LinkedIn, keeping your social and professional lifelines intact.
-
--   **🔄 Effortless Updates**: Keeping **StevenBlock** fighting fit is a breeze. Your root manager handles updates, so you're always rocking the latest and greatest protection with just a few taps.
-
-## **🎯 Choose Your Shield: Customizable Blocklists**
-
-**StevenBlock** now puts the power in your hands. During installation, you'll be prompted to select the hosts file that best suits your browsing style.
-
--   **⭐ StevenBlack — Unified List**: The classic, balanced blocklist. A great starting point for most users, offering robust daily protection with excellent compatibility.
+-   **🟢 StevenBlack — Unified Main List (Default)**: The classic, highly recommended balanced blocklist. A great starting point for most users, offering robust daily protection with excellent compatibility.
 -   **⚡ Energized Spark — Lightweight Protection**: Ideal for users who want essential protection with the lowest possible impact on system resources. Fast, light, and effective.
--   **💧 Energized Blu — Balanced Protection**: A great all-rounder that offers extended protection against a wider range of threats. The perfect middle ground for most users.
--   **🛡️ Energized Ultimate — Comprehensive Protection**: For the user who wants maximum security. This list is extensive, providing a powerful shield against ads, trackers, and malware domains.
+-   **🔵 Energized Blu — Medium Protection**: A great all-rounder that offers extended protection against a wider range of threats. The perfect middle ground.
+-   **🔥 Energized Ultimate — Aggressive Protection**: For the user who wants maximum security. This list is extensive, providing an absolute shield against ads, trackers, and malware domains.
 
 ## **📊 The Numbers Game: How We Protect You**
 
 > [!WARNING]
-> Brace yourself: Depending on the list you choose, **StevenBlock** acts as a bouncer for your device, blocking **hundreds of thousands** of troublemakers (read: malware, ad, and spyware domains). And just like a top-tier security team, our blocklists are constantly updated to keep the riffraff out.
+> Brace yourself: Depending on the list you choose, **StevenBlock** acts as a bouncer for your device, blocking **hundreds of thousands** of troublemakers (malware, ad, and spyware domains). Check the live counter in your WebUI to see the exact number of blocked connections!
 
 ## **🧠 Knowledge is Power: F.A.Q. Time!**
 
 > [!TIP]
 > **❔: What's this "hosts file" and where is it?**
 >
-> Think of the hosts file as your device's bouncer list. It lives in `/system/etc` and tells your device which connections to block before they even start.
+> Think of the hosts file as your device's VIP bouncer list. It lives in `/system/etc/hosts` and tells your device which bad connections to immediately drop before they even load.
 
 > [!TIP]
 > **❔: How does StevenBlock actually work?**
 >
-> It's a master of misdirection. When an app or website tries to connect to a blocked domain, **StevenBlock** redirects that request to a digital dead end (0.0.0.0). By merging multiple trusted sources into one powerful hosts file, we ensure comprehensive protection without slowing you down.
+> It's a master of misdirection. When an app or website tries to connect to a blocked domain, **StevenBlock** redirects that request to a digital dead end (`0.0.0.0` or `127.0.0.1`). 
 
 > [!TIP]
-> **❔: How can I see what's being blocked?**
+> **❔: How do I know if the module is active?**
 >
-> Curiosity is a great thing! Head over to Google Play or F-Droid and search for a "hosts manager" or "hosts editor" app. These tools let you view and even customize the list of blocked domains.
+> Open your root manager, go to Modules, and tap the **Action** button on StevenBlock. In the WebUI, tap **"🔍 Check Hosts Status"**. An animation will instantly show you exactly how many malicious lines are currently blocked!
 
 ## **🛠️ Let's Get This Party Started: Installation Guide**
 
 Ready to level up your digital defense? It's as easy as 1-2-3-4:
 
-1.  **Grab & Install**: Open your root manager (**Magisk**, **KernelSU**, or **APatch**), head to the Modules section, tap the 'Install from storage' button, and select the **StevenBlock** module zip.
-2.  **Choose Your Shield**: An interactive menu will appear during installation. Use your **Volume Up** key to navigate through the blocklist options and **Volume Down** to confirm your selection.
-3.  **Quick Reboot**: Give your device a quick restart to activate **StevenBlock**'s shields.
-4.  **Enjoy the Peace**: Welcome to your new, cleaner, and faster digital world!
+1.  **Flash It**: Open your root manager (**Magisk**, **KernelSU**, or **APatch**), head to the Modules section, tap 'Install from storage', and select the **StevenBlock v3.0** `.zip` file.
+2.  **First Reboot**: Reboot your device once. *Note: The module will automatically apply the default StevenBlack Unified list during this first boot.*
+3.  **Launch WebUI**: Go back to your Root Manager's module list and tap the **Action** (or Settings) icon next to StevenBlock. The beautifully designed WebUI will pop up!
+4.  **Customize**: Select your preferred shield (Spark, Blu, Ultimate, etc.). Wait for the success toast, and do one final quick reboot to lock in your new ultimate protection. Enjoy!
 
 ## **💖 Support the Project 💖**
 
@@ -81,25 +75,22 @@ Got questions or want to hang out? Join our **[Telegram group](https://t.me/stev
 ## **🔔 Hot Off the Press: Updates & Pro Tips**
 
 > [!IMPORTANT]
-> If you're already using a root solution like **Magisk**, **KernelSU**, or **APatch**, you **do not** need any other "systemless hosts" modules. **StevenBlock** handles everything. For best results, avoid using it alongside **AdAway** to prevent conflicts.
+> If you're already using a root solution like **Magisk**, **KernelSU**, or **APatch**, you **do not** need any other "systemless hosts" modules. **StevenBlock** handles everything perfectly. For best results, avoid using it alongside **AdAway** to prevent conflicts.
 
 > [!TIP]
-> **Using KernelSU and still seeing ads in Chrome?** This is a common issue. To fix it, disable module unmounting for your browser (Chrome, Brave, etc.).
+> **Using KernelSU/APatch and still seeing ads in Chrome?** This is a common Chromium restriction. 
 > 
-> **How to fix:** Go to the **KernelSU app → Superuser tab → Select Chrome → Custom → and uncheck 'umount modules'**. This ensures the hosts file applies correctly to your browser.
+> **How to fix:** Go to the **KernelSU/APatch app → Superuser tab → Select Chrome/Brave → Custom → and uncheck 'umount modules'**. This ensures the hosts file applies correctly to your web browser.
 
 > [!NOTE]
-> While we're pros at blocking domains, some ads served directly by browsers (like on YouTube's website) might still sneak through. We're powerful, but not quite magicians!
-
-> [!TIP]
-> We're always evolving! Expect fresh updates 1-2 times a week. Star us on GitHub to stay in the loop. Most root solutions will notify you of updates, but checking our GitHub is always a good idea.
+> While we're pros at blocking domains, some ads served directly by the same server as the content (like official YouTube app video ads) cannot be blocked via Hosts file. We're incredibly powerful, but we recommend dedicated modded apps for YouTube!
 
 ## **🙌 Standing on the Shoulders of Giants**
 
 A huge shoutout to these amazing projects for making **StevenBlock** possible:
 
--   **[StevenBlack](https://github.com/StevenBlack)** for being the original hosts file guru and inspiration.
--   **[EnergizedProtection](https://github.com/EnergizedProtection)** for providing the excellent Spark, Blu, and Ultimate packs that power our selection menu.
+-   **[StevenBlack](https://github.com/StevenBlack)** for being the original hosts file guru and our default provider.
+-   **[EnergizedProtection](https://github.com/EnergizedProtection)** for the excellent Spark, Blu, and Ultimate packs that power our advanced options.
 -   A special thanks to **[ZG089](https://github.com/ZG089)** for their incredible support and contributions to the project.
 
 ---

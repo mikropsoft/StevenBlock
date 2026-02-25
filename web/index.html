@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>StevenBlock UI</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+--bg: #090e14;
+--text: #ffffff;
+--muted: #8b9eb0;
+--glass-bg: rgba(20, 25, 35, 0.4);
+--glass-border: rgba(255, 255, 255, 0.08);
+--primary: #00e676;
+--primary-glow: rgba(0, 230, 118, 0.5);
+--spark: #ffea00;
+--blu: #2979ff;
+--ultimate: #ff1744;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; -webkit-tap-highlight-color: transparent; }
+body { background: var(--bg); color: var(--text); overflow-x: hidden; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 30px 20px; position: relative; }
+.blob { position: fixed; filter: blur(90px); z-index: -1; opacity: 0.6; border-radius: 50%; animation: float 15s infinite alternate ease-in-out; }
+.blob-1 { width: 300px; height: 300px; background: #00e676; top: -50px; left: -100px; }
+.blob-2 { width: 250px; height: 250px; background: #2979ff; bottom: -50px; right: -50px; animation-delay: -5s; }
+.blob-3 { width: 200px; height: 200px; background: #8a2be2; top: 40%; left: 50%; transform: translateX(-50%); animation-delay: -10s; }
+@keyframes float { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(30px, 40px) scale(1.1); } }
+.header { text-align: center; margin-bottom: 30px; animation: slideDown 0.8s cubic-bezier(0.25, 1, 0.5, 1); }
+.header h1 { font-size: 2.4rem; font-weight: 900; background: linear-gradient(135deg, #fff, #a3b8cc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -1px; }
+.header p { color: var(--muted); font-size: 0.9rem; font-weight: 300; margin-top: 5px; }
+.glass { background: var(--glass-bg); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 1px solid var(--glass-border); border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
+.grid { display: grid; grid-template-columns: 1fr; gap: 15px; width: 100%; max-width: 500px; animation: popIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards; opacity: 0; }
+.card { padding: 20px; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: transform 0.2s, background 0.2s; }
+.card:active { transform: scale(0.96); background: rgba(255,255,255,0.05); }
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.card h2 { font-size: 1.2rem; font-weight: 700; z-index: 2; }
+.card p { font-size: 0.8rem; color: var(--muted); z-index: 2; margin-bottom: 15px; }
+.badge { font-size: 0.7rem; padding: 4px 10px; border-radius: 12px; font-weight: 700; text-transform: uppercase; z-index: 2; }
+.badge.steven { background: rgba(0,230,118,0.2); color: var(--primary); }
+.badge.spark { background: rgba(255,234,0,0.2); color: var(--spark); }
+.badge.blu { background: rgba(41,121,255,0.2); color: var(--blu); }
+.badge.ultimate { background: rgba(255,23,68,0.2); color: var(--ultimate); }
+.card-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 12px; border-radius: 14px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: 0.2s; z-index: 2; width: 100%; }
+.card.steven .card-btn:active { background: var(--primary); color: #000; border-color: var(--primary); }
+.card.spark .card-btn:active { background: var(--spark); color: #000; border-color: var(--spark); }
+.card.blu .card-btn:active { background: var(--blu); color: #fff; border-color: var(--blu); }
+.card.ultimate .card-btn:active { background: var(--ultimate); color: #fff; border-color: var(--ultimate); }
+.glow-line { position: absolute; left: 0; top: 0; height: 100%; width: 4px; border-radius: 24px 0 0 24px; }
+.card.steven .glow-line { background: var(--primary); box-shadow: 0 0 15px var(--primary); }
+.card.spark .glow-line { background: var(--spark); box-shadow: 0 0 15px var(--spark); }
+.card.blu .glow-line { background: var(--blu); box-shadow: 0 0 15px var(--blu); }
+.card.ultimate .glow-line { background: var(--ultimate); box-shadow: 0 0 15px var(--ultimate); }
+.actions { margin-top: 25px; display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 500px; animation: popIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards; opacity: 0; }
+.action-btn { padding: 16px; border-radius: 16px; font-weight: 700; font-size: 1rem; border: none; display: flex; justify-content: center; align-items: center; gap: 8px; cursor: pointer; transition: 0.2s; text-decoration: none; }
+.btn-check { background: rgba(41,121,255,0.15); border: 1px solid rgba(41,121,255,0.4); color: #60a5fa; }
+.btn-check:active { background: var(--blu); color: #fff; transform: scale(0.96); }
+.btn-disable { background: rgba(255,23,68,0.15); border: 1px solid rgba(255,23,68,0.4); color: #fb7185; }
+.btn-disable:active { background: var(--ultimate); color: #fff; transform: scale(0.96); }
+.btn-telegram { background: rgba(0, 136, 204, 0.15); border: 1px solid rgba(0, 136, 204, 0.4); color: #38bdf8; margin-top: 10px; }
+.btn-telegram:active { background: #0088cc; color: #fff; transform: scale(0.96); }
+.modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); backdrop-filter: blur(10px); display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; transition: 0.4s; z-index: 100; }
+.modal.active { opacity: 1; pointer-events: all; }
+.modal-content { padding: 40px 30px; text-align: center; width: 90%; max-width: 400px; transform: translateY(50px) scale(0.9); transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1); position: relative; overflow: hidden; }
+.modal.active .modal-content { transform: translateY(0) scale(1); }
+.modal-content::before { content: ''; position: absolute; top: -50px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: var(--primary); filter: blur(50px); opacity: 0.5; z-index: -1; }
+.modal h2 { font-size: 1.5rem; font-weight: 900; margin-bottom: 5px; }
+.modal p { color: var(--muted); font-size: 0.9rem; }
+.counter { font-size: 3.5rem; font-weight: 900; color: var(--primary); text-shadow: 0 0 30px var(--primary-glow); margin: 20px 0; line-height: 1; }
+.pending-alert { background: rgba(255, 187, 0, 0.15); border: 1px solid rgba(255, 187, 0, 0.3); color: #ffd000; padding: 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 700; margin-top: 15px; display: none; }
+.toast { position: fixed; bottom: -80px; left: 50%; transform: translateX(-50%); background: rgba(20, 25, 35, 0.9); border: 1px solid rgba(255,255,255,0.1); padding: 16px 24px; border-radius: 20px; font-size: 0.95rem; font-weight: 500; transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1); z-index: 200; white-space: nowrap; box-shadow: 0 10px 30px rgba(0,0,0,0.5); display: flex; align-items: center; gap: 10px; }
+.toast.show { bottom: 40px; }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes popIn { from { opacity: 0; transform: translateY(20px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
+</style>
+</head>
+<body>
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+<div class="header">
+<h1>🛡️ StevenBlock</h1>
+<p>v3.0 Premium Protection</p>
+</div>
+<div class="grid">
+<div class="card glass steven">
+<div class="glow-line"></div>
+<div class="card-header">
+<h2>StevenBlack</h2>
+<span class="badge steven">Default</span>
+</div>
+<p>Unified main list. Highly recommended for daily robust protection.</p>
+<button class="card-btn" onclick="applyList('steven')">Apply Shield</button>
+</div>
+<div class="card glass spark">
+<div class="glow-line"></div>
+<div class="card-header">
+<h2>Energized Spark</h2>
+<span class="badge spark">Light</span>
+</div>
+<p>Lightweight blocklist with the lowest impact on system resources.</p>
+<button class="card-btn" onclick="applyList('spark')">Apply Shield</button>
+</div>
+<div class="card glass blu">
+<div class="glow-line"></div>
+<div class="card-header">
+<h2>Energized Blu</h2>
+<span class="badge blu">Medium</span>
+</div>
+<p>Balanced protection against a wider range of modern threats.</p>
+<button class="card-btn" onclick="applyList('blu')">Apply Shield</button>
+</div>
+<div class="card glass ultimate">
+<div class="glow-line"></div>
+<div class="card-header">
+<h2>Energized Ultimate</h2>
+<span class="badge ultimate">Aggressive</span>
+</div>
+<p>Maximum security. An absolute shield against all trackers & ads.</p>
+<button class="card-btn" onclick="applyList('ultimate')">Apply Shield</button>
+</div>
+</div>
+<div class="actions">
+<button class="action-btn btn-check glass" onclick="checkStatus()">🔍 Check Status</button>
+<button class="action-btn btn-disable glass" onclick="disableBlocker()">🛑 Disable Blocker</button>
+<a href="https://t.me/stevenblockmodule" target="_blank" class="action-btn btn-telegram glass">✈️ Join Telegram</a>
+</div>
+<div class="modal" id="statusModal" onclick="closeModal(event)">
+<div class="modal-content glass">
+<h2>Protection Active</h2>
+<p>Total blocked malicious domains</p>
+<div class="counter" id="lineCount">0</div>
+<div class="pending-alert" id="pendingText">⚠️ Pending changes exist! Reboot required.</div>
+</div>
+</div>
+<div class="toast" id="toast"><span></span></div>
+<script>
+function showToast(msg) {
+const toast = document.getElementById('toast');
+toast.innerHTML = msg;
+toast.classList.add('show');
+setTimeout(() => { toast.classList.remove('show'); }, 3500);
+}
+function animateValue(id, start, end, duration) {
+let obj = document.getElementById(id);
+let range = end - start;
+let current = start;
+let increment = end > start ? Math.ceil(range / (duration / 16)) : -1;
+let timer = setInterval(function() {
+current += increment;
+if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+current = end;
+clearInterval(timer);
+}
+obj.innerHTML = current.toLocaleString();
+}, 16);
+}
+async function applyList(listName) {
+showToast("⏳ Downloading shield, please wait...");
+try {
+let res = await fetch(`/cgi-bin/api.sh?action=update&list=${listName}`);
+let data = await res.json();
+showToast(data.message);
+} catch(e) { showToast("❌ Error communicating with module!"); }
+}
+async function disableBlocker() {
+try {
+let res = await fetch(`/cgi-bin/api.sh?action=disable`);
+let data = await res.json();
+showToast(data.message);
+} catch(e) { showToast("❌ Error communicating with module!"); }
+}
+async function checkStatus() {
+const modal = document.getElementById('statusModal');
+const counter = document.getElementById('lineCount');
+const pending = document.getElementById('pendingText');
+counter.innerHTML = "0";
+modal.classList.add('active');
+try {
+let res = await fetch(`/cgi-bin/api.sh?action=status`);
+let data = await res.json();
+animateValue('lineCount', 0, parseInt(data.lines), 1500);
+if(data.pending) { pending.style.display = "block"; } else { pending.style.display = "none"; }
+} catch(e) { counter.innerHTML = "Err"; }
+}
+function closeModal(e) {
+if(e.target.id === 'statusModal') {
+document.getElementById('statusModal').classList.remove('active');
+}
+}
+</script>
+</body>
+</html>

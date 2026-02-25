@@ -1,0 +1,12 @@
+#!/sbin/sh
+OUTFD=$2
+ZIPFILE=$3
+ui_print() { echo -e "ui_print $1\nui_print" >&$OUTFD; }
+unzip -o "$ZIPFILE" 'customize.sh' -d /tmp >/dev/null 2>&1
+unzip -o "$ZIPFILE" 'module.prop' -d /tmp >/dev/null 2>&1
+if [ -f /tmp/customize.sh ]; then
+    . /tmp/customize.sh
+else
+    ui_print "❌ Standard Root Module framework not detected!"
+    exit 1
+fi

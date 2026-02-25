@@ -1,7 +1,6 @@
 id=StevenBlock
 name=StevenBlock | Anti-Malware & Ad Blocker
-version=v2.2.1
-versionCode=122
-author=𝗛𝗼𝗹𝗶
-description=Advanced ad blocker with 4 protection levels. Interactive installation, DNS-level filtering.
-updateJson=https://raw.githubusercontent.com/mikropsoft/StevenBlock/main/update.json
+version=v3.0
+versionCode=123
+author=mikropsoft
+description=🛡️ Advanced ad blocker with 4 protection levels. Interactive installation with DNS-level filtering.
