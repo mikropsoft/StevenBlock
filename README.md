@@ -55,7 +55,7 @@ Through our modern WebUI, you can select the perfect hosts file that suits your 
 
 Ready to level up your digital defense? It's as easy as 1-2-3-4:
 
-1.  **Flash It**: Open your root manager (**Magisk**, **KernelSU**, or **APatch**), head to the Modules section, tap 'Install from storage', and select the **StevenBlock v3.0** `.zip` file.
+1.  **Flash It**: Open your root manager (**Magisk**, **KernelSU**, or **APatch**), head to the Modules section, tap 'Install from storage', and select the **StevenBlock** `.zip` file.
 2.  **First Reboot**: Reboot your device once. *Note: The module will automatically apply the default StevenBlack Unified list during this first boot.*
 3.  **Launch WebUI**: Go back to your Root Manager's module list and tap the **Action** (or Settings) icon next to StevenBlock. The beautifully designed WebUI will pop up!
 4.  **Customize**: Select your preferred shield (Spark, Blu, Ultimate, etc.). Wait for the success toast, and do one final quick reboot to lock in your new ultimate protection. Enjoy!
@@ -106,5 +106,6 @@ A huge shoutout to these amazing projects for making **StevenBlock** possible:
 [![Star History Chart](https://api.star-history.com/svg?repos=mikropsoft/StevenBlock,Magisk-Modules-Alt-Repo/StevenBlock&type=Date)](https://star-history.com/#mikropsoft/StevenBlock&Magisk-Modules-Alt-Repo/StevenBlock&Date)
 
 ---
+
 
 <img src="https://raw.githubusercontent.com/matfantinel/matfantinel/master/waves.svg" width="100%" height="100">
