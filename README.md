@@ -8,7 +8,7 @@
 ![KernelSU](https://img.shields.io/badge/KernelSU-199116?style=for-the-badge&logo=kernelsu&logoColor=white)
 ![APatch](https://img.shields.io/badge/APatch-3086F8?style=for-the-badge&logo=apatch&logoColor=white)
 
-Hey there, digital explorer! 👋 Ready to reclaim your online experience? Say hello to **StevenBlock v3.0**, your ultimate weapon in the fight against pesky ads, trackers, and sneaky malware. Now supercharged with a brand-new **Web-based UI**! Let's dive into how this little powerhouse can transform your digital life!
+Hey there, digital explorer! 👋 Ready to reclaim your online experience? Say hello to **StevenBlock**, your ultimate weapon in the fight against pesky ads, trackers, and sneaky malware. Now supercharged with a brand-new **Web-based UI**! Let's dive into how this little powerhouse can transform your digital life!
 
 ## **🚀 What Makes StevenBlock Your Digital Superhero?**
 
@@ -91,7 +91,6 @@ A huge shoutout to these amazing projects for making **StevenBlock** possible:
 
 -   **[StevenBlack](https://github.com/StevenBlack)** for being the original hosts file guru and our default provider.
 -   **[EnergizedProtection](https://github.com/EnergizedProtection)** for the excellent Spark, Blu, and Ultimate packs that power our advanced options.
--   A special thanks to **[ZG089](https://github.com/ZG089)** for their incredible support and contributions to the project.
 
 ---
 
