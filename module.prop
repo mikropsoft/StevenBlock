@@ -1,6 +1,6 @@
 id=StevenBlock
-name=StevenBlock | Anti-Malware & Ad Blocker
-version=v3.0
-versionCode=123
+name=StevenBlock | Security Center & Ad Blocker
+version=v4.0
+versionCode=400
 author=mikropsoft
-description=🛡️ Advanced ad blocker with 4 protection levels. Interactive installation with DNS-level filtering.
+description=🛡️ The Ultimate Root Security Center. Featuring a sleek WebUI, Custom Domain Rules (Black/White), Smart Updates, and Premium Blocklists (StevenBlack & Energized).

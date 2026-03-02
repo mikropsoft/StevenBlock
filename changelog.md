@@ -1,49 +1,69 @@
-# 🛡️ StevenBlock | Changelog & History
+# 🛡️ Welcome to StevenBlock
 
-Welcome to the official release history for **StevenBlock**. Stay up-to-date with all the latest features, improvements, and bug fixes we bring to your digital guardian.
+Hey there, digital explorer! 👋 If you're reading this, it means you've successfully installed **StevenBlock** and taken a massive step toward a cleaner, faster, and safer digital life. 
 
-## 🤝 Official Support & Community
-
-Looking for support, the latest news, or want to connect with other users?  
-Join our official group to stay in the loop and engage with the StevenBlock community!
-
-> 💬 **[Join us on Telegram](https://t.me/stevenblockmodule)** — This is the *only* official support channel for this module. We'd love to see you there!
+Say goodbye to annoying pop-ups, creepy trackers, and malicious domains. You are now under the protection of the ultimate systemless shield! 🛡️
 
 ---
 
-## 🚀 Release Notes
+## 🚀 How to Access Your New Security Center
 
-### **v3.0** — *The Premium WebUI Update* (Latest)
-*The biggest update yet, bringing a complete UI overhaul and next-gen stability.*
+You don't need to look for a new app icon on your phone! **StevenBlock** lives right inside your root manager.
 
-✨ **New Features:**
-- **Brand New WebUI:** Added a gorgeous, Glassmorphism-inspired Web dashboard accessible directly from your Root Manager's (Magisk/KSU/APatch) "Action" button. No extra APK needed!
-- **On-Demand Customization:** Switch seamlessly between **StevenBlack** (Default) and **Energized** (Spark, Blu, Ultimate) lists via the new UI.
-- **Delayed Apply Mechanism:** To ensure maximum system stability and prevent connection drops, lists are now securely downloaded and applied *only* upon the next system reboot.
-- **Built-in Hosts Checker:** View your live protection status and the exact number of blocked malicious domains with fluid animations directly in the dashboard.
-
-⚡ **Improvements & Fixes:**
-- **Zero Battery Drain:** Switched to a purely systemless API-based approach. Absolute zero background usage.
-- **Next-Gen Root Support:** Flawless compatibility and auto-detection for Magisk, KernelSU, and APatch environments.
-- **Busybox Integration:** The module now utilizes the internal `busybox httpd` for the WebUI, eliminating external dependencies.
+1. Open your Root Manager (**Magisk**, **KernelSU**, or **APatch**).
+2. Go to the **Modules** tab.
+3. Find **StevenBlock** and tap the **Action** (or Settings ⚙️) button next to it.
+4. Boom! 💥 Welcome to your gorgeous, glassmorphism-styled WebUI Security Center.
 
 ---
 
-### **v2.0** — *The Energized Expansion*
-✨ **New Features:**
-- Integrated the highly requested **EnergizedProtection** lists (Spark, Blu, Ultimate) for users needing more aggressive ad-blocking.
-- Added native systemless hosts routing specifically tailored for KernelSU users.
+## 💡 Pro Tips for Maximum Power
 
-⚡ **Improvements & Fixes:**
-- Updated the main StevenBlack list to the latest upstream version, blocking an additional 15,000+ new malware domains.
-- Optimized shell script execution time during the boot process.
-- Fixed a rare issue where some specific tracking domains were bypassing the systemless hosts mount.
+Want to get the most out of StevenBlock? Here are some insider tips:
+
+> 🛡️ **Tip 1: Choose Your Weapon Wisely**
+> By default, you are protected by the **StevenBlack (Unified)** list, which is perfect for 90% of users. But if you want to go nuclear on ads, open your WebUI and switch to **Energized Ultimate**. Just remember: aggressive lists might break some shopping tracking links!
+
+> ⚡ **Tip 2: The Magic of Rebooting**
+> To ensure absolute system stability and prevent your current apps from crashing, **StevenBlock** applies its magic *only* when you reboot. If you change a list or add a custom domain rule, you'll see a yellow ⚠️ warning. Just give your phone a quick restart!
+
+> 🌐 **Tip 3: Chrome/Brave Users (KSU & APatch)**
+> Are you using KernelSU or APatch and still seeing ads in Google Chrome or Brave? Browsers try to bypass system hosts. 
+> **The Fix:** Go to your Root Manager -> Superuser Tab -> Select your Browser -> Custom Profile -> **UNCHECK "umount modules"**. Problem solved!
+
+> 🎯 **Tip 4: Custom Rules**
+> Did a specific app stop working? Or did an ad slip through? Use the new **Domain Rules** section in the WebUI! You can easily **Whitelist (Allow)** a broken site or **Blacklist (Block)** a sneaky ad domain.
 
 ---
 
-### **v1.0** — *The Beginning*
-✨ **New Features:**
-- Birth of StevenBlock! 🛡️
-- Standard systemless hosts implementation using the robust StevenBlack Unified list.
-- Successfully blocks intrusive ads, malware, and spyware domains system-wide.
-- Extremely lightweight with a minimal system footprint.
+## 🤝 Join the StevenBlock Family!
+
+You are not alone in this fight against malware! We have a fast-growing, super helpful community. Whether you need help setting up, want to report an issue, or just want to hang out and talk about Android modding, we are here for you!
+
+💬 **[Join our Official Telegram Group!](https://t.me/stevenblockmodule)**  
+*(This is the only official support channel. Come say hi!)*
+
+---
+
+## ☕ Support the Developer
+
+**StevenBlock** is 100% free, open-source, and strictly ad-free (ironic, right?). It takes countless hours to maintain the servers, write the code, and keep the WebUI looking fresh. 
+
+If this module made your digital life better, consider buying me a coffee. It keeps me awake and coding! 💻☕
+
+💛 **[Buy me a Coffee (Support the Project)](https://buymeacoffee.com/mikropsoft)**
+
+---
+
+## 📜 A Quick Note on YouTube Ads...
+
+We get this question a lot: *"Why am I still seeing ads in the official YouTube app?"*
+
+**The Truth:** StevenBlock blocks connections based on domain names (DNS level). YouTube serves its videos and its ads from the *exact same servers*. If we block the ad server, we break the video entirely! 
+
+For an ad-free YouTube experience, we highly recommend using dedicated, modified YouTube clients alongside StevenBlock. They are the perfect combo! 🤝
+
+---
+
+**Stay safe, stay fast, and enjoy your ad-free experience!**
+*- Developed with ❤️ by mikropsoft.*
