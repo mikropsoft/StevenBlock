@@ -1,6 +1,7 @@
-id=StevenBlock
-name=StevenBlock | Security Center & Ad Blocker
-version=v4.0
-versionCode=400
+id=stevenblock
+name=StevenBlock
+version=v5.0
+versionCode=500
 author=mikropsoft
-description=🛡️ The Ultimate Root Security Center. Featuring a sleek WebUI, Custom Domain Rules (Black/White), Smart Updates, and Premium Blocklists (StevenBlack & Energized).
+description=Ultra-lightweight system-wide ad blocker using static hosts file. Zero background processes, zero resource usage. Terminal-only configuration.
+updateJson=https://raw.githubusercontent.com/mikropsoft/StevenBlock/main/update.json
