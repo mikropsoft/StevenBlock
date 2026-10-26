@@ -1,74 +1,50 @@
-# 🛡️ Welcome to StevenBlock (The Zero-Bloat Era)
+# 🛡️ StevenBlock v1.0
 
-Hey there, digital explorer! 👋 Welcome to the completely rebuilt era of **StevenBlock**. We looked at heavy adblockers and decided to throw the bloat in the trash. 
+StevenBlock was rewritten from scratch, so this brand-new architecture starts a fresh version line at v1.0.
 
-Say goodbye to resource-hogging WebUIs and battery-draining background services. You are now wielding the ultimate, pure-terminal systemless shield! 🛡️⚡
+## 🚀 Highlights
 
----
+- 🖥️ **Brand-new WebUI** — switch lists, update, manage domain rules, check status and read logs from one polished interface.
+- ⚙️ **Fully automatic install** — no questions, no volume keys. The installer detects your root manager, checks for conflicts, cleans up old versions and installs the default list.
+- 🔋 **Zero permanent background processes** — blocking is a static hosts file, and the local WebUI server only runs while you use it.
+- 🛟 **Backed-up, atomic updates** — downloads are validated before they can touch your hosts file, and every write can be rolled back.
+- 🧪 **Applied-state check** — see at a glance whether your hosts file is ✅ Applied, 🟡 Not applied yet or ⚠️ Overridden by another module.
+- 🔒 **Private by design** — local only, token-protected, no telemetry, no external requests from the WebUI.
 
-## 🚀 What's New in This Architecture?
+## 🎯 New blocklists
 
-We rebuilt everything from the ground up for maximum efficiency:
+- 🟢 **StevenBlack Main** — the balanced default 
+- 🔵 **hBlock** — a mixed list built from many sources
+- 🟢 **HaGeZi Light** — basic protection 
+- 🔵 **HaGeZi Normal** — all-round protection 
+- 🟡 **HaGeZi Pro** — extended protection 
+- 🟠 **HaGeZi Pro++** — aggressive, may break some sites 
+- 🔴 **HaGeZi Ultimate** — the most aggressive option 
+- 📊 Live entry counts and last-update dates, read from each list's header without downloading the whole file
 
-*   💻 **Death of the WebUI, Birth of CLI:** We removed the heavy web interface! Everything is now managed through a brutally fast, interactive Terminal via your root manager's **Action** menu.
-*   🎛️ **Volume Key Navigation:** No typing required! You can now use your physical **Volume UP / DOWN** keys to navigate menus and select your blocklists during installation and inside the Action menu.
-*   📅 **Live Repository Intelligence:** Before you choose a blocklist, the script now dynamically fetches the exact "Last Updated" date directly from GitHub. You always know how fresh your armor is!
-*   🧹 **Aggressive Auto-Cleanup:** The script now automatically sanitizes downloaded lists, strips dead domains, and flawlessly flushes your Android DNS cache (`ndc resolver`).
-*   🔋 **Absolute Zero Battery Drain:** Zero background processes. Zero active RAM usage. Just a perfectly optimized `/system/etc/hosts` file.
+## 🖥️ WebUI
 
----
+- 📋 **Lists** — level badges, entry counts, dates and a clearly marked active list
+- ⬇️ **Live progress** — download, verify, optimize and install steps with percentage, size, speed and a ✖️ Cancel button
+- 🧩 **Domain Rules** — ✅ Allow and ⛔ Block single domains; paste a full URL and the domain is extracted for you
+- ⚡ **Actions** — 🔄 Update Current List, 📊 Check Status and ⏻ Disable / Enable Blocker
+- 📜 **Logs** — timestamped, color-coded entries (ℹ️ INFO, ⚠️ WARN, ❌ ERROR)
+- 🔁 **Reboot banner** — appears whenever saved changes are waiting for a reboot
+- 🌙 **Dark and ☀️ light themes**, built for phones from 360 px up to tablets
+- 📱 Opens inside KernelSU, KernelSU Next, SukiSU and APatch, and from the Action button on Magisk v28+ (or with KsuWebUI, MMRL and WebUI X)
 
-## 🎯 How to Access Your Control Center
+## 🛟 Safety net
 
-1. Open your Root Manager (**Magisk**, **KernelSU**, or **APatch**).
-2. Go to the **Modules** tab.
-3. Find **StevenBlock** and tap the **Action** (or Settings ⚙️) button.
-4. A terminal will open! Use your **Volume Keys** to Reconfigure, Force Update, or Check your Status.
+- 🔍 Every download must return HTTP 200, can't be empty or an HTML page, must contain at least 1,000 valid entries and must match its Content-Length
+- 🧹 One-pass normalization: every entry becomes 0.0.0.0, duplicates and invalid domains are removed
+- 💾 The last 3 hosts files are kept as backups
+- ⚛️ Atomic writes and post-write verification with automatic restore
+- 🔒 One task at a time, with stale-lock detection
+- 🌐 Offline install? StevenBlock finishes installing and downloads your list automatically after the next boot
 
----
+## ⬆️ Upgrading from v5.0
 
-## 💡 Pro Tips for Maximum Power
-
-> ⚡ **Tip 1: The Magic of Rebooting**
-> StevenBlock applies its magic deep within the system. If you change a list or force an update via the Action menu, **always REBOOT your device** to apply the changes perfectly!
-
-> 🌐 **Tip 2: Chrome/Brave Users (KSU & APatch)**
-> Are you using KernelSU or APatch and still seeing ads in Google Chrome or Brave? Browsers try to bypass system hosts. 
-> **The Fix:** Go to your Root Manager -> Superuser Tab -> Select your Browser -> Custom Profile -> **UNCHECK "umount modules"**. Problem solved!
-
-> 🛑 **Tip 3: Do Not Mix Adblockers!**
-> Please disable "Systemless Hosts" in your root manager and uninstall apps like AdAway. Running multiple hosts-blockers will create chaos. Let StevenBlock do all the heavy lifting!
-
----
-
-## 🤝 Join the StevenBlock Family!
-
-You are not alone in this fight against malware and trackers! We have a fast-growing, super helpful community. 
-
-💬 **[Join our Official Telegram Group!](https://t.me/stevenblockmodule)**  
-*(Come say hi, report issues, or just hang out with performance purists!)*
-
----
-
-## ☕ Support the Rebellion
-
-**StevenBlock** is 100% free, open-source, and strictly ad-free. It takes countless hours to write the code and maintain this zero-bloat standard. 
-
-If this module made your digital life better and saved your battery, consider buying me a coffee. It keeps me awake and coding! 💻☕
-
-💛 **[Buy me a Coffee (Support the Project)](https://buymeacoffee.com/mikropsoft)**
-
----
-
-## 📜 A Quick Note on YouTube Ads...
-
-*"Why am I still seeing ads in the official YouTube app?"*
-
-**The Truth:** StevenBlock kills connections at the DNS level. YouTube serves its videos and its ads from the *exact same servers*. If we block the ad server, we break the video entirely! 
-
-For an ad-free YouTube experience, we highly recommend using dedicated, modified YouTube clients (like ReVanced) alongside StevenBlock. They are the perfect combo! 🤝
-
----
-
-**Stay safe, stay fast, and enjoy your ad-free experience!**
-*- Developed with ❤️ by mikropsoft.*
+- 💻 The terminal menu, 🎛️ volume-key installer and ⚡ Energized lists have been removed
+- 🧹 v5.0 leftovers (config.txt, hosts.bak, hosts.tmp) are cleaned up automatically
+- 🎯 Everyone starts on StevenBlack Main — pick any other list in the WebUI after rebooting
+- 🔁 Reboot after the update to activate StevenBlock v1.0

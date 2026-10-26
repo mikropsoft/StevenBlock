@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#06080d">
+<meta name="referrer" content="no-referrer">
+<title>StevenBlock</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css?v=1000">
+<script>try{var t=localStorage.getItem('sb-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+
+<header class="topbar glass" id="top">
+  <div class="topbar-row">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">🛡️</div>
+      <div class="brand-text">
+        <div class="brand-name">StevenBlock <span class="ver" id="ver">v1.0</span></div>
+        <div class="badge is-wait" id="badge"><span class="badge-emoji" id="badge-emoji">⏳</span><span id="badge-text">Loading…</span></div>
+      </div>
+    </div>
+    <button class="icon-btn" id="theme-btn" type="button" aria-label="Switch to light theme">☀️</button>
+  </div>
+  <div class="ribbon">
+    <nav class="ribbon-nav" id="ribbon-nav" aria-label="Sections">
+      <a class="chip" href="#lists">📋 Lists</a>
+      <a class="chip" href="#rules">🧩 Rules</a>
+      <a class="chip" href="#actions">⚡ Actions</a>
+      <a class="chip" href="#logs">📜 Logs</a>
+    </nav>
+    <div class="ribbon-alert" id="ribbon-alert" hidden>
+      <span class="ribbon-text"><span class="rt-long" id="ribbon-long">🟡 Reboot to apply changes</span><span class="rt-short" id="ribbon-short">🟡 Reboot required</span></span>
+      <button class="btn btn-warn btn-xs" id="ribbon-btn" type="button">🔁 Reboot now</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero glass" id="hero" aria-label="Protection overview">
+    <div class="hero-head">
+      <span class="eyebrow">🛡️ Protection</span>
+      <span class="eyebrow-sub">The Zero-Bloat Digital Guardian</span>
+    </div>
+    <div class="hero-num"><span id="hero-count"><span class="sk sk-num"></span></span></div>
+    <div class="hero-sub" id="hero-sub"><span class="sk sk-line w-40"></span></div>
+    <div class="hero-list" id="hero-list"><span class="sk sk-line w-60"></span></div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-k">🧩 Rules</div>
+        <div class="stat-v" id="stat-rules"><span class="sk sk-line w-70"></span></div>
+      </div>
+      <div class="stat">
+        <div class="stat-k">🕒 Updated</div>
+        <div class="stat-v" id="stat-updated"><span class="sk sk-line w-70"></span></div>
+      </div>
+    </div>
+    <div class="hero-applied" id="hero-applied"><span class="sk sk-line w-50"></span></div>
+  </section>
+
+  <section class="panel glass" id="lists" aria-labelledby="lists-title">
+    <div class="panel-head">
+      <h2 id="lists-title">📋 Lists</h2>
+      <button class="btn btn-ghost btn-xs" id="lists-refresh" type="button">🔄 Refresh</button>
+    </div>
+    <p class="panel-note" id="lists-note">Pick a blocklist. Stronger lists block more, but can break more.</p>
+    <h3 class="group-title">🧬 Unified lists</h3>
+    <div class="cards" id="group-unified">
+      <article class="lcard is-skel"><div class="lc-top"><span class="sk sk-line w-50"></span><span class="sk sk-pill"></span></div><div class="lc-desc"><span class="sk sk-line w-90"></span><span class="sk sk-line w-70"></span></div><div class="lc-meta"><span class="sk sk-line w-40"></span><span class="sk sk-line w-30"></span></div><div class="lc-foot"><span></span><span class="sk sk-btn"></span></div></article>
+      <article class="lcard is-skel"><div class="lc-top"><span class="sk sk-line w-50"></span><span class="sk sk-pill"></span></div><div class="lc-desc"><span class="sk sk-line w-90"></span><span class="sk sk-line w-70"></span></div><div class="lc-meta"><span class="sk sk-line w-40"></span><span class="sk sk-line w-30"></span></div><div class="lc-foot"><span></span><span class="sk sk-btn"></span></div></article>
+    </div>
+    <h3 class="group-title">🎚️ HaGeZi <span class="group-sub">Light → Ultimate, gentle to strict</span></h3>
+    <div class="cards" id="group-hagezi">
+      <article class="lcard is-skel"><div class="lc-top"><span class="sk sk-line w-50"></span><span class="sk sk-pill"></span></div><div class="lc-desc"><span class="sk sk-line w-90"></span><span class="sk sk-line w-70"></span></div><div class="lc-meta"><span class="sk sk-line w-40"></span><span class="sk sk-line w-30"></span></div><div class="lc-foot"><span></span><span class="sk sk-btn"></span></div></article>
+      <article class="lcard is-skel"><div class="lc-top"><span class="sk sk-line w-50"></span><span class="sk sk-pill"></span></div><div class="lc-desc"><span class="sk sk-line w-90"></span><span class="sk sk-line w-70"></span></div><div class="lc-meta"><span class="sk sk-line w-40"></span><span class="sk sk-line w-30"></span></div><div class="lc-foot"><span></span><span class="sk sk-btn"></span></div></article>
+      <article class="lcard is-skel"><div class="lc-top"><span class="sk sk-line w-50"></span><span class="sk sk-pill"></span></div><div class="lc-desc"><span class="sk sk-line w-90"></span><span class="sk sk-line w-70"></span></div><div class="lc-meta"><span class="sk sk-line w-40"></span><span class="sk sk-line w-30"></span></div><div class="lc-foot"><span></span><span class="sk sk-btn"></span></div></article>
+      <article class="lcard is-skel"><div class="lc-top"><span class="sk sk-line w-50"></span><span class="sk sk-pill"></span></div><div class="lc-desc"><span class="sk sk-line w-90"></span><span class="sk sk-line w-70"></span></div><div class="lc-meta"><span class="sk sk-line w-40"></span><span class="sk sk-line w-30"></span></div><div class="lc-foot"><span></span><span class="sk sk-btn"></span></div></article>
+      <article class="lcard is-skel"><div class="lc-top"><span class="sk sk-line w-50"></span><span class="sk sk-pill"></span></div><div class="lc-desc"><span class="sk sk-line w-90"></span><span class="sk sk-line w-70"></span></div><div class="lc-meta"><span class="sk sk-line w-40"></span><span class="sk sk-line w-30"></span></div><div class="lc-foot"><span></span><span class="sk sk-btn"></span></div></article>
+    </div>
+  </section>
+
+  <section class="panel glass" id="rules" aria-labelledby="rules-title">
+    <div class="panel-head">
+      <h2 id="rules-title">🧩 Domain Rules</h2>
+    </div>
+    <p class="panel-note">Always allow or always block a single domain, on top of your list.</p>
+    <label class="field" for="rule-input">
+      <span class="sr-only">Domain or URL</span>
+      <input id="rule-input" type="text" inputmode="url" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="2048" placeholder="example.com or a full URL">
+    </label>
+    <div class="field-msg" id="rule-msg" aria-live="polite"></div>
+    <div class="row-2">
+      <button class="btn btn-allow" id="rule-allow" type="button">✅ Allow Domain</button>
+      <button class="btn btn-block" id="rule-block" type="button">⛔ Block Domain</button>
+    </div>
+    <p class="tip">💡 Hosts files can’t use wildcards (*). Allow and Block match that exact domain only — sub.example.com needs its own rule.</p>
+    <div class="seg" role="tablist" aria-label="Rule lists">
+      <button class="seg-btn is-on" id="tab-allow" type="button" role="tab" aria-selected="true">✅ Allowed <span class="seg-count" id="count-allow">0</span></button>
+      <button class="seg-btn" id="tab-block" type="button" role="tab" aria-selected="false">⛔ Blocked <span class="seg-count" id="count-block">0</span></button>
+    </div>
+    <ul class="rule-list" id="rule-list" aria-live="polite"><li class="empty is-skel"><span class="sk sk-line w-50"></span></li></ul>
+  </section>
+
+  <section class="panel glass" id="actions" aria-labelledby="actions-title">
+    <div class="panel-head">
+      <h2 id="actions-title">⚡ Actions</h2>
+    </div>
+    <div class="tiles">
+      <button class="tile" id="act-update" type="button"><span class="tile-emoji">🔄</span><span class="tile-label">Update Current List</span></button>
+      <button class="tile" id="act-status" type="button"><span class="tile-emoji">📊</span><span class="tile-label">Check Status</span></button>
+      <button class="tile" id="act-toggle" type="button"><span class="tile-emoji tile-power" id="toggle-icon"></span><span class="tile-label" id="toggle-label">Disable Blocker</span></button>
+    </div>
+    <p class="panel-note tiles-note" id="actions-note">Updates only download when the source has changed.</p>
+  </section>
+
+  <section class="panel glass" id="logs" aria-labelledby="logs-title">
+    <div class="panel-head">
+      <h2 id="logs-title">📜 Logs</h2>
+      <div class="head-actions">
+        <button class="btn btn-ghost btn-xs" id="logs-refresh" type="button" aria-label="Refresh logs">🔄</button>
+        <button class="btn btn-ghost btn-xs" id="logs-clear" type="button">🧹 Clear logs</button>
+      </div>
+    </div>
+    <div class="logbox" id="logbox" tabindex="0" aria-label="Log entries"></div>
+  </section>
+
+  <footer class="credits glass">
+    <h2>🙌 Credits</h2>
+    <p class="credits-by">StevenBlock is made by <strong>mikropsoft</strong>.</p>
+    <div class="row-2">
+      <button class="btn btn-ghost" type="button" data-link="github">🐙 GitHub</button>
+      <button class="btn btn-ghost" type="button" data-link="telegram">✈️ Telegram Group</button>
+    </div>
+    <h3 class="credits-sub">Blocklists &amp; typeface</h3>
+    <div class="credits-grid">
+      <button class="btn btn-ghost" type="button" data-link="stevenblack">📋 StevenBlack</button>
+      <button class="btn btn-ghost" type="button" data-link="hblock">📋 hBlock</button>
+      <button class="btn btn-ghost" type="button" data-link="hagezi">📋 HaGeZi</button>
+      <button class="btn btn-ghost" type="button" data-link="inter">🔤 Inter</button>
+    </div>
+    <p class="credits-ver" id="credits-ver">StevenBlock v1.0 • 🔒 Local only • No telemetry • Inter by Rasmus Andersson (SIL OFL 1.1)</p>
+  </footer>
+</main>
+
+<div class="gate" id="gate" hidden>
+  <div class="gate-card glass-strong">
+    <div class="gate-icon" id="gate-icon">🔑</div>
+    <h2 id="gate-title">Secure session required</h2>
+    <p id="gate-text"></p>
+    <button class="btn btn-primary" id="gate-retry" type="button">🔄 Try again</button>
+  </div>
+</div>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-scrim" id="modal-scrim"></div>
+  <div class="sheet glass-strong" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="sheet-grip" aria-hidden="true"></div>
+    <div class="sheet-icon" id="sheet-icon" aria-hidden="true"></div>
+    <h3 class="sheet-title" id="sheet-title"></h3>
+    <div class="sheet-body" id="sheet-body"></div>
+    <div class="sheet-actions" id="sheet-actions"></div>
+  </div>
+</div>
+
+<button class="mini glass-strong" id="mini" type="button" hidden>
+  <span class="mini-text" id="mini-text">⬇️ Working…</span>
+  <span class="mini-bar"><span class="mini-fill" id="mini-fill"></span></span>
+</button>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="app.js?v=1000"></script>
+</body>
+</html>

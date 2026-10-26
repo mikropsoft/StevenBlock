@@ -1,0 +1,6 @@
+# StevenBlock v1.0 - systemless hosts file
+# No blocklist is installed yet. StevenBlock downloads one as soon as it can.
+# https://github.com/mikropsoft/StevenBlock
+
+127.0.0.1 localhost
+::1 localhost ip6-localhost

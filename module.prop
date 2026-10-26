@@ -1,7 +1,7 @@
 id=stevenblock
 name=StevenBlock
-version=v5.0
-versionCode=500
+version=v1.0
+versionCode=1000
 author=mikropsoft
-description=Ultra-lightweight system-wide ad blocker using static hosts file. Zero background processes, zero resource usage. Terminal-only configuration.
+description=🛡️ Zero-bloat systemless ad blocker • 7 curated blocklists • WebUI • Reboot to finish setup
 updateJson=https://raw.githubusercontent.com/mikropsoft/StevenBlock/main/update.json
