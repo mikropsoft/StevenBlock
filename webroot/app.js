@@ -442,6 +442,7 @@
     if (st.reboot) return { cls: 'is-warn', e: '🟡', t: 'Reboot required' };
     if (!st.enabled) return { cls: 'is-off', e: '🔴', t: 'Disabled' };
     if (st.applied === 'overridden') return { cls: 'is-warn', e: '⚠️', t: 'Overridden' };
+    if (st.applied === 'inactive') return { cls: 'is-off', e: '🔴', t: 'Not active' };
     return { cls: 'is-on', e: '🟢', t: 'Active' };
   }
 
@@ -449,6 +450,7 @@
     if (a === 'applied') return ['✅ Applied', 'is-ok'];
     if (a === 'pending') return ['🟡 Not applied yet — reboot required', 'is-warn'];
     if (a === 'overridden') return ['⚠️ Overridden by another module', 'is-warn'];
+    if (a === 'inactive') return ['🔴 Not active — reboot to activate', 'is-err'];
     return ['ℹ️ The system hosts file couldn’t be checked', ''];
   }
 
@@ -482,12 +484,18 @@
     let mode = '';
     if (st.reboot) mode = 'reboot';
     else if (st.setup !== 'ready' && !S.busy) mode = 'setup';
+    else if (st.applied === 'inactive' && st.enabled && st.setup === 'ready') mode = 'inactive';
     if (mode) {
+      const texts = {
+        reboot: ['🟡 Reboot to apply changes', '🟡 Reboot required'],
+        inactive: ['🔴 Reboot to activate', '🔴 Not active'],
+        setup: st.setup === 'failed' ? ['❌ First download failed', '❌ Download failed'] : ['⏳ First list not downloaded', '⏳ Setup pending']
+      };
       alert.classList.toggle('is-info', mode === 'setup');
-      $('ribbon-long').textContent = mode === 'reboot' ? '🟡 Reboot to apply changes' : (st.setup === 'failed' ? '❌ First download failed' : '⏳ First list not downloaded');
-      $('ribbon-short').textContent = mode === 'reboot' ? '🟡 Reboot required' : (st.setup === 'failed' ? '❌ Download failed' : '⏳ Setup pending');
-      $('ribbon-btn').textContent = mode === 'reboot' ? '🔁 Reboot now' : '⬇️ Download now';
-      $('ribbon-btn').className = 'btn btn-xs ' + (mode === 'reboot' ? 'btn-warn' : 'btn-primary');
+      $('ribbon-long').textContent = texts[mode][0];
+      $('ribbon-short').textContent = texts[mode][1];
+      $('ribbon-btn').textContent = mode === 'setup' ? '⬇️ Download now' : '🔁 Reboot now';
+      $('ribbon-btn').className = 'btn btn-xs ' + (mode === 'setup' ? 'btn-primary' : 'btn-warn');
       $('ribbon-btn').setAttribute('data-mode', mode);
       $('ribbon-btn').disabled = S.busy && mode === 'setup';
       alert.hidden = false;
@@ -509,7 +517,8 @@
     } else {
       count.appendChild(h('span', { class: 'num', text: fmtNum(st.domains) }));
       if (st.reboot) sub.textContent = 'domains ready — reboot to apply';
-      else if (st.applied === 'overridden') sub.textContent = 'domains in your hosts file, but another module overrides it';
+      else if (st.applied === 'overridden') sub.textContent = 'domains ready, but overridden';
+      else if (st.applied === 'inactive') sub.textContent = 'domains ready — reboot to activate';
       else sub.textContent = 'domains blocked system-wide';
     }
 
@@ -1102,6 +1111,7 @@
       ['🧪 Applied', appliedText(st.applied)[0]],
       ['🧰 Root manager', (st.manager || 'Unknown') + (st.managerVersion ? ' ' + st.managerVersion : '')],
       ['📦 Module version', (st.version || 'v1.0') + ' (' + (st.versionCode || 1000) + ')'],
+      ['🔗 Mounted by', ({ manager: 'Root manager', self: 'StevenBlock (direct)', conflict: 'Another module', failed: '❌ Mount failed' })[st.mount] || '—'],
       ['🖥️ Interface', Bridge.mode === 'ksu' ? 'Root manager WebUI' : 'Local server · 127.0.0.1:9090']
     ];
     const list = h('div', { class: 'kv-list' }, rows.map((row) => h('div', { class: 'kv' }, h('span', { class: 'k', text: row[0] }), h('span', { class: 'v', text: row[1] }))));
@@ -1112,6 +1122,12 @@
     }
     if (st.adaway) body.push(h('div', { class: 'note is-warn', text: '⚠️ AdAway is installed. Don’t use its root or systemless mode together with StevenBlock.' }));
     if (st.applied === 'pending') body.push(h('div', { class: 'note', text: '🔁 Your latest changes are saved and become active after a reboot.' }));
+    if (st.applied === 'inactive') {
+      body.push(h('div', { class: 'note is-err', text: st.mount === 'failed'
+        ? '🔴 Android isn’t using StevenBlock’s hosts file, and mounting it at startup failed. Check 📜 Logs for details.'
+        : '🔴 Android isn’t using StevenBlock’s hosts file yet. Reboot — StevenBlock mounts it automatically at startup.' }));
+    }
+    if (st.applied === 'applied' && st.mount === 'self') body.push(h('div', { class: 'note', text: '🔗 Your root manager didn’t mount the hosts file, so StevenBlock mounted it directly. Blocking works normally.' }));
     Modal.show({ icon: '📊', title: 'Status', body: body, view: 'status', actions: [{ label: '👌 Got it', class: 'btn-primary', onClick: () => Modal.close() }] });
   }
 
@@ -1374,7 +1390,7 @@
     }
     $('ribbon-btn').addEventListener('click', () => {
       const mode = $('ribbon-btn').getAttribute('data-mode');
-      if (mode === 'reboot') rebootFlow();
+      if (mode === 'reboot' || mode === 'inactive') rebootFlow();
       else if (mode === 'setup' && S.status) runUpdate();
     });
     $('lists-refresh').addEventListener('click', () => refreshMeta(''));

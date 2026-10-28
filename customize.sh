@@ -12,6 +12,7 @@ ui_print " "
 set_perm "$MODPATH/sb.sh" 0 0 0755
 set_perm "$MODPATH/action.sh" 0 0 0755
 set_perm "$MODPATH/service.sh" 0 0 0755
+set_perm "$MODPATH/post-mount.sh" 0 0 0755
 set_perm "$MODPATH/uninstall.sh" 0 0 0755
 
 SB_MODDIR="$MODPATH" BOOTMODE="${BOOTMODE:-true}" \

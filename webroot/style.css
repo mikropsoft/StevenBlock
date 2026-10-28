@@ -606,6 +606,10 @@ p {
   color: var(--warn);
 }
 
+.hero-applied.is-err {
+  color: var(--danger);
+}
+
 .panel-head {
   min-height: 44px;
   display: flex;
@@ -1459,10 +1463,10 @@ p {
 .sheet-actions {
   position: -webkit-sticky;
   position: sticky;
-  bottom: 0;
+  bottom: -18px;
   margin: 18px -20px -18px;
   padding: 12px 20px 18px;
-  background: var(--glass-strong);
+  background: var(--glass-solid);
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;

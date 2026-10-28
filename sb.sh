@@ -53,6 +53,9 @@ HOSTS=$HOSTSD/hosts
 PROP=$MODDIR/module.prop
 SYS_HOSTS=/system/etc/hosts
 INIT_HOSTS=/proc/1/root/system/etc/hosts
+INIT_NS=/proc/1/ns/mnt
+MOUNT_TARGET=/system/etc/hosts
+MOUNTF=$RUND/mount
 PORT=9090
 IDLE_LIMIT=600
 UA="StevenBlock/1.0 (+https://github.com/mikropsoft/StevenBlock)"
@@ -791,14 +794,105 @@ pending_flag() {
   [ "$(cat "$PENDF" 2>/dev/null)" = "$(boot_id)" ]
 }
 
+hosts_sane() {
+  [ -s "$1" ] && grep -qx '127\.0\.0\.1 localhost' "$1" && grep -qx '::1 localhost ip6-localhost' "$1"
+}
+
+# Makes sure a sane module hosts file exists before it is mounted: rebuilds it from the cache when it is missing or damaged.
+repair_hosts() {
+  hosts_sane "$HOSTS" && return 0
+  mkdir -p "$HOSTSD"
+  rm -f "$HOSTSD/.hosts.sbnew"
+  cfg_load
+  _rh=0
+  if [ "$C_ENABLED" != 1 ]; then
+    compile_into "$HOSTSD/.hosts.sbnew" 0 && _rh=1
+  elif [ "$C_SETUP" = ready ] && [ -s "$LISTCACHE" ]; then
+    compile_into "$HOSTSD/.hosts.sbnew" 1 "$LISTCACHE" && _rh=1
+  fi
+  if [ "$_rh" = 1 ] && hosts_sane "$HOSTSD/.hosts.sbnew"; then
+    set_hosts_perm "$HOSTSD/.hosts.sbnew"
+    if mv -f "$HOSTSD/.hosts.sbnew" "$HOSTS"; then
+      C_DOMAINS=$CH_COUNT
+      cfg_save
+      log WARN "The hosts file was missing or damaged; rebuilt it from the cached list"
+      return 0
+    fi
+  fi
+  rm -f "$HOSTSD/.hosts.sbnew"
+  write_clean_hosts || return 1
+  log WARN "The hosts file was missing or damaged; wrote a clean localhost-only file"
+  return 0
+}
+
+in_init_ns() {
+  _ns_s=$(readlink /proc/self/ns/mnt 2>/dev/null)
+  [ -n "$_ns_s" ] && [ "$_ns_s" = "$(readlink "$INIT_NS" 2>/dev/null)" ]
+}
+
+# Bind-mounts the module hosts file over /system/etc/hosts in init's mount namespace.
+bind_hosts() {
+  if in_init_ns; then
+    mount -o bind "$HOSTS" "$MOUNT_TARGET" 2>/dev/null && return 0
+  fi
+  if [ "$SB_BB" != none ]; then
+    "$SB_BB" nsenter -t 1 -m -- "$SB_BB" mount -o bind "$HOSTS" "$MOUNT_TARGET" 2>/dev/null && return 0
+  fi
+  if [ -x /system/bin/nsenter ]; then
+    /system/bin/nsenter -t 1 -m -- /system/bin/mount -o bind "$HOSTS" "$MOUNT_TARGET" 2>/dev/null && return 0
+  fi
+  in_init_ns || mount -o bind "$HOSTS" "$MOUNT_TARGET" 2>/dev/null
+}
+
+mount_record() {
+  printf '%s\n%s\n' "$(boot_id)" "$1" > "$MOUNTF.tmp" 2>/dev/null && mv -f "$MOUNTF.tmp" "$MOUNTF"
+  return 0
+}
+
+mount_mode() {
+  _mm_b=; _mm=
+  [ -f "$MOUNTF" ] && { read -r _mm_b; read -r _mm; } < "$MOUNTF"
+  [ "$_mm_b" = "$(boot_id)" ] || _mm=
+  printf '%s' "$_mm"
+}
+
+# Runs at boot after the root manager (or its metamodule) has mounted modules.
+# Recent KernelSU, SukiSU and APatch builds only mount modules through a metamodule, and some
+# metamodules mount a copy taken at install time. If the system isn't using StevenBlock's current
+# hosts file and no other module provides one, StevenBlock bind-mounts its own file directly.
+ensure_mounted() {
+  [ -f "$HOSTS" ] || return 0
+  if cmp -s "$(live_hosts)" "$HOSTS"; then
+    [ -n "$(mount_mode)" ] || mount_record manager
+    return 0
+  fi
+  _em_cf=$(conflicts)
+  if [ -n "$_em_cf" ]; then
+    mount_record conflict
+    log WARN "Another module also replaces /system/etc/hosts ($_em_cf), so StevenBlock left it alone"
+    return 0
+  fi
+  set_hosts_perm "$HOSTS"
+  if bind_hosts && cmp -s "$(live_hosts)" "$HOSTS"; then
+    mount_record self
+    log INFO "The root manager didn't apply StevenBlock's hosts file, so StevenBlock mounted it directly"
+    return 0
+  fi
+  mount_record failed
+  log ERROR "Couldn't mount the hosts file onto /system/etc/hosts"
+  return 1
+}
+
 applied_state() {
   if [ ! -f "$HOSTS" ]; then printf 'unknown'; return 0; fi
   if cmp -s "$(live_hosts)" "$HOSTS"; then
     printf 'applied'
   elif pending_flag; then
     printf 'pending'
-  else
+  elif [ -n "$(conflicts)" ]; then
     printf 'overridden'
+  else
+    printf 'inactive'
   fi
 }
 
@@ -820,6 +914,8 @@ describe() {
     printf '🛡️ 🔴 Disabled • %s is paused' "$L_NAME"
   elif [ "$_ds" = overridden ]; then
     printf '🛡️ ⚠️ Overridden • Another module replaces /system/etc/hosts'
+  elif [ "$_ds" = inactive ]; then
+    printf '🛡️ 🔴 Not active • Reboot to activate %s' "$L_NAME"
   else
     printf '🛡️ 🟢 Active • %s • %s domains blocked' "$L_NAME" "$(fmt_num "$C_DOMAINS")"
   fi
@@ -1322,10 +1418,10 @@ cmd_status() {
   _st_rb=false; [ "$_st_app" = pending ] && _st_rb=true
   _st_hd=false; httpd_available && _st_hd=true
   _st_aa=false; [ -d /data/data/org.adaway ] && _st_aa=true
-  _st_d=$(printf '{"version":"%s","versionCode":%s,"manager":%s,"managerVersion":%s,"enabled":%s,"list":"%s","listName":%s,"level":"%s","levelText":%s,"domains":%s,"listCount":%s,"allow":%s,"block":%s,"updated":%s,"sourceDate":%s,"reboot":%s,"applied":"%s","setup":"%s","conflicts":%s,"adaway":%s,"httpd":%s,"op":%s}' \
+  _st_d=$(printf '{"version":"%s","versionCode":%s,"manager":%s,"managerVersion":%s,"enabled":%s,"list":"%s","listName":%s,"level":"%s","levelText":%s,"domains":%s,"listCount":%s,"allow":%s,"block":%s,"updated":%s,"sourceDate":%s,"reboot":%s,"applied":"%s","mount":"%s","setup":"%s","conflicts":%s,"adaway":%s,"httpd":%s,"op":%s}' \
     "$SB_VER" "$SB_VCODE" "$(jstr "$MGR_NAME")" "$(jstr "$MGR_VER")" "$_st_en" "$C_LIST" "$(jstr "$L_NAME")" "$L_LEVEL" "$(jstr "$L_LEVELTXT")" \
     "$C_DOMAINS" "$C_COUNT" "$(count_lines "$ALLOWF")" "$(count_lines "$BLOCKF")" "$C_UPDATED" "$(jstr "$C_SRCDATE")" \
-    "$_st_rb" "$_st_app" "$C_SETUP" "$_st_cfj" "$_st_aa" "$_st_hd" "$(op_json)")
+    "$_st_rb" "$_st_app" "$(mount_mode)" "$C_SETUP" "$_st_cfj" "$_st_aa" "$_st_hd" "$(op_json)")
   reply true status '' "$_st_d"
 }
 
@@ -1973,6 +2069,13 @@ boot_main() {
   rm -rf "$TMPD" 2>/dev/null
   mkdir -p "$TMPD"
   cfg_load
+  if [ ! -f "$CFG" ]; then
+    C_SETUP=pending
+    cfg_save
+    log WARN "Settings were missing; the default list will be downloaded again"
+  fi
+  repair_hosts
+  ensure_mounted
   set_description
   list_info "$C_LIST"
   if [ "$C_SETUP" = pending ]; then
@@ -1983,6 +2086,13 @@ boot_main() {
   else
     log INFO "Boot: blocker is disabled"
   fi
+}
+
+mount_main() {
+  MODE=boot
+  ensure_dirs
+  repair_hosts
+  ensure_mounted
 }
 
 uninstall_main() {
@@ -2135,6 +2245,7 @@ install_main() {
   printf '🔁 Reboot your device to activate it.\n'
   case $MGR_NAME in
     KernelSU* | SukiSU* | APatch)
+      printf '🔗 Works with or without a metamodule: StevenBlock checks the mount at every boot.\n'
       printf '🖥️ After reboot, tap the WebUI button on the StevenBlock card.\n'
       printf '▶️ The Action button opens the same WebUI in your browser.\n'
       ;;
@@ -2160,6 +2271,7 @@ case ${1:-} in
   _action) action_main ;;
   _install) install_main ;;
   _boot) boot_main ;;
+  _mount) mount_main ;;
   _uninstall) uninstall_main ;;
   *) dispatch "$@" ;;
 esac

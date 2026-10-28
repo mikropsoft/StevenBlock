@@ -1,8 +1,8 @@
 # 🛡️ StevenBlock: The Zero-Bloat Digital Guardian 🛡️
 
-![Downloads](https://img.shields.io/github/downloads/mikropsoft/StevenBlock/total?color=green&style=for-the-badge)
-![Release](https://img.shields.io/github/v/release/mikropsoft/StevenBlock?style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/mikropsoft/StevenBlock?style=for-the-badge)
+![Downloads](https://img.shields.io/github/downloads/Magisk-Modules-Alt-Repo/StevenBlock/total?color=green&style=for-the-badge)
+![Release](https://img.shields.io/github/v/release/Magisk-Modules-Alt-Repo/StevenBlock?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/Magisk-Modules-Alt-Repo/StevenBlock?style=for-the-badge)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 ![Magisk](https://img.shields.io/badge/Magisk-8A2BE2?style=for-the-badge&logo=magisk&logoColor=white)
 ![KernelSU](https://img.shields.io/badge/KernelSU-199116?style=for-the-badge&logo=kernelsu&logoColor=white)
@@ -48,7 +48,8 @@ Pick from **7 curated blocklists**, add your own **Allow / Block rules**, update
 - **🎯 7 curated blocklists.** From the gentle, battle-tested StevenBlack list to HaGeZi Ultimate, each with a clear strength level, live entry count and last-update date.
 - **🧩 Your own domain rules.** Always allow a domain a list blocks by mistake, or always block one the list misses. Paste a full URL and StevenBlock extracts the domain for you.
 - **🛟 Backed-up, atomic updates.** Every download is validated before it can touch your hosts file. The new file is written next to the old one and swapped in a single step, then verified. If anything fails, the previous file is restored automatically.
-- **🧪 Applied-state check.** StevenBlock compares the live `/system/etc/hosts` with its own file and tells you plainly: ✅ Applied, 🟡 Not applied yet — reboot required, or ⚠️ Overridden by another module.
+- **🧪 Applied-state check.** StevenBlock compares the live `/system/etc/hosts` with its own file and tells you plainly: ✅ Applied, 🟡 Not applied yet — reboot required, ⚠️ Overridden by another module, or 🔴 Not active.
+- **🔗 Works with or without a metamodule.** At every boot StevenBlock checks that Android really uses its hosts file. If your root manager didn't mount it, StevenBlock mounts it itself.
 - **🔒 Private by design.** Local only, token-protected, zero telemetry, and the WebUI loads nothing from the internet — not even fonts.
 - **⚙️ Fully automatic install.** No questions, no volume keys. StevenBlock detects your root manager, checks for conflicts, cleans up old versions and installs the default list on its own.
 - **🛡️ Safe by construction.** Every entry from every list is rewritten to `0.0.0.0`, so a list can only ever block a domain — it can never redirect you somewhere else.
@@ -78,13 +79,13 @@ All lists are downloaded straight from their official sources. Pick one in **�
 
 | # | List | Type | Level | Approx. entries* | Best for |
 |---|---|---|---|---|---|
-| 1 | **StevenBlack Main** | Unified list (default) | 🟢 Balanced | Varies | Everyone. The safe, battle-tested default. |
+| 1 | **StevenBlack Main** | Unified list (default) | 🟢 Balanced | ~74K | Everyone. The safe, battle-tested default. |
 | 2 | **hBlock** | Mixed list built from many sources | 🔵 Mixed | Varies | Broad coverage from many public lists in one file. |
-| 3 | **HaGeZi Light** | Basic protection | 🟢 Basic | Varies | Zero-hassle blocking that shouldn't break anything. |
-| 4 | **HaGeZi Normal** | All-round protection | 🔵 All-round | Varies | Stronger everyday protection, rarely breaks anything. |
-| 5 | **HaGeZi Pro** | Extended protection | 🟡 Extended | Varies | Power users who don't mind an occasional allow rule. |
-| 6 | **HaGeZi Pro++** | Aggressive | 🟠 Aggressive | Varies | Experienced users. Some legitimate sites may break. |
-| 7 | **HaGeZi Ultimate** | Most aggressive | 🔴 Maximum | Varies | Maximum blocking. Can restrict app and site features. |
+| 3 | **HaGeZi Light** | Basic protection | 🟢 Basic | ~155K | Zero-hassle blocking that shouldn't break anything. |
+| 4 | **HaGeZi Normal** | All-round protection | 🔵 All-round | ~365K | Stronger everyday protection, rarely breaks anything. |
+| 5 | **HaGeZi Pro** | Extended protection | 🟡 Extended | ~468K | Power users who don't mind an occasional allow rule. |
+| 6 | **HaGeZi Pro++** | Aggressive | 🟠 Aggressive | ~521K | Experienced users. Some legitimate sites may break. |
+| 7 | **HaGeZi Ultimate** | Most aggressive | 🔴 Maximum | ~569K | Maximum blocking. Can restrict app and site features. |
 
 <sub>*As of October 2026. Lists update often, so the WebUI always shows the current numbers.</sub>
 
@@ -105,6 +106,7 @@ All lists are downloaded straight from their official sources. Pick one in **�
 
 - 🌐 **Magisk** (including the current v31.1) has no built-in module WebUI. The **Action** button (Magisk v28+) starts a private server on `127.0.0.1:9090` and opens the WebUI in your browser. You can also open the WebUI natively with **KsuWebUI**, **MMRL** or **WebUI X**.
 - ▶️ On **KernelSU, KernelSU Next, SukiSU and APatch** the Action button works too: it opens the same WebUI in your browser.
+- 🔗 **Metamodules:** recent KernelSU, SukiSU and APatch releases leave module mounting to a *metamodule* (such as meta-overlayfs). StevenBlock doesn't depend on one: right after the boot-time mount, and again when boot finishes, it checks that `/system/etc/hosts` really is its file and bind-mounts the file itself if not.
 - 🧰 StevenBlock uses the BusyBox that ships with your root manager. It downloads with `curl` when available, otherwise with BusyBox `wget`.
 
 <a id="installation"></a>
@@ -134,7 +136,7 @@ All lists are downloaded straight from their official sources. Pick one in **�
 
 ### 🛡️ Header
 
-The StevenBlock logo, the version and a live status badge: **🟢 Active**, **🔴 Disabled** or **🟡 Reboot required**. The 🌙 / ☀️ button switches between the dark (default) and light themes and remembers your choice. Right below, quick links jump to every section.
+The StevenBlock logo, the version and a live status badge: **🟢 Active**, **🔴 Disabled**, **🟡 Reboot required**, **⚠️ Overridden** or **🔴 Not active**. The 🌙 / ☀️ button switches between the dark (default) and light themes and remembers your choice. Right below, quick links jump to every section.
 
 ### 🔁 Reboot banner
 
@@ -207,7 +209,8 @@ Your hosts file is too important to gamble with, so StevenBlock checks everythin
 6. **⚛️ Atomic write.** The new file is written next to the old one under a temporary name and moved into place in one step, so a half-written hosts file can't happen.
 7. **✅ Verification.** The new file must exist, be non-empty, contain the `127.0.0.1 localhost` and `::1 localhost ip6-localhost` lines and have exactly the expected number of entries. If not, the backup is restored automatically.
 8. **🧽 DNS cache flush.** StevenBlock tries the `ndc resolver` methods your Android version supports. If none is available, that's only logged — the reboot clears the cache anyway.
-9. **📜 Nothing fails silently.** Every error appears in the WebUI and in the log.
+9. **🔗 Mount check at every boot.** If the hosts file is missing or damaged, it's rebuilt from the cached list. If Android isn't using StevenBlock's file and no other module provides one, StevenBlock bind-mounts it directly — `/system` itself is never written.
+10. **📜 Nothing fails silently.** Every error appears in the WebUI and in the log.
 
 <a id="privacy-security"></a>
 
@@ -290,7 +293,7 @@ Those ads are served from the same servers as the videos themselves. A hosts fil
 <details>
 <summary>❔ Why do my changes need a reboot?</summary>
 
-Your root manager mounts StevenBlock's hosts file over `/system/etc/hosts` at boot. When StevenBlock installs a new hosts file, it swaps in a complete new file atomically — but the mount keeps showing the previous file until the next boot. Your current protection keeps working in the meantime. After the reboot, **📊 Check Status** shows ✅ Applied.
+StevenBlock's hosts file is mounted over `/system/etc/hosts` at boot — by your root manager, or by StevenBlock itself when the manager doesn't. When StevenBlock installs a new hosts file, it swaps in a complete new file atomically — but the mount keeps showing the previous file until the next boot. Your current protection keeps working in the meantime. After the reboot, **📊 Check Status** shows ✅ Applied.
 
 </details>
 
@@ -301,6 +304,13 @@ Your root manager mounts StevenBlock's hosts file over `/system/etc/hosts` at bo
 2. 🔍 Identify the blocked domain — the error message, a browser's network inspector or the app's support pages often name it.
 3. ✅ Add that domain as an **Allow** rule. Remember that rules match the exact domain only.
 4. 🎚️ Using 🟠 Pro++ or 🔴 Ultimate? Step down to 🟡 Pro or 🔵 Normal — the stricter lists trade compatibility for blocking power.
+
+</details>
+
+<details>
+<summary>❔ Do I need a metamodule on KernelSU, SukiSU or APatch?</summary>
+
+No. Recent releases of these root managers only mount module files through a metamodule, and some metamodules mount a copy of the module that was made during installation — so later list changes would never reach the system. StevenBlock checks at every boot whether `/system/etc/hosts` is its current file. If it isn't, and no other module provides a hosts file, StevenBlock bind-mounts its own file directly. **📊 Check Status** shows who mounted it under **🔗 Mounted by**.
 
 </details>
 
@@ -319,6 +329,7 @@ No background service runs for blocking — it's a static file read by Android's
 |---|---|
 | 🟡 “Not applied yet — reboot required” | Reboot. Saved changes become active after the restart. |
 | ⚠️ “Overridden by another module” | Another module provides `/system/etc/hosts` (often Magisk's Systemless hosts or AdAway). Remove or disable it and reboot. **📊 Check Status** lists the conflicting modules. |
+| 🔴 “Not active” | Android isn't using StevenBlock's hosts file. Reboot — StevenBlock mounts it at startup. If it stays, check **📊 Check Status** (**🔗 Mounted by**) and **📜 Logs**, and share them in the Telegram group. |
 | 🔌 “WebUI server stopped” in the browser | The server stops after 10 minutes without activity. Tap **Action ▶️** again. |
 | 🔑 “Session expired” or “Secure session required” | Open the WebUI from the **Action ▶️** button — each press creates a new secure link. |
 | ❌ “Port 9090 is already in use by another app” | Another app is using port 9090. Close it (or reboot) and press **Action ▶️** again. |

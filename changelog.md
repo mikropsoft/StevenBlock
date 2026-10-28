@@ -8,18 +8,19 @@ StevenBlock was rewritten from scratch, so this brand-new architecture starts a 
 - ⚙️ **Fully automatic install** — no questions, no volume keys. The installer detects your root manager, checks for conflicts, cleans up old versions and installs the default list.
 - 🔋 **Zero permanent background processes** — blocking is a static hosts file, and the local WebUI server only runs while you use it.
 - 🛟 **Backed-up, atomic updates** — downloads are validated before they can touch your hosts file, and every write can be rolled back.
-- 🧪 **Applied-state check** — see at a glance whether your hosts file is ✅ Applied, 🟡 Not applied yet or ⚠️ Overridden by another module.
+- 🧪 **Applied-state check** — see at a glance whether your hosts file is ✅ Applied, 🟡 Not applied yet, ⚠️ Overridden by another module or 🔴 Not active.
+- 🔗 **Works with or without a metamodule** — on KernelSU, SukiSU and APatch, StevenBlock checks the mount at every boot and bind-mounts its hosts file itself when the root manager doesn't.
 - 🔒 **Private by design** — local only, token-protected, no telemetry, no external requests from the WebUI.
 
 ## 🎯 New blocklists
 
-- 🟢 **StevenBlack Main** — the balanced default 
+- 🟢 **StevenBlack Main** — the balanced default (~74K entries)
 - 🔵 **hBlock** — a mixed list built from many sources
-- 🟢 **HaGeZi Light** — basic protection 
-- 🔵 **HaGeZi Normal** — all-round protection 
-- 🟡 **HaGeZi Pro** — extended protection 
-- 🟠 **HaGeZi Pro++** — aggressive, may break some sites 
-- 🔴 **HaGeZi Ultimate** — the most aggressive option 
+- 🟢 **HaGeZi Light** — basic protection (~155K entries)
+- 🔵 **HaGeZi Normal** — all-round protection (~365K entries)
+- 🟡 **HaGeZi Pro** — extended protection (~468K entries)
+- 🟠 **HaGeZi Pro++** — aggressive, may break some sites (~521K entries)
+- 🔴 **HaGeZi Ultimate** — the most aggressive option (~569K entries)
 - 📊 Live entry counts and last-update dates, read from each list's header without downloading the whole file
 
 ## 🖥️ WebUI
@@ -41,6 +42,7 @@ StevenBlock was rewritten from scratch, so this brand-new architecture starts a 
 - ⚛️ Atomic writes and post-write verification with automatic restore
 - 🔒 One task at a time, with stale-lock detection
 - 🌐 Offline install? StevenBlock finishes installing and downloads your list automatically after the next boot
+- 🔧 A missing or damaged hosts file is rebuilt from the cached list at boot
 
 ## ⬆️ Upgrading from v5.0
 
