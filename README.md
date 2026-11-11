@@ -1,5 +1,9 @@
 # 🛡️ StevenBlock: The Zero-Bloat Digital Guardian 🛡️
 
+<p align="center">
+  <img src="assets/cover.png" width="100%" alt="StevenBlock: systemless ad blocking for rooted Android with a WebUI, 7 curated blocklists and your own domain rules">
+</p>
+
 ![Downloads](https://img.shields.io/github/downloads/mikropsoft/StevenBlock/total?color=green&style=for-the-badge)
 ![Release](https://img.shields.io/github/v/release/mikropsoft/StevenBlock?style=for-the-badge)
 ![Stars](https://img.shields.io/github/stars/mikropsoft/StevenBlock?style=for-the-badge)
