@@ -6,11 +6,12 @@
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#06080d">
 <meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
 <title>StevenBlock</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=1000">
-<script>try{var t=localStorage.getItem('sb-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
+<link rel="stylesheet" href="style.css?v=2000">
+<script src="theme.js?v=2000"></script>
 </head>
 <body>
 <div class="bg" aria-hidden="true"></div>
@@ -20,7 +21,7 @@
     <div class="brand">
       <div class="logo" aria-hidden="true">🛡️</div>
       <div class="brand-text">
-        <div class="brand-name">StevenBlock <span class="ver" id="ver">v1.0</span></div>
+        <div class="brand-name">StevenBlock <span class="ver" id="ver">v2.0</span></div>
         <div class="badge is-wait" id="badge"><span class="badge-emoji" id="badge-emoji">⏳</span><span id="badge-text">Loading…</span></div>
       </div>
     </div>
@@ -60,6 +61,7 @@
       </div>
     </div>
     <div class="hero-applied" id="hero-applied"><span class="sk sk-line w-50"></span></div>
+    <div class="hero-tags" id="hero-tags"></div>
   </section>
 
   <section class="panel glass" id="lists" aria-labelledby="lists-title">
@@ -78,8 +80,18 @@
       <article class="lcard is-skel"><div class="lc-top"><span class="sk sk-line w-50"></span><span class="sk sk-pill"></span></div><div class="lc-desc"><span class="sk sk-line w-90"></span><span class="sk sk-line w-70"></span></div><div class="lc-meta"><span class="sk sk-line w-40"></span><span class="sk sk-line w-30"></span></div><div class="lc-foot"><span></span><span class="sk sk-btn"></span></div></article>
       <article class="lcard is-skel"><div class="lc-top"><span class="sk sk-line w-50"></span><span class="sk sk-pill"></span></div><div class="lc-desc"><span class="sk sk-line w-90"></span><span class="sk sk-line w-70"></span></div><div class="lc-meta"><span class="sk sk-line w-40"></span><span class="sk sk-line w-30"></span></div><div class="lc-foot"><span></span><span class="sk sk-btn"></span></div></article>
       <article class="lcard is-skel"><div class="lc-top"><span class="sk sk-line w-50"></span><span class="sk sk-pill"></span></div><div class="lc-desc"><span class="sk sk-line w-90"></span><span class="sk sk-line w-70"></span></div><div class="lc-meta"><span class="sk sk-line w-40"></span><span class="sk sk-line w-30"></span></div><div class="lc-foot"><span></span><span class="sk sk-btn"></span></div></article>
-      <article class="lcard is-skel"><div class="lc-top"><span class="sk sk-line w-50"></span><span class="sk sk-pill"></span></div><div class="lc-desc"><span class="sk sk-line w-90"></span><span class="sk sk-line w-70"></span></div><div class="lc-meta"><span class="sk sk-line w-40"></span><span class="sk sk-line w-30"></span></div><div class="lc-foot"><span></span><span class="sk sk-btn"></span></div></article>
-      <article class="lcard is-skel"><div class="lc-top"><span class="sk sk-line w-50"></span><span class="sk sk-pill"></span></div><div class="lc-desc"><span class="sk sk-line w-90"></span><span class="sk sk-line w-70"></span></div><div class="lc-meta"><span class="sk sk-line w-40"></span><span class="sk sk-line w-30"></span></div><div class="lc-foot"><span></span><span class="sk sk-btn"></span></div></article>
+    </div>
+
+    <h3 class="group-title">➕ Add-ons <span class="group-sub">Stack extra lists on top of your main list</span></h3>
+    <div class="addons" id="addons">
+      <div class="arow is-skel"><span class="sk sk-ico"></span><span class="arow-text"><span class="sk sk-line w-50"></span><span class="sk sk-line w-90"></span></span><span class="sk sk-switch"></span></div>
+      <div class="arow is-skel"><span class="sk sk-ico"></span><span class="arow-text"><span class="sk sk-line w-50"></span><span class="sk sk-line w-90"></span></span><span class="sk sk-switch"></span></div>
+      <div class="arow is-skel"><span class="sk sk-ico"></span><span class="arow-text"><span class="sk sk-line w-50"></span><span class="sk sk-line w-90"></span></span><span class="sk sk-switch"></span></div>
+    </div>
+    <div class="addon-bar" id="addon-bar" hidden>
+      <span class="addon-bar-text" id="addon-bar-text">🧩 1 change</span>
+      <button class="btn btn-ghost btn-xs" id="addon-reset" type="button">↩️ Reset</button>
+      <button class="btn btn-primary btn-xs" id="addon-apply" type="button">✅ Apply</button>
     </div>
   </section>
 
@@ -87,7 +99,7 @@
     <div class="panel-head">
       <h2 id="rules-title">🧩 Domain Rules</h2>
     </div>
-    <p class="panel-note">Always allow or always block a single domain, on top of your list.</p>
+    <p class="panel-note">Always allow or always block a domain, on top of your lists.</p>
     <label class="field" for="rule-input">
       <span class="sr-only">Domain or URL</span>
       <input id="rule-input" type="text" inputmode="url" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="2048" placeholder="example.com or a full URL">
@@ -97,12 +109,22 @@
       <button class="btn btn-allow" id="rule-allow" type="button">✅ Allow Domain</button>
       <button class="btn btn-block" id="rule-block" type="button">⛔ Block Domain</button>
     </div>
-    <p class="tip">💡 Hosts files can’t use wildcards (*). Allow and Block match that exact domain only — sub.example.com needs its own rule.</p>
+    <button class="btn btn-ghost btn-wide" id="rule-check" type="button">🔍 Check this domain</button>
+    <div class="lookup" id="lookup" hidden></div>
+    <p class="tip">💡 Rules match that exact domain. To allow a domain together with all of its subdomains, start an allow rule with *. — for example *.example.com.</p>
     <div class="seg" role="tablist" aria-label="Rule lists">
       <button class="seg-btn is-on" id="tab-allow" type="button" role="tab" aria-selected="true">✅ Allowed <span class="seg-count" id="count-allow">0</span></button>
       <button class="seg-btn" id="tab-block" type="button" role="tab" aria-selected="false">⛔ Blocked <span class="seg-count" id="count-block">0</span></button>
     </div>
+    <label class="field field-filter" for="rule-filter" id="rule-filter-wrap" hidden>
+      <span class="sr-only">Filter rules</span>
+      <input id="rule-filter" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="100" placeholder="🔎 Filter your rules">
+    </label>
     <ul class="rule-list" id="rule-list" aria-live="polite"><li class="empty is-skel"><span class="sk sk-line w-50"></span></li></ul>
+    <div class="row-2 rules-tools">
+      <button class="btn btn-ghost" id="rules-import" type="button">📥 Import rules</button>
+      <button class="btn btn-ghost" id="rules-export" type="button">📤 Export rules</button>
+    </div>
   </section>
 
   <section class="panel glass" id="actions" aria-labelledby="actions-title">
@@ -110,9 +132,12 @@
       <h2 id="actions-title">⚡ Actions</h2>
     </div>
     <div class="tiles">
-      <button class="tile" id="act-update" type="button"><span class="tile-emoji">🔄</span><span class="tile-label">Update Current List</span></button>
+      <button class="tile" id="act-update" type="button"><span class="tile-emoji">🔄</span><span class="tile-label">Update Lists</span></button>
       <button class="tile" id="act-status" type="button"><span class="tile-emoji">📊</span><span class="tile-label">Check Status</span></button>
       <button class="tile" id="act-toggle" type="button"><span class="tile-emoji tile-power" id="toggle-icon"></span><span class="tile-label" id="toggle-label">Disable Blocker</span></button>
+      <button class="tile" id="act-diag" type="button"><span class="tile-emoji">🩺</span><span class="tile-label">Health Check</span></button>
+      <button class="tile" id="act-settings" type="button"><span class="tile-emoji">⚙️</span><span class="tile-label">Settings</span></button>
+      <button class="tile" id="act-repair" type="button"><span class="tile-emoji">🛠️</span><span class="tile-label">Repair</span></button>
     </div>
     <p class="panel-note tiles-note" id="actions-note">Updates only download when the source has changed.</p>
   </section>
@@ -122,8 +147,14 @@
       <h2 id="logs-title">📜 Logs</h2>
       <div class="head-actions">
         <button class="btn btn-ghost btn-xs" id="logs-refresh" type="button" aria-label="Refresh logs">🔄</button>
+        <button class="btn btn-ghost btn-xs" id="logs-copy" type="button" aria-label="Copy logs">📋</button>
         <button class="btn btn-ghost btn-xs" id="logs-clear" type="button">🧹 Clear logs</button>
       </div>
+    </div>
+    <div class="filters" role="tablist" aria-label="Log filter">
+      <button class="filter is-on" type="button" role="tab" aria-selected="true" data-level="all">📜 All</button>
+      <button class="filter" type="button" role="tab" aria-selected="false" data-level="warn">⚠️ Warnings</button>
+      <button class="filter" type="button" role="tab" aria-selected="false" data-level="error">❌ Errors</button>
     </div>
     <div class="logbox" id="logbox" tabindex="0" aria-label="Log entries"></div>
   </section>
@@ -142,7 +173,7 @@
       <button class="btn btn-ghost" type="button" data-link="hagezi">📋 HaGeZi</button>
       <button class="btn btn-ghost" type="button" data-link="inter">🔤 Inter</button>
     </div>
-    <p class="credits-ver" id="credits-ver">StevenBlock v1.0 • 🔒 Local only • No telemetry • Inter by Rasmus Andersson (SIL OFL 1.1)</p>
+    <p class="credits-ver" id="credits-ver">StevenBlock v2.0 • 🔒 Local only • No telemetry • Inter by Rasmus Andersson (SIL OFL 1.1)</p>
   </footer>
 </main>
 
@@ -173,6 +204,6 @@
 
 <div class="toasts" id="toasts" aria-live="polite"></div>
 
-<script src="app.js?v=1000"></script>
+<script src="app.js?v=2000"></script>
 </body>
 </html>

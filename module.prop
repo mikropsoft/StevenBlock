@@ -1,7 +1,7 @@
 id=stevenblock
 name=StevenBlock
-version=v1.0
-versionCode=1000
+version=v2.0
+versionCode=2000
 author=mikropsoft
-description=🛡️ Zero-bloat systemless ad blocker • 7 curated blocklists • WebUI • Reboot to finish setup
+description=🛡️ Zero-bloat systemless ad blocker • 7 lists + add-ons • Live apply • WebUI • Reboot to finish setup
 updateJson=https://raw.githubusercontent.com/mikropsoft/StevenBlock/main/update.json
